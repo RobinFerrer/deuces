@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership — Deuces Tennis &amp; Padel Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <img src="logo/Deuces Logo Wordmark NEG.svg" alt="Deuces" class="nav-logo-img">
+            </a>
+            <div class="nav-right">
+                <div class="lang-toggle" id="langToggle">
+                    <button class="lang-btn" data-lang="nl">NL</button>
+                    <span class="lang-sep">|</span>
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                </div>
+                <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
+        <div class="menu-overlay-content">
+            <div class="menu-overlay-right">
+                <div class="menu-overlay-imgs" id="menuOverlayImgs">
+                    <img src="imgs/tennis player 1 edited.jpg" class="menu-img" data-for="about courts facilities membership contact" alt="Deuces tennis">
+                    <img src="imgs/jongeman_neon_geel_shirt_padel_backhand_bal_lucht_edited.jpg" class="menu-img" data-for="coaching shop" alt="Deuces coaching">
+                </div>
+            </div>
+            <div class="menu-overlay-left">
+                <ul class="menu-overlay-list">
+                    <li><a href="about.html" class="menu-overlay-link" data-img="about" data-nl="Over Ons" data-en="About">About</a></li>
+                    <li><a href="courts.html" class="menu-overlay-link" data-img="courts" data-nl="Banen" data-en="Courts">Courts</a></li>
+                    <li><a href="facilities.html" class="menu-overlay-link" data-img="facilities" data-nl="Faciliteiten" data-en="Facilities">Facilities</a></li>
+                    <li><a href="coaching.html" class="menu-overlay-link" data-img="coaching" data-nl="Coaching" data-en="Coaching">Coaching</a></li>
+                    <li><a href="membership.html" class="menu-overlay-link" data-img="membership" data-nl="Lidmaatschap" data-en="Membership">Membership</a></li>
+                    <li><a href="shop.html" class="menu-overlay-link" data-img="shop" data-nl="Shop" data-en="Shop">Shop</a></li>
+                    <li><a href="contact.html" class="menu-overlay-link" data-img="contact" data-nl="Contact" data-en="Contact">Contact</a></li>
+                </ul>
+                <div class="menu-overlay-footer">
+                    <a href="courts.html" class="btn btn-flame menu-overlay-cta" data-nl="Baan Reserveren" data-en="Book a Court">Book a Court</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="page-hero-bg" style="background-image: url('imgs/jonge_man_wit_poloshirt_armen_gekruist_lachend_tennisbaan.jpg');"></div>
+        <div class="container page-hero-inner">
+            <span class="page-eyebrow" data-nl="Word Lid" data-en="Become a Member">Become a Member</span>
+            <h1 data-nl="Lidmaatschap" data-en="Membership">Membership</h1>
+            <p class="page-sub" data-nl="Kies het lidmaatschap dat bij jou past. Geen verborgen kosten." data-en="Choose the membership that fits you. No hidden fees.">Choose the membership that fits you. No hidden fees.</p>
+        </div>
+    </section>
+
+    <!-- MEMBERSHIP TIERS -->
+    <section class="membership section-cream animate-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label dark" data-nl="Kies Jouw Plan" data-en="Choose Your Plan">Choose Your Plan</p>
+                <h2 class="section-title dark" data-nl="Lidmaatschappen" data-en="Memberships">Memberships</h2>
+                <p class="section-sub dark" data-nl="Transparante prijzen. Geen verborgen kosten. Annuleer wanneer je wil." data-en="Transparent pricing. No hidden fees. Cancel any time.">Transparent pricing. No hidden fees. Cancel any time.</p>
+            </div>
+            <div class="membership-grid">
+                <div class="membership-card animate-child">
+                    <div class="membership-header-block">
+                        <p class="membership-tier" data-nl="Standaard" data-en="Standard">Standard</p>
+                        <div class="membership-price">€<span>49</span><small data-nl="/maand" data-en="/month">/month</small></div>
+                    </div>
+                    <ul class="membership-features">
+                        <li data-nl="Onbeperkt baanreservaties (off-peak)" data-en="Unlimited court bookings (off-peak)">Unlimited court bookings (off-peak)</li>
+                        <li data-nl="Toegang tot de clubruimtes" data-en="Access to club facilities">Access to club facilities</li>
+                        <li data-nl="1 groepsles per week" data-en="1 group lesson per week">1 group lesson per week</li>
+                        <li data-nl="10% korting in de shop" data-en="10% discount in the shop">10% discount in the shop</li>
+                        <li class="inactive" data-nl="Prioriteit bij reservaties" data-en="Priority court reservations">Priority court reservations</li>
+                        <li class="inactive" data-nl="Privé coach toegang" data-en="Private coach access">Private coach access</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-outline-dark" data-nl="Aanmelden" data-en="Sign Up">Sign Up</a>
+                </div>
+
+                <div class="membership-card featured animate-child">
+                    <div class="membership-badge" data-nl="Meest Gekozen" data-en="Most Popular">Most Popular</div>
+                    <div class="membership-header-block">
+                        <p class="membership-tier" data-nl="Premium" data-en="Premium">Premium</p>
+                        <div class="membership-price">€<span>89</span><small data-nl="/maand" data-en="/month">/month</small></div>
+                    </div>
+                    <ul class="membership-features">
+                        <li data-nl="Onbeperkt baanreservaties (alle uren)" data-en="Unlimited court bookings (all hours)">Unlimited court bookings (all hours)</li>
+                        <li data-nl="Toegang tot de clubruimtes" data-en="Access to club facilities">Access to club facilities</li>
+                        <li data-nl="3 groepslessen per week" data-en="3 group lessons per week">3 group lessons per week</li>
+                        <li data-nl="20% korting in de shop" data-en="20% discount in the shop">20% discount in the shop</li>
+                        <li data-nl="Prioriteit bij reservaties" data-en="Priority court reservations">Priority court reservations</li>
+                        <li class="inactive" data-nl="Privé coach toegang" data-en="Private coach access">Private coach access</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-flame" data-nl="Aanmelden" data-en="Sign Up">Sign Up</a>
+                </div>
+
+                <div class="membership-card animate-child">
+                    <div class="membership-header-block">
+                        <p class="membership-tier" data-nl="Elite" data-en="Elite">Elite</p>
+                        <div class="membership-price">€<span>149</span><small data-nl="/maand" data-en="/month">/month</small></div>
+                    </div>
+                    <ul class="membership-features">
+                        <li data-nl="Onbeperkt baanreservaties (alle uren)" data-en="Unlimited court bookings (all hours)">Unlimited court bookings (all hours)</li>
+                        <li data-nl="Toegang tot de clubruimtes" data-en="Access to club facilities">Access to club facilities</li>
+                        <li data-nl="Onbeperkte groepslessen" data-en="Unlimited group lessons">Unlimited group lessons</li>
+                        <li data-nl="30% korting in de shop" data-en="30% discount in the shop">30% discount in the shop</li>
+                        <li data-nl="Prioriteit bij reservaties" data-en="Priority court reservations">Priority court reservations</li>
+                        <li data-nl="2 privélessen per maand inbegrepen" data-en="2 private lessons per month included">2 private lessons per month included</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-outline-dark" data-nl="Aanmelden" data-en="Sign Up">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-top">
+                <a href="index.html" class="footer-logo" data-nl="Deuces" data-en="Deuces">Deuces</a>
+                <p class="footer-tagline" data-nl="Tennis &amp; Padel Academie — Gent" data-en="Tennis &amp; Padel Academy — Ghent">Tennis &amp; Padel Academy — Ghent</p>
+            </div>
+            <div class="footer-mid">
+                <div class="footer-col">
+                    <p class="footer-col-title" data-nl="Navigatie" data-en="Navigation">Navigation</p>
+                    <ul>
+                        <li><a href="about.html" data-nl="Over Ons" data-en="About">About</a></li>
+                        <li><a href="courts.html" data-nl="Banen" data-en="Courts">Courts</a></li>
+                        <li><a href="facilities.html" data-nl="Faciliteiten" data-en="Facilities">Facilities</a></li>
+                        <li><a href="coaching.html" data-nl="Coaching" data-en="Coaching">Coaching</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <p class="footer-col-title" data-nl="Meer" data-en="More">More</p>
+                    <ul>
+                        <li><a href="membership.html" data-nl="Lidmaatschap" data-en="Membership">Membership</a></li>
+                        <li><a href="shop.html" data-nl="Shop" data-en="Shop">Shop</a></li>
+                        <li><a href="contact.html" data-nl="Contact" data-en="Contact">Contact</a></li>
+                        <li><a href="#" data-nl="Privacy Policy" data-en="Privacy Policy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <p class="footer-col-title" data-nl="Volg Ons" data-en="Follow Us">Follow Us</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-nl="© 2025 Deuces Tennis &amp; Padel Academie. Alle rechten voorbehouden." data-en="© 2025 Deuces Tennis &amp; Padel Academy. All rights reserved.">© 2025 Deuces Tennis &amp; Padel Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

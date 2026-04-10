@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courts — Deuces Tennis &amp; Padel Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <img src="logo/Deuces Logo Wordmark NEG.svg" alt="Deuces" class="nav-logo-img">
+            </a>
+            <div class="nav-right">
+                <div class="lang-toggle" id="langToggle">
+                    <button class="lang-btn" data-lang="nl">NL</button>
+                    <span class="lang-sep">|</span>
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                </div>
+                <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
+        <div class="menu-overlay-content">
+            <div class="menu-overlay-right">
+                <div class="menu-overlay-imgs" id="menuOverlayImgs">
+                    <img src="imgs/tennis player 1 edited.jpg" class="menu-img" data-for="about courts facilities membership contact" alt="Deuces tennis">
+                    <img src="imgs/jongeman_neon_geel_shirt_padel_backhand_bal_lucht_edited.jpg" class="menu-img" data-for="coaching shop" alt="Deuces coaching">
+                </div>
+            </div>
+            <div class="menu-overlay-left">
+                <ul class="menu-overlay-list">
+                    <li><a href="about.html" class="menu-overlay-link" data-img="about" data-nl="Over Ons" data-en="About">About</a></li>
+                    <li><a href="courts.html" class="menu-overlay-link" data-img="courts" data-nl="Banen" data-en="Courts">Courts</a></li>
+                    <li><a href="facilities.html" class="menu-overlay-link" data-img="facilities" data-nl="Faciliteiten" data-en="Facilities">Facilities</a></li>
+                    <li><a href="coaching.html" class="menu-overlay-link" data-img="coaching" data-nl="Coaching" data-en="Coaching">Coaching</a></li>
+                    <li><a href="membership.html" class="menu-overlay-link" data-img="membership" data-nl="Lidmaatschap" data-en="Membership">Membership</a></li>
+                    <li><a href="shop.html" class="menu-overlay-link" data-img="shop" data-nl="Shop" data-en="Shop">Shop</a></li>
+                    <li><a href="contact.html" class="menu-overlay-link" data-img="contact" data-nl="Contact" data-en="Contact">Contact</a></li>
+                </ul>
+                <div class="menu-overlay-footer">
+                    <a href="courts.html" class="btn btn-flame menu-overlay-cta" data-nl="Baan Reserveren" data-en="Book a Court">Book a Court</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="page-hero-bg" style="background-image: url('imgs/bovenaanzicht_vrouw_opslag_hardcourt_blauw_groen.jpg');"></div>
+        <div class="container page-hero-inner">
+            <span class="page-eyebrow" data-nl="Faciliteiten" data-en="Facilities">Facilities</span>
+            <h1 data-nl="Onze Banen" data-en="Our Courts">Our Courts</h1>
+            <p class="page-sub" data-nl="Professionele banen voor elk niveau, in een omgeving die ademt." data-en="Professional courts for every level, in an environment that breathes.">Professional courts for every level, in an environment that breathes.</p>
+        </div>
+    </section>
+
+    <!-- COURTS GRID -->
+    <section class="courts section-white animate-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label dark" data-nl="Faciliteiten" data-en="Facilities">Facilities</p>
+                <h2 class="section-title dark" data-nl="Onze Banen" data-en="Our Courts">Our Courts</h2>
+                <p class="section-sub dark" data-nl="Professionele banen voor elk niveau, in een omgeving die ademt." data-en="Professional courts for every level, in an environment that breathes.">Professional courts for every level, in an environment that breathes.</p>
+            </div>
+            <div class="courts-grid">
+                <div class="court-card animate-child">
+                    <div class="img-placeholder img-indoor"></div>
+                    <div class="court-card-body">
+                        <span class="court-badge" data-nl="Tennis" data-en="Tennis">Tennis</span>
+                        <h3 data-nl="Binnenbanen" data-en="Indoor Courts">Indoor Courts</h3>
+                        <p data-nl="Acht geconditioneerde binnenbanen met professionele hardcourt-bekleding. Klimaatbeheersing en LED-verlichting voor optimale omstandigheden het hele jaar door." data-en="Eight climate-controlled indoor courts with professional hardcourt surfaces. Year-round optimal conditions with LED lighting.">Eight climate-controlled indoor courts with professional hardcourt surfaces. Year-round optimal conditions with LED lighting.</p>
+                        <a href="contact.html" class="btn-text" data-nl="Baan Boeken →" data-en="Book Now →">Book Now →</a>
+                    </div>
+                </div>
+                <div class="court-card animate-child">
+                    <div class="img-placeholder img-outdoor"></div>
+                    <div class="court-card-body">
+                        <span class="court-badge" data-nl="Tennis" data-en="Tennis">Tennis</span>
+                        <h3 data-nl="Buitenbanen" data-en="Outdoor Courts">Outdoor Courts</h3>
+                        <p data-nl="Zes graniet-banen aan de open lucht, omringd door groen. Ideaal voor de zomercompetitie en recreatief spel in de zon." data-en="Six outdoor clay courts surrounded by greenery. Perfect for summer competition and recreational play under the open sky.">Six outdoor clay courts surrounded by greenery. Perfect for summer competition and recreational play under the open sky.</p>
+                        <a href="contact.html" class="btn-text" data-nl="Baan Boeken →" data-en="Book Now →">Book Now →</a>
+                    </div>
+                </div>
+                <div class="court-card animate-child">
+                    <div class="img-placeholder img-padel"></div>
+                    <div class="court-card-body">
+                        <span class="court-badge indigo" data-nl="Padel" data-en="Padel">Padel</span>
+                        <h3 data-nl="Padelbanen" data-en="Padel Courts">Padel Courts</h3>
+                        <p data-nl="Vier panoramische padelbanen, overdekt en in openlucht. De perfecte combinatie van kracht en verbinding — voor elk niveau." data-en="Four panoramic padel courts, covered and open-air. The perfect blend of power and connection — for every level.">Four panoramic padel courts, covered and open-air. The perfect blend of power and connection — for every level.</p>
+                        <a href="contact.html" class="btn-text" data-nl="Baan Boeken →" data-en="Book Now →">Book Now →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Booking CTA -->
+            <div style="text-align:center; margin-top: clamp(40px,6vw,72px);">
+                <p class="section-sub dark" style="margin:0 auto 2rem;" data-nl="Reserveer jouw baan online of neem contact op met de receptie." data-en="Reserve your court online or contact our reception.">Reserve your court online or contact our reception.</p>
+                <a href="contact.html" class="btn btn-flame" data-nl="Boek een Baan" data-en="Book a Court">Book a Court</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-top">
+                <a href="index.html" class="footer-logo" data-nl="Deuces" data-en="Deuces">Deuces</a>
+                <p class="footer-tagline" data-nl="Tennis &amp; Padel Academie — Gent" data-en="Tennis &amp; Padel Academy — Ghent">Tennis &amp; Padel Academy — Ghent</p>
+            </div>
+            <div class="footer-mid">
+                <div class="footer-col">
+                    <p class="footer-col-title" data-nl="Navigatie" data-en="Navigation">Navigation</p>
+                    <ul>
+                        <li><a href="about.html" data-nl="Over Ons" data-en="About">About</a></li>
+                        <li><a href="courts.html" data-nl="Banen" data-en="Courts">Courts</a></li>
+                        <li><a href="facilities.html" data-nl="Faciliteiten" data-en="Facilities">Facilities</a></li>
+                        <li><a href="coaching.html" data-nl="Coaching" data-en="Coaching">Coaching</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <p class="footer-col-title" data-nl="Meer" data-en="More">More</p>
+                    <ul>
+                        <li><a href="membership.html" data-nl="Lidmaatschap" data-en="Membership">Membership</a></li>
+                        <li><a href="shop.html" data-nl="Shop" data-en="Shop">Shop</a></li>
+                        <li><a href="contact.html" data-nl="Contact" data-en="Contact">Contact</a></li>
+                        <li><a href="#" data-nl="Privacy Policy" data-en="Privacy Policy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <p class="footer-col-title" data-nl="Volg Ons" data-en="Follow Us">Follow Us</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-nl="© 2025 Deuces Tennis &amp; Padel Academie. Alle rechten voorbehouden." data-en="© 2025 Deuces Tennis &amp; Padel Academy. All rights reserved.">© 2025 Deuces Tennis &amp; Padel Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
