@@ -5,7 +5,9 @@
 /* ── Court image placeholders ────────────────────── */
 .img-indoor {
     height: 240px;
-    background: linear-gradient(135deg, #1a3d5c 0%, var(--prussian) 100%);
+    background: url(imgs/indoor.jpg);
+    background-size: cover;
+    background-position: center;
 }
 .img-indoor::after {
     content: '';
@@ -16,13 +18,17 @@
 
 .img-outdoor {
     height: 240px;
-    background: linear-gradient(135deg, #1a3520 0%, #0e2218 100%);
+    background: url(imgs/gravel-court.jpg);
+    background-size: cover;
+    background-position: center;
 }
 .img-outdoor::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 40%, rgba(10,20,14,0.6) 100%); }
 
 .img-padel {
     height: 240px;
-    background: linear-gradient(135deg, #1a1a4a 0%, #0D1C35 100%);
+    background: url(imgs/padel-court-9.jpeg);
+    background-size: cover;
+    background-position: center;
 }
 .img-padel::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 40%, rgba(13,28,53,0.6) 100%); }
 

@@ -9,10 +9,10 @@
     overflow: hidden;
 }
 
-.img-product-cap    { background: linear-gradient(135deg, var(--prussian-light) 0%, var(--prussian-mid) 100%); }
-.img-product-polo   { background: linear-gradient(135deg, #f0ede6 0%, #ddd8ce 100%); }
-.img-product-bag    { background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); }
-.img-product-bottle { background: linear-gradient(135deg, #003d36 0%, #00c2a833 60%, #003d36 100%); }
+.img-product-cap    { background: url(imgs/mockups/Tactics-Blue-Tee.png); background-size: cover; background-position: center; }
+.img-product-polo   { background: url(imgs/mockups/Deuces-Front-White-Tee.png); background-size: cover; background-position: center; }
+.img-product-bag    { background: url(imgs/mockups/Court-Blue-Hoodie.png); background-size: cover; background-position: center; }
+.img-product-bottle { background: url(imgs/mockups/BJKvsMC-White-Tee.png); background-size: cover; background-position: center; }
 
 
 /* ── Shop section ────────────────────────────────── */
