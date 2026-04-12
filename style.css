@@ -152,6 +152,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
     color: var(--prussian);
     border-color: rgba(13,28,53,0.4);
 }
+
 .btn-outline:hover {
     background: rgba(13,28,53,0.05);
     border-color: var(--prussian);
@@ -211,12 +212,12 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 #navbar.scrolled {
-    background: var(--white);
+    background: var(--prussian);
     box-shadow: 0 1px 0 rgba(13,28,53,0.08);
 }
 
 #navbar.scrolled-light {
-    background: var(--white);
+    background: var(--prussian);
     box-shadow: 0 1px 0 rgba(13,28,53,0.08);
 }
 
@@ -281,14 +282,15 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
     font-size: 0.72rem;
     font-weight: 500;
     letter-spacing: 0.1em;
-    color: rgba(13,28,53,0.4);
+    color: var(--white);
+    opacity: 0.5;
     transition: color var(--transition);
     padding: 0.15rem 0;
 }
-.lang-btn.active { color: var(--prussian); }
-.lang-btn:hover  { color: var(--prussian); }
+.lang-btn.active { color: var(--white); opacity: 1; }
+.lang-btn:hover { color: var(--white); opacity: 1; }
 
-.lang-sep { font-size: 0.72rem; color: rgba(13,28,53,0.2); }
+.lang-sep { font-size: 0.72rem; color: var(--white); opacity: 0.5; }
 
 .nav-cta { font-size: 0.72rem; padding: 0.6rem 1.25rem; }
 
@@ -304,7 +306,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
     display: block;
     width: 22px;
     height: 2px;
-    background: var(--prussian);
+    background: var(--white);
     transition: var(--transition);
 }
 .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); background-color: var(--white);}
