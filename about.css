@@ -1,0 +1,55 @@
+/* ═══════════════════════════════════════════════════
+   ABOUT — shared component (index.html + about.html)
+═══════════════════════════════════════════════════ */
+
+/* ── About image placeholder ─────────────────────── */
+.img-about {
+    height: 560px;
+    background: linear-gradient(160deg, var(--prussian-mid) 0%, #0a1826 100%);
+    display: flex;
+    align-items: flex-end;
+    padding: 2rem;
+}
+
+.img-about::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(255,255,255,0.04) 60px, rgba(255,255,255,0.04) 61px),
+        repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(255,255,255,0.04) 60px, rgba(255,255,255,0.04) 61px);
+    border-radius: inherit;
+}
+
+.img-inner-label {
+    position: relative;
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--text-light-dim);
+    z-index: 1;
+}
+
+
+/* ── About section ───────────────────────────────── */
+.about {
+    padding: var(--section-pad) 0;
+}
+
+.about-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: center;
+}
+
+.about-text .section-title {
+    margin-bottom: 1.75rem;
+}
+
+
+/* ── Responsive ──────────────────────────────────── */
+@media (max-width: 900px) {
+    .about-inner { grid-template-columns: 1fr; }
+    .about-image { display: none; }
+}

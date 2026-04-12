@@ -1,0 +1,110 @@
+/* ═══════════════════════════════════════════════════
+   SHOP — shared component (index.html + shop.html)
+═══════════════════════════════════════════════════ */
+
+/* ── Product image placeholders ─────────────────── */
+.product-img {
+    height: 260px;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-product-cap    { background: linear-gradient(135deg, var(--prussian-light) 0%, var(--prussian-mid) 100%); }
+.img-product-polo   { background: linear-gradient(135deg, #f0ede6 0%, #ddd8ce 100%); }
+.img-product-bag    { background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); }
+.img-product-bottle { background: linear-gradient(135deg, #003d36 0%, #00c2a833 60%, #003d36 100%); }
+
+
+/* ── Shop section ────────────────────────────────── */
+.shop {
+    padding: var(--section-pad) 0;
+}
+
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.product-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: transform var(--transition);
+    border: 1px solid var(--cream-dark);
+}
+.product-card:hover { transform: translateY(-4px); }
+
+.product-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: var(--flame);
+    color: var(--white);
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.55rem;
+    border-radius: 2px;
+    z-index: 1;
+}
+
+.product-body {
+    padding: 1.25rem 1.5rem 1.5rem;
+}
+.product-body h4 {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--prussian);
+    margin-bottom: 0.3rem;
+}
+.product-sub {
+    font-size: 0.76rem;
+    color: var(--text-mid);
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+}
+
+.product-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-price {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--prussian);
+}
+
+.btn-cart {
+    font-family: var(--font-sans);
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--flame);
+    padding: 0.45rem 0.9rem;
+    border: 1px solid var(--flame);
+    border-radius: var(--radius);
+    transition: var(--transition);
+}
+.btn-cart:hover {
+    background: var(--flame);
+    color: var(--white);
+}
+
+
+/* ── Responsive ──────────────────────────────────── */
+@media (max-width: 1024px) {
+    .shop-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .shop-grid { grid-template-columns: 1fr; max-width: 360px; margin: 0 auto; }
+}

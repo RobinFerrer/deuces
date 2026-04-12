@@ -1,0 +1,88 @@
+/* ═══════════════════════════════════════════════════
+   COURTS — shared component (index.html + courts.html + about.html)
+═══════════════════════════════════════════════════ */
+
+/* ── Court image placeholders ────────────────────── */
+.img-indoor {
+    height: 240px;
+    background: linear-gradient(135deg, #1a3d5c 0%, var(--prussian) 100%);
+}
+.img-indoor::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 40%, rgba(13,28,53,0.6) 100%);
+}
+
+.img-outdoor {
+    height: 240px;
+    background: linear-gradient(135deg, #1a3520 0%, #0e2218 100%);
+}
+.img-outdoor::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 40%, rgba(10,20,14,0.6) 100%); }
+
+.img-padel {
+    height: 240px;
+    background: linear-gradient(135deg, #1a1a4a 0%, #0D1C35 100%);
+}
+.img-padel::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 40%, rgba(13,28,53,0.6) 100%); }
+
+
+/* ── Courts section ──────────────────────────────── */
+.courts {
+    padding: var(--section-pad) 0;
+}
+
+.courts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.court-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+.court-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 48px rgba(13,28,53,0.12);
+}
+
+.court-card-body {
+    padding: 1.75rem;
+}
+.court-card-body h3 {
+    font-family: var(--font-serif);
+    font-size: 1.35rem;
+    font-style: normal;
+    text-transform: uppercase;
+    color: var(--prussian);
+    margin-bottom: 0.75rem;
+    margin-top: 0.5rem;
+}
+.court-card-body p {
+    font-size: 0.875rem;
+    line-height: 1.75;
+    color: var(--text-mid);
+    margin-bottom: 0.25rem;
+}
+
+.court-badge {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    background: var(--flame);
+    color: var(--white);
+    padding: 0.25rem 0.6rem;
+    border-radius: 2px;
+}
+.court-badge.indigo { background: var(--indigo); }
+
+
+/* ── Responsive ──────────────────────────────────── */
+@media (max-width: 900px) {
+    .courts-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+}

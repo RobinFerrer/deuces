@@ -8,6 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="courts.css">
+    <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
@@ -234,95 +238,58 @@
                 <p class="section-sub" data-nl="Kies het lidmaatschap dat bij jou past. Geen verborgen kosten." data-en="Choose the membership that fits you. No hidden fees.">Choose the membership that fits you. No hidden fees.</p>
             </div>
         </div>
-        <div class="mem-carousel-wrap">
-            <div class="mem-carousel">
+        <div class="container">
+            <div class="mem-grid">
 
                 <!-- Standard -->
-                <a href="membership.html#standard" class="mem-card mem-card--cream animate-child">
-                    <div class="mem-card-top">
-                        <div class="mem-card-tags">
-                            <span class="mem-tag">€49/mo</span>
-                            <span class="mem-tag" data-nl="Standaard" data-en="Standard">Standard</span>
-                        </div>
-                        <div class="mem-card-icon">
-                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M6.4 6.4a8 8 0 0 0 11.2 0M6.4 17.6a8 8 0 0 1 11.2 0"/></svg>
-                        </div>
+                <a href="membership.html#standard" class="mem-card mem-card--plain animate-child">
+                    <div class="mem-card-header">
+                        <p class="mem-card-name" data-nl="Standaard" data-en="Standard">Standard</p>
+                        <div class="mem-card-price">€<span>49</span></div>
+                        <p class="mem-card-period" data-nl="per gebruiker, per maand" data-en="per user, per month">per user, per month</p>
                     </div>
-                    <h3 class="mem-card-title" data-nl="Standaard" data-en="Standard">Standard</h3>
-                    <p class="mem-card-desc" data-nl="Onbeperkt baanreservaties off-peak, 1 groepsles per week en toegang tot de clubruimtes." data-en="Unlimited off-peak court bookings, 1 group lesson per week and full access to club facilities.">Unlimited off-peak court bookings, 1 group lesson per week and full access to club facilities.</p>
-                    <div class="mem-card-photo">
-                        <img src="imgs/jonge_man_wit_poloshirt_armen_gekruist_lachend_tennisbaan.jpg" alt="Standard membership">
-                        <span class="mem-card-cta">
-                            <span data-nl="Meer Info" data-en="Read More">Read More</span>
-                            <span class="mem-cta-arrow">→</span>
-                        </span>
-                    </div>
+                    <span class="mem-card-btn btn-outline-dark" data-nl="Word Lid" data-en="Join Now">Join Now</span>
+                    <ul class="mem-card-features">
+                        <li data-nl="Onbeperkt baanreservaties (off-peak)" data-en="Unlimited court bookings (off-peak)">Unlimited court bookings (off-peak)</li>
+                        <li data-nl="Toegang tot de clubruimtes" data-en="Access to club facilities">Access to club facilities</li>
+                        <li data-nl="1 groepsles per week" data-en="1 group lesson per week">1 group lesson per week</li>
+                        <li data-nl="10% korting in de shop" data-en="10% discount in the shop">10% discount in the shop</li>
+                    </ul>
                 </a>
 
                 <!-- Premium -->
-                <a href="membership.html#premium" class="mem-card mem-card--lime animate-child">
-                    <div class="mem-card-top">
-                        <div class="mem-card-tags">
-                            <span class="mem-tag">€89/mo</span>
-                            <span class="mem-tag" data-nl="Meest Gekozen" data-en="Most Popular">Most Popular</span>
-                        </div>
-                        <div class="mem-card-icon">
-                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M6.4 6.4a8 8 0 0 0 11.2 0M6.4 17.6a8 8 0 0 1 11.2 0"/></svg>
-                        </div>
+                <a href="membership.html#premium" class="mem-card mem-card--dark animate-child">
+                    <div class="mem-card-badge" data-nl="Meest Gekozen" data-en="Most Popular">Most Popular</div>
+                    <div class="mem-card-header">
+                        <p class="mem-card-name" data-nl="Premium" data-en="Premium">Premium</p>
+                        <div class="mem-card-price">€<span>89</span></div>
+                        <p class="mem-card-period" data-nl="per gebruiker, per maand" data-en="per user, per month">per user, per month</p>
                     </div>
-                    <h3 class="mem-card-title" data-nl="Premium" data-en="Premium">Premium</h3>
-                    <p class="mem-card-desc" data-nl="Onbeperkt baanreservaties alle uren, 3 groepslessen per week en prioriteit bij reservaties." data-en="Unlimited court bookings all hours, 3 group lessons per week and priority reservations.">Unlimited court bookings all hours, 3 group lessons per week and priority reservations.</p>
-                    <div class="mem-card-photo">
-                        <img src="imgs/man_geel_shirt_witte_pet_armen_gekruist_tennisbaan.jpg" alt="Premium membership">
-                        <span class="mem-card-cta">
-                            <span data-nl="Meer Info" data-en="Read More">Read More</span>
-                            <span class="mem-cta-arrow">→</span>
-                        </span>
-                    </div>
+                    <span class="mem-card-btn btn-flame" data-nl="Word Lid" data-en="Join Now">Join Now</span>
+                    <ul class="mem-card-features">
+                        <li data-nl="Onbeperkt baanreservaties (alle uren)" data-en="Unlimited court bookings (all hours)">Unlimited court bookings (all hours)</li>
+                        <li data-nl="Toegang tot de clubruimtes" data-en="Access to club facilities">Access to club facilities</li>
+                        <li data-nl="3 groepslessen per week" data-en="3 group lessons per week">3 group lessons per week</li>
+                        <li data-nl="20% korting in de shop" data-en="20% discount in the shop">20% discount in the shop</li>
+                        <li data-nl="Prioriteit bij reservaties" data-en="Priority court reservations">Priority court reservations</li>
+                    </ul>
                 </a>
 
                 <!-- Elite -->
-                <a href="membership.html#elite" class="mem-card mem-card--stone animate-child">
-                    <div class="mem-card-top">
-                        <div class="mem-card-tags">
-                            <span class="mem-tag">€149/mo</span>
-                            <span class="mem-tag" data-nl="Elite" data-en="Elite">Elite</span>
-                        </div>
-                        <div class="mem-card-icon">
-                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M6.4 6.4a8 8 0 0 0 11.2 0M6.4 17.6a8 8 0 0 1 11.2 0"/></svg>
-                        </div>
+                <a href="membership.html#elite" class="mem-card mem-card--plain animate-child">
+                    <div class="mem-card-header">
+                        <p class="mem-card-name" data-nl="Elite" data-en="Elite">Elite</p>
+                        <div class="mem-card-price">€<span>149</span></div>
+                        <p class="mem-card-period" data-nl="per gebruiker, per maand" data-en="per user, per month">per user, per month</p>
                     </div>
-                    <h3 class="mem-card-title" data-nl="Elite" data-en="Elite">Elite</h3>
-                    <p class="mem-card-desc" data-nl="Alles van Premium, plus onbeperkte groepslessen, 30% shopkorting en 2 privélessen per maand." data-en="Everything in Premium, plus unlimited group lessons, 30% shop discount and 2 private lessons/month.">Everything in Premium, plus unlimited group lessons, 30% shop discount and 2 private lessons/month.</p>
-                    <div class="mem-card-photo">
-                        <img src="imgs/close_up_portret_man_ernstig_tennisracket.jpg" alt="Elite membership">
-                        <span class="mem-card-cta">
-                            <span data-nl="Meer Info" data-en="Read More">Read More</span>
-                            <span class="mem-cta-arrow">→</span>
-                        </span>
-                    </div>
-                </a>
-
-                <!-- Junior -->
-                <a href="membership.html#junior" class="mem-card mem-card--cream animate-child">
-                    <div class="mem-card-top">
-                        <div class="mem-card-tags">
-                            <span class="mem-tag">€35/mo</span>
-                            <span class="mem-tag" data-nl="Junior" data-en="Junior">Junior</span>
-                        </div>
-                        <div class="mem-card-icon">
-                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M6.4 6.4a8 8 0 0 0 11.2 0M6.4 17.6a8 8 0 0 1 11.2 0"/></svg>
-                        </div>
-                    </div>
-                    <h3 class="mem-card-title" data-nl="Junior" data-en="Junior">Junior</h3>
-                    <p class="mem-card-desc" data-nl="Voor jeugdspelers van 5 tot 18 jaar. Techniek, mentaliteit en teamgeest in een holistische aanpak." data-en="For players aged 5 to 18. Technique, mentality and team spirit through a holistic approach.">For players aged 5 to 18. Technique, mentality and team spirit through a holistic approach.</p>
-                    <div class="mem-card-photo">
-                        <img src="imgs/jongen_sprint_tennisbal_groen_baan_head_banner.jpg" alt="Junior membership">
-                        <span class="mem-card-cta">
-                            <span data-nl="Meer Info" data-en="Read More">Read More</span>
-                            <span class="mem-cta-arrow">→</span>
-                        </span>
-                    </div>
+                    <span class="mem-card-btn btn-outline-dark" data-nl="Word Lid" data-en="Join Now">Join Now</span>
+                    <ul class="mem-card-features">
+                        <li data-nl="Onbeperkt baanreservaties (alle uren)" data-en="Unlimited court bookings (all hours)">Unlimited court bookings (all hours)</li>
+                        <li data-nl="Onbeperkte groepslessen" data-en="Unlimited group lessons">Unlimited group lessons</li>
+                        <li data-nl="30% korting in de shop" data-en="30% discount in the shop">30% discount in the shop</li>
+                        <li data-nl="Prioriteit bij reservaties" data-en="Priority court reservations">Priority court reservations</li>
+                        <li data-nl="2 privélessen per maand" data-en="2 private lessons/month">2 private lessons/month</li>
+                    </ul>
                 </a>
 
             </div>

@@ -1,0 +1,135 @@
+/* ═══════════════════════════════════════════════════
+   COACHING — coaching.html
+═══════════════════════════════════════════════════ */
+
+/* ── Coaching image placeholders ─────────────────── */
+.img-coaching-adults  { height: 380px; background: linear-gradient(135deg, #1e3040 0%, #0D1C35 60%, #162030 100%); border-radius: var(--radius-lg); }
+.img-coaching-juniors { height: 380px; background: linear-gradient(135deg, #1a3020 0%, #0D1C35 60%, #102018 100%); border-radius: var(--radius-lg); }
+.img-coaching-padel   { height: 380px; background: linear-gradient(135deg, #1a1a50 0%, #0D1C35 60%, #0a0a30 100%); border-radius: var(--radius-lg); }
+.img-coaching-private { height: 380px; background: linear-gradient(135deg, #2e1a10 0%, #1a0d08 60%, #0D1C35 100%); border-radius: var(--radius-lg); }
+
+
+/* ── Coaching section ────────────────────────────── */
+.coaching {
+    padding: var(--section-pad) 0;
+}
+
+.tabs-wrapper { margin-top: 0; }
+
+.tabs {
+    display: flex;
+    gap: 0;
+    border-bottom: 1px solid rgba(13,28,53,0.12);
+    margin-bottom: 3rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+.tabs::-webkit-scrollbar { display: none; }
+
+.tab-btn {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(13,28,53,0.4);
+    padding: 1rem 1.75rem;
+    border-bottom: 2px solid transparent;
+    transition: var(--transition);
+    white-space: nowrap;
+    margin-bottom: -1px;
+}
+.tab-btn:hover  { color: rgba(13,28,53,0.7); }
+.tab-btn.active { color: var(--prussian); border-bottom-color: var(--flame); }
+
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+.tab-panel-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 5vw, 72px);
+    align-items: center;
+}
+
+.tab-text h3 {
+    font-family: var(--font-serif);
+    font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+.tab-text p {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: var(--text-mid);
+    margin-bottom: 1.5rem;
+}
+
+.feature-list {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+.feature-list li {
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: var(--text-mid);
+    padding-left: 1.25rem;
+    position: relative;
+}
+.feature-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--flame);
+}
+
+/* ── Stacked programs ────────────────────────────── */
+.coaching-program {
+    padding: var(--section-pad) 0;
+}
+
+.coaching-program-num {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--flame);
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+/* Tab-text colors adapt to cream/white sections */
+.section-cream .tab-text h3,
+.section-white .tab-text h3 { color: var(--prussian); }
+
+.section-cream .tab-text p,
+.section-white .tab-text p  { color: var(--text-mid); }
+
+.section-cream .feature-list li,
+.section-white .feature-list li { color: var(--text-mid); }
+
+/* Tab-panel inside coaching-program: always block, no hide/show */
+.coaching-program .tab-panel {
+    display: block;
+}
+
+
+/* ── Responsive ──────────────────────────────────── */
+@media (max-width: 900px) {
+    .tab-panel-inner { grid-template-columns: 1fr; }
+    .tab-image { display: none; }
+}
+
+@media (max-width: 480px) {
+    .tabs { gap: 0; }
+    .tab-btn { padding: 0.85rem 1rem; font-size: 0.7rem; }
+}

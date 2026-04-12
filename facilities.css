@@ -1,0 +1,50 @@
+/* ═══════════════════════════════════════════════════
+   FACILITIES — facilities.html
+═══════════════════════════════════════════════════ */
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.facility-card {
+    background: var(--white);
+    padding: clamp(28px, 4vw, 52px);
+    border: 1px solid var(--cream-dark);
+    transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.facility-card:hover {
+    box-shadow: 0 8px 32px rgba(13,28,53,0.08);
+    transform: translateY(-2px);
+}
+
+.facility-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 1.5rem;
+    color: var(--flame);
+}
+
+.facility-card h3 {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--prussian);
+    margin-bottom: 0.6rem;
+}
+
+.facility-card p {
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--text-mid);
+}
+
+
+/* ── Responsive ──────────────────────────────────── */
+@media (max-width: 900px) { .facilities-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .facilities-grid { grid-template-columns: 1fr; } }

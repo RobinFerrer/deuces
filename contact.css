@@ -1,0 +1,76 @@
+/* ═══════════════════════════════════════════════════
+   CONTACT — contact.html
+═══════════════════════════════════════════════════ */
+
+.contact {
+    padding: var(--section-pad) 0;
+}
+
+.contact-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: center;
+}
+
+.contact-info .section-title { margin-bottom: 2rem; }
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.contact-block p.contact-label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--flame);
+    margin-bottom: 0.4rem;
+}
+.contact-block p {
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--text-mid);
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 400px;
+    background: var(--cream-dark);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(13,28,53,0.08);
+}
+
+.map-placeholder::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(13,28,53,0.04) 40px, rgba(13,28,53,0.04) 41px),
+        repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(13,28,53,0.04) 40px, rgba(13,28,53,0.04) 41px);
+}
+
+.map-label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-mid);
+    position: relative;
+    z-index: 1;
+}
+
+
+/* ── Responsive ──────────────────────────────────── */
+@media (max-width: 900px) {
+    .contact-inner { grid-template-columns: 1fr; }
+    .contact-map { display: none; }
+}
