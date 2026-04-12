@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deuces — Tennis &amp; Padel Academy</title>
+    <title>Deuces — Shop All</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -19,7 +19,7 @@
           NAVIGATION
     ═══════════════════════════════════════ -->
     <nav id="navbar">
-        <div class="nav-inner">
+        <div class="nav-inner" id="nav-pdp-shop">
             <a href="index.html" class="nav-logo">
                 <img src="logo/Deuces-Logo-Wordmark-NEG.svg" alt="Deuces" class="nav-logo-img">
             </a>
@@ -43,38 +43,14 @@
         <div class="menu-overlay-content">
             <div class="menu-overlay-right">
                 <div class="menu-overlay-imgs" id="menuOverlayImgs">
-                    <img src="imgs/overhead-tennis-courts.jpg"
-                          class="menu-img"
-                          data-for="about"
-                          alt="Deuces tennis">
-                    <img src="imgs/padel-court-6.jpg"
-                          class="menu-img"
-                          data-for="courts"
-                          alt="courts">
-                    <img src="imgs/gym.jpg"
-                          class="menu-img"
-                          data-for="facilities"
-                          alt="facilities">
-                    <img src="imgs/padel-trainer-racket-court-basket.jpg"
-                          class="menu-img"
-                          data-for="coaching"
-                          alt="coaching">
-                    <img src="imgs/padel-trainer-racket-court-basket.jpg"
-                          class="menu-img"
-                          data-for="coaching"
-                          alt="coaching">
-                    <img src="imgs/overhead-serve-tennis.jpg"
-                          class="menu-img"
-                          data-for="membership"
-                          alt="membership">
-                    <img src="imgs/mockups/Tactics Blue Tee.png"
-                          class="menu-img"
-                          data-for="shop"
-                          alt="shop">
-                    <img src="imgs/bar.jpg"
-                          class="menu-img"
-                          data-for="contact"
-                          alt="contact">
+                    <img src="imgs/overhead-tennis-courts.jpg" class="menu-img" data-for="about" alt="Deuces tennis">
+                    <img src="imgs/padel-court-6.jpg" class="menu-img" data-for="courts" alt="courts">
+                    <img src="imgs/gym.jpg" class="menu-img" data-for="facilities" alt="facilities">
+                    <img src="imgs/padel-trainer-racket-court-basket.jpg" class="menu-img" data-for="coaching" alt="coaching">
+                    <img src="imgs/padel-trainer-racket-court-basket.jpg" class="menu-img" data-for="coaching" alt="coaching">
+                    <img src="imgs/overhead-serve-tennis.jpg" class="menu-img" data-for="membership" alt="membership">
+                    <img src="imgs/mockups/Tactics Blue Tee.png" class="menu-img" data-for="shop" alt="shop">
+                    <img src="imgs/bar.jpg" class="menu-img" data-for="contact" alt="contact">
                 </div>
             </div>
             <div class="menu-overlay-left">
@@ -94,75 +70,164 @@
         </div>
     </div>
 
-    <!-- PAGE HERO -->
-    <section class="page-hero">
-        <div class="page-hero-bg" style="background-image: url('imgs/man_geel_shirt_witte_pet_armen_gekruist_tennisbaan.jpg');"></div>
-        <div class="container page-hero-inner">
-            <span class="page-eyebrow" data-nl="Merchandise" data-en="Merchandise">Merchandise</span>
-            <h1 data-nl="Shop" data-en="Shop">Shop</h1>
-            <p class="page-sub" data-nl="Draag het merk. Voel het spel." data-en="Wear the brand. Feel the game.">Wear the brand. Feel the game.</p>
+    <!-- ═══════════════════════════════════════
+          SHOP PAGE HEADER
+    ═══════════════════════════════════════ -->
+    <section class="shop-page-header">
+        <h1 class="shop-page-title" data-en="Shop All" data-nl="Alle Producten">Shop All</h1>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+          FILTER BAR
+    ═══════════════════════════════════════ -->
+    <div class="shop-filter-bar">
+        <div class="shop-filter-inner container">
+            <div class="shop-filter-tabs">
+                <button class="sft sft--active" data-filter="all" data-en="All" data-nl="Alles">All</button>
+                <button class="sft" data-filter="tees" data-en="T-Shirts" data-nl="T-Shirts">T-Shirts</button>
+                <button class="sft" data-filter="hoodies" data-en="Hoodies" data-nl="Hoodies">Hoodies</button>
+                <button class="sft" data-filter="new" data-en="New Arrivals" data-nl="Nieuw">New Arrivals</button>
+            </div>
+            <span class="shop-filter-count" data-en="34 products" data-nl="34 producten">34 products</span>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+          EDITORIAL PRODUCT GRID
+    ═══════════════════════════════════════ -->
+    <section class="shop-editorial">
+        <div class="shop-all-grid">
+
+            <!-- Row 1 — two equal products -->
+            <a href="product.html" class="shop-cell shop-cell--product sc-1">
+                <div class="shop-cell-img-wrap">
+                    <img src="imgs/mockups/Tactics-Blue-Tee.png" alt="Tactics Blue Tee" loading="lazy">
+                    <div class="shop-cell-hover">
+                        <span class="shop-btn-view" data-en="View" data-nl="Bekijk">View</span>
+                    </div>
+                </div>
+                <div class="shop-cell-info">
+                    <span class="shop-cell-label" data-en="Court Collection" data-nl="Court Collectie">Court Collection</span>
+                    <div class="shop-cell-bottom">
+                        <h3 class="shop-cell-name" data-en="Tactics Blue Tee" data-nl="Tactics Blauw T-shirt">Tactics Blue Tee</h3>
+                        <span class="shop-cell-price">€ 59</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="product.html" class="shop-cell shop-cell--product sc-2">
+                <div class="shop-cell-img-wrap">
+                    <img src="imgs/mockups/Deuces-Front-White-Tee.png" alt="Deuces White Tee" loading="lazy">
+                    <div class="shop-cell-hover">
+                        <span class="shop-btn-view" data-en="View" data-nl="Bekijk">View</span>
+                    </div>
+                </div>
+                <div class="shop-cell-info">
+                    <span class="shop-cell-label" data-en="Essentials" data-nl="Essentials">Essentials</span>
+                    <div class="shop-cell-bottom">
+                        <h3 class="shop-cell-name" data-en="Deuces White Tee" data-nl="Deuces Wit T-shirt">Deuces White Tee</h3>
+                        <span class="shop-cell-price">€ 55</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Row 2 — wide lifestyle + narrow product -->
+            <div class="shop-cell shop-cell--lifestyle sc-ls1">
+                <img src="imgs/padel-court-6.jpg" alt="" loading="lazy">
+            </div>
+
+            <a href="product.html" class="shop-cell shop-cell--product sc-3">
+                <div class="shop-cell-img-wrap">
+                    <img src="imgs/mockups/Float-Blue-Hoodie.png" alt="Float Blue Hoodie" loading="lazy">
+                    <div class="shop-cell-hover">
+                        <span class="shop-btn-view" data-en="View" data-nl="Bekijk">View</span>
+                    </div>
+                </div>
+                <div class="shop-cell-info">
+                    <span class="shop-cell-label" data-en="Court Collection" data-nl="Court Collectie">Court Collection</span>
+                    <div class="shop-cell-bottom">
+                        <h3 class="shop-cell-name" data-en="Float Blue Hoodie" data-nl="Float Blauw Hoodie">Float Blue Hoodie</h3>
+                        <span class="shop-cell-price">€ 75</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Row 3 — three equal products -->
+            <a href="product.html" class="shop-cell shop-cell--product sc-4">
+                <div class="shop-cell-img-wrap">
+                    <img src="imgs/mockups/BJKvsMC-White-Hoodie.png" alt="BJK vs MC Hoodie" loading="lazy">
+                    <div class="shop-cell-hover">
+                        <span class="shop-btn-view" data-en="View" data-nl="Bekijk">View</span>
+                    </div>
+                </div>
+                <div class="shop-cell-info">
+                    <span class="shop-cell-label" data-en="Signature Series" data-nl="Signature Reeks">Signature Series</span>
+                    <div class="shop-cell-bottom">
+                        <h3 class="shop-cell-name" data-en="BJK vs MC Hoodie" data-nl="BJK vs MC Hoodie">BJK vs MC Hoodie</h3>
+                        <span class="shop-cell-price">€ 75</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="product.html" class="shop-cell shop-cell--product sc-5">
+                <div class="shop-cell-img-wrap">
+                    <img src="imgs/mockups/Cage-Blue-Tee.png" alt="Cage Blue Tee" loading="lazy">
+                    <div class="shop-cell-hover">
+                        <span class="shop-btn-view" data-en="View" data-nl="Bekijk">View</span>
+                    </div>
+                </div>
+                <div class="shop-cell-info">
+                    <span class="shop-cell-label" data-en="Court Collection" data-nl="Court Collectie">Court Collection</span>
+                    <div class="shop-cell-bottom">
+                        <h3 class="shop-cell-name" data-en="Cage Blue Tee" data-nl="Cage Blauw T-shirt">Cage Blue Tee</h3>
+                        <span class="shop-cell-price">€ 55</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="product.html" class="shop-cell shop-cell--product sc-6">
+                <div class="shop-cell-img-wrap">
+                    <img src="imgs/mockups/Tactics-White-Hoodie.png" alt="Tactics White Hoodie" loading="lazy">
+                    <div class="shop-cell-hover">
+                        <span class="shop-btn-view" data-en="View" data-nl="Bekijk">View</span>
+                    </div>
+                </div>
+                <div class="shop-cell-info">
+                    <span class="shop-cell-label" data-en="Essentials" data-nl="Essentials">Essentials</span>
+                    <div class="shop-cell-bottom">
+                        <h3 class="shop-cell-name" data-en="Tactics White Hoodie" data-nl="Tactics Wit Hoodie">Tactics White Hoodie</h3>
+                        <span class="shop-cell-price">€ 75</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Row 4 — narrow product + wide lifestyle -->
+            <a href="product.html" class="shop-cell shop-cell--product sc-7">
+                <div class="shop-cell-img-wrap">
+                    <img src="imgs/mockups/Stickman-Tennis-Blue-Tee.png" alt="Stickman Tennis Tee" loading="lazy">
+                    <div class="shop-cell-hover">
+                        <span class="shop-btn-view" data-en="View" data-nl="Bekijk">View</span>
+                    </div>
+                </div>
+                <div class="shop-cell-info">
+                    <span class="shop-cell-label" data-en="Tennis Icons" data-nl="Tennis Iconen">Tennis Icons</span>
+                    <div class="shop-cell-bottom">
+                        <h3 class="shop-cell-name" data-en="Stickman Tennis Tee" data-nl="Stickman Tennis T-shirt">Stickman Tennis Tee</h3>
+                        <span class="shop-cell-price">€ 55</span>
+                    </div>
+                </div>
+            </a>
+
+            <div class="shop-cell shop-cell--lifestyle sc-ls2">
+                <img src="imgs/women-smiling-team-padel.jpg" alt="" loading="lazy">
+            </div>
+
         </div>
     </section>
 
-    <!-- SHOP GRID -->
-    <section class="shop section-dark animate-section">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-label" data-nl="Collectie" data-en="Collection">Collection</p>
-                <h2 class="section-title" data-nl="Deuces Merchandise" data-en="Deuces Merchandise">Deuces Merchandise</h2>
-                <p class="section-sub" data-nl="Elk stuk ontworpen voor op en naast de baan." data-en="Every piece designed for on and off the court.">Every piece designed for on and off the court.</p>
-            </div>
-            <div class="shop-grid">
-                <div class="product-card animate-child">
-                    <div class="product-img img-product-cap">
-                        <div class="product-badge" data-nl="Nieuw" data-en="New">New</div>
-                    </div>
-                    <div class="product-body">
-                        <h4 data-nl="Deuces Cap" data-en="Deuces Cap">Deuces Cap</h4>
-                        <p class="product-sub" data-nl="Sportieve 6-panel cap — Prussian Blue" data-en="Sport 6-panel cap — Prussian Blue">Sport 6-panel cap — Prussian Blue</p>
-                        <div class="product-footer">
-                            <span class="product-price">€ 34</span>
-                            <button class="btn-cart" data-nl="Voeg toe" data-en="Add to Bag">Add to Bag</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card animate-child">
-                    <div class="product-img img-product-polo"></div>
-                    <div class="product-body">
-                        <h4 data-nl="Polo Shirt" data-en="Polo Shirt">Polo Shirt</h4>
-                        <p class="product-sub" data-nl="Ademend piqué polo — Wit / Tiger Flame" data-en="Breathable piqué polo — White / Tiger Flame">Breathable piqué polo — White / Tiger Flame</p>
-                        <div class="product-footer">
-                            <span class="product-price">€ 79</span>
-                            <button class="btn-cart" data-nl="Voeg toe" data-en="Add to Bag">Add to Bag</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card animate-child">
-                    <div class="product-img img-product-bag"></div>
-                    <div class="product-body">
-                        <h4 data-nl="Racket Bag" data-en="Racket Bag">Racket Bag</h4>
-                        <p class="product-sub" data-nl="Gestructureerde rackettas voor 2–3 rackets" data-en="Structured racket bag for 2–3 rackets">Structured racket bag for 2–3 rackets</p>
-                        <div class="product-footer">
-                            <span class="product-price">€ 119</span>
-                            <button class="btn-cart" data-nl="Voeg toe" data-en="Add to Bag">Add to Bag</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card animate-child">
-                    <div class="product-img img-product-bottle"></div>
-                    <div class="product-body">
-                        <h4 data-nl="Drinkfles" data-en="Water Bottle">Water Bottle</h4>
-                        <p class="product-sub" data-nl="Thermische fles 750ml — Ocean Mist" data-en="Thermal bottle 750ml — Ocean Mist">Thermal bottle 750ml — Ocean Mist</p>
-                        <div class="product-footer">
-                            <span class="product-price">€ 28</span>
-                            <button class="btn-cart" data-nl="Voeg toe" data-en="Add to Bag">Add to Bag</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    <!-- ═══════════════════════════════════════
+          FOOTER
+    ═══════════════════════════════════════ -->
     <footer class="footer">
         <div class="container footer-inner">
             <div class="footer-top">
@@ -211,6 +276,16 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        /* Filter tab interactivity */
+        document.querySelectorAll('.sft').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.sft').forEach(function(b) {
+                    b.classList.remove('sft--active');
+                });
+                this.classList.add('sft--active');
+            });
+        });
+    </script>
 </body>
 </html>
-

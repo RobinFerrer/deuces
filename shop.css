@@ -2,11 +2,16 @@
    SHOP — shared component (index.html + shop.html)
 ═══════════════════════════════════════════════════ */
 
+#nav-pdp-shop {
+  background: var(--prussian);
+}
+
+
 /* ── Product image placeholders ─────────────────── */
 .product-img {
-    height: 260px;
-    position: relative;
-    overflow: hidden;
+  height: 260px;
+  position: relative;
+  overflow: hidden;
 }
 
 .img-product-cap    { background: url(imgs/mockups/Tactics-Blue-Tee.png); background-size: cover; background-position: center; }
@@ -100,11 +105,276 @@
 }
 
 
-/* ── Responsive ──────────────────────────────────── */
+/* ── Responsive (index.html shop grid) ───────────── */
 @media (max-width: 1024px) {
     .shop-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 450px) {
     .shop-grid { grid-template-columns: 1fr; max-width: 360px; margin: 0 auto; }
+}
+
+
+/* ══════════════════════════════════════════════════
+   SHOP PAGE — Editorial layout (shop.html only)
+══════════════════════════════════════════════════ */
+
+/* ── Page header ─────────────────────────────────── */
+.shop-page-header {
+    padding: calc(var(--nav-h) + 3.5rem) 0 2rem;
+    text-align: center;
+    background: var(--white);
+}
+
+.shop-page-title {
+    font-family: var(--font-sans);
+    font-size: clamp(0.85rem, 1.6vw, 1.2rem);
+    font-weight: 400;
+    letter-spacing: 0.45em;
+    text-transform: uppercase;
+    color: var(--prussian);
+}
+
+/* ── Filter bar ──────────────────────────────────── */
+.shop-filter-bar {
+    background: var(--white);
+    padding-bottom: 0;
+}
+
+.shop-filter-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(13,28,53,0.1);
+    border-bottom: 1px solid rgba(13,28,53,0.1);
+    padding: 0.85rem 1rem;
+}
+
+.shop-filter-tabs {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.sft {
+    font-family: var(--font-sans);
+    font-size: 0.66rem;
+    font-weight: 400;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-mid);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0 0 2px;
+    position: relative;
+    transition: color var(--transition);
+}
+
+.sft::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--prussian);
+    transition: width 0.28s var(--ease-out);
+}
+
+.sft.sft--active { color: var(--prussian); }
+.sft.sft--active::after { width: 100%; }
+.sft:hover { color: var(--prussian); }
+.sft:hover::after { width: 100%; }
+
+.shop-filter-count {
+    font-size: 0.63rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-mid);
+}
+
+/* ── Editorial grid ──────────────────────────────── */
+.shop-editorial {
+    background: var(--white);
+    padding-bottom: var(--section-pad);
+}
+
+.shop-all-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 440px 520px 400px 520px;
+    gap: 3px;
+    background: var(--cream-dark);
+}
+
+/* Grid placement — 6-column layout */
+.sc-1   { grid-column: 1 / 4; }
+.sc-2   { grid-column: 4 / 7; }
+.sc-ls1 { grid-column: 1 / 5; }
+.sc-3   { grid-column: 5 / 7; }
+.sc-4   { grid-column: 1 / 3; }
+.sc-5   { grid-column: 3 / 5; }
+.sc-6   { grid-column: 5 / 7; }
+.sc-7   { grid-column: 1 / 3; }
+.sc-ls2 { grid-column: 3 / 7; }
+
+/* ── Cell base ───────────────────────────────────── */
+.shop-cell {
+    position: relative;
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+}
+
+.shop-cell-img-wrap {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    min-height: 0;
+}
+
+.shop-cell-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    padding: 2rem;
+    transition: transform 0.65s var(--ease-out);
+    display: block;
+}
+
+.shop-cell--product:hover .shop-cell-img-wrap img {
+    transform: scale(1.04);
+}
+
+/* View button overlay */
+.shop-cell-hover {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.shop-btn-view {
+    font-family: var(--font-sans);
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--prussian);
+    border: 1px solid var(--prussian);
+    padding: 0.6rem 1.6rem;
+    background: rgba(255,255,255,0.95);
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.28s, transform 0.28s;
+    pointer-events: none;
+}
+
+.shop-cell--product:hover .shop-btn-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Cell info bar */
+.shop-cell-info {
+    background: var(--white);
+    padding: 0.7rem 1.1rem 0.85rem;
+    flex-shrink: 0;
+}
+
+.shop-cell-label {
+    display: block;
+    font-size: 0.56rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--text-mid);
+    margin-bottom: 0.22rem;
+}
+
+.shop-cell-bottom {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.shop-cell-name {
+    font-family: var(--font-sans);
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--prussian);
+}
+
+.shop-cell-price {
+    font-family: var(--font-serif);
+    font-size: 0.88rem;
+    font-style: italic;
+    color: var(--prussian);
+    white-space: nowrap;
+}
+
+/* ── Lifestyle cell ──────────────────────────────── */
+.shop-cell--lifestyle {
+    background: var(--prussian);
+    cursor: default;
+}
+
+.shop-cell--lifestyle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.8s var(--ease-out);
+    display: block;
+}
+
+.shop-cell--lifestyle:hover img {
+    transform: scale(1.03);
+}
+
+/* Touch devices — always show View button */
+@media (hover: none) {
+    .shop-btn-view {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ── Responsive — editorial grid ─────────────────── */
+@media (max-width: 900px) {
+    .shop-all-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: none;
+        grid-auto-rows: 380px;
+        gap: 2px;
+    }
+
+    .sc-1, .sc-2, .sc-3, .sc-4,
+    .sc-5, .sc-6, .sc-7 { grid-column: span 1; }
+
+    .sc-ls1, .sc-ls2 {
+        grid-column: span 2;
+        grid-auto-rows: 380px;
+    }
+}
+
+@media (max-width: 540px) {
+    .shop-all-grid {
+        grid-auto-rows: 300px;
+    }
+
+    .sc-ls1, .sc-ls2 { aspect-ratio: 3 / 2; grid-auto-rows: auto; }
+
+    .shop-cell-img-wrap img { padding: 1.25rem; }
+
+    .shop-filter-tabs { gap: 1.25rem; }
 }
