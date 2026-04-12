@@ -248,7 +248,7 @@
 
 .mem-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
     align-items: stretch;
 }
@@ -396,7 +396,6 @@
 .mem-section-footer {
     text-align: center;
     padding: 2.5rem 0 0;
-    margin: 0 6rem;
 }
 
 
@@ -408,7 +407,7 @@
     .home-explore-card { border-bottom: 1px solid rgba(13,28,53,0.08); }
     .home-explore-card:nth-child(2) { border-right: none; }
     .home-explore-card:nth-last-child(-n+2) { border-bottom: none; }
-
+    .mem-grid { grid-template-columns: repeat(3, 1fr); }
     .home-split { grid-template-columns: 1fr; }
     .home-split-img { display: none; }
 }
@@ -416,14 +415,24 @@
 @media (max-width: 768px) {
     .hero-title { font-size: clamp(3rem, 12vw, 4.5rem); }
     .hero-actions { flex-direction: column; align-items: center; }
+    .mem-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 640px) {
-    .coaching-overview-grid { grid-template-columns: 1fr; }
+    .coaching-overview-grid { grid-template-columns: 1fr; padding: 0 2rem; }
+}
+
+@media (max-width: 520px) {
+    .mem-grid { grid-template-columns: 1fr; padding: 0 2rem; }
 }
 
 @media (max-width: 480px) {
+    .home-explore-card:nth-last-child(-n+2) { border-bottom: 1px solid rgba(13,28,53,0.08); }
     .home-explore { grid-template-columns: 1fr; }
     .home-explore-card { border-right: none; border-bottom: 1px solid rgba(13,28,53,0.08); }
     .home-explore-card:last-child { border-bottom: none; }
+}
+
+@media (max-width: 450px) {
+    .section-header { padding: 0 2rem; }
 }

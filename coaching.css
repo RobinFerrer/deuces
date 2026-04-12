@@ -133,3 +133,7 @@
     .tabs { gap: 0; }
     .tab-btn { padding: 0.85rem 1rem; font-size: 0.7rem; }
 }
+
+@media (max-width: 450px) {
+    .section-header { padding: 0 2rem; }
+}

@@ -52,4 +52,5 @@
 @media (max-width: 900px) {
     .about-inner { grid-template-columns: 1fr; }
     .about-image { display: none; }
+    .section-title br { display: none;}
 }
