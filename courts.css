@@ -5,7 +5,7 @@
 /* ── Court image placeholders ────────────────────── */
 .img-indoor {
     height: 240px;
-    background: url(imgs/indoor.jpg);
+    background: url(imgs/shelton-slice-motion.jpeg);
     background-size: cover;
     background-position: center;
 }
@@ -18,7 +18,7 @@
 
 .img-outdoor {
     height: 240px;
-    background: url(imgs/gravel-court.jpg);
+    background: url(imgs/alcaraz-gravel-motion.jpeg);
     background-size: cover;
     background-position: center;
 }
@@ -26,7 +26,7 @@
 
 .img-padel {
     height: 240px;
-    background: url(imgs/padel-court-9.jpeg);
+    background: url(imgs/padel-duo-motion.jpeg);
     background-size: cover;
     background-position: center;
 }
