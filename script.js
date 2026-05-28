@@ -227,13 +227,9 @@
     ════════════════════════════════════════════ */
     document.querySelectorAll('.btn-cart').forEach(btn => {
         btn.addEventListener('click', function () {
-            const original = this.textContent;
-            const added    = currentLang === 'nl' ? 'Toegevoegd ✓' : 'Added ✓';
-            this.textContent = added;
             this.style.background = '#EC672C';
             this.style.color = '#fff';
             setTimeout(() => {
-                this.textContent = original;
                 this.style.background = '';
                 this.style.color = '';
             }, 1800);

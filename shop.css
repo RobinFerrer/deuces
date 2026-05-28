@@ -121,16 +121,17 @@
 
 /* ── Page header ─────────────────────────────────── */
 .shop-page-header {
-    padding: calc(var(--nav-h) + 3.5rem) 0 2rem;
+    padding: calc(var(--nav-h) + 4rem) 0 2.5rem;
     text-align: center;
     background: var(--white);
+    border-bottom: 1px solid rgba(13,28,53,0.08);
 }
 
 .shop-page-title {
     font-family: var(--font-sans);
-    font-size: clamp(0.85rem, 1.6vw, 1.2rem);
+    font-size: clamp(0.75rem, 1.4vw, 1rem);
     font-weight: 400;
-    letter-spacing: 0.45em;
+    letter-spacing: 0.5em;
     text-transform: uppercase;
     color: var(--prussian);
 }
@@ -145,9 +146,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-top: 1px solid rgba(13,28,53,0.1);
-    border-bottom: 1px solid rgba(13,28,53,0.1);
-    padding: 0.85rem 1rem;
+    border-bottom: 1px solid rgba(13,28,53,0.08);
+    padding: 1rem 2rem;
 }
 
 .shop-filter-tabs {
@@ -203,9 +203,8 @@
 .shop-all-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 440px 520px 400px 520px;
-    gap: 3px;
-    background: var(--cream-dark);
+    grid-template-rows: 500px 580px 460px 580px;
+    background: rgba(13,28,53,0.07);
 }
 
 /* Grid placement — 6-column layout */
@@ -235,14 +234,14 @@
     position: relative;
     overflow: hidden;
     min-height: 0;
+    background: #f3f0ea;
 }
 
 .shop-cell-img-wrap img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
-    padding: 2rem;
     transition: transform 0.65s var(--ease-out);
     display: block;
 }
@@ -267,10 +266,9 @@
     font-weight: 500;
     letter-spacing: 0.24em;
     text-transform: uppercase;
-    color: var(--prussian);
-    border: 1px solid var(--prussian);
-    padding: 0.6rem 1.6rem;
-    background: rgba(255,255,255,0.95);
+    color: var(--white);
+    padding: 0.8rem 2rem;
+    background: var(--flame);
     opacity: 0;
     transform: translateY(8px);
     transition: opacity 0.28s, transform 0.28s;
@@ -285,41 +283,55 @@
 /* Cell info bar */
 .shop-cell-info {
     background: var(--white);
-    padding: 0.7rem 1.1rem 0.85rem;
+    padding: 0.9rem 1.2rem 1rem;
     flex-shrink: 0;
 }
 
 .shop-cell-label {
     display: block;
-    font-size: 0.56rem;
+    font-size: 0.55rem;
     letter-spacing: 0.22em;
     text-transform: uppercase;
     color: var(--text-mid);
-    margin-bottom: 0.22rem;
+    margin-bottom: 0.3rem;
 }
 
 .shop-cell-bottom {
     display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 0.5rem;
+    flex-direction: column;
+    gap: 0.2rem;
 }
 
 .shop-cell-name {
     font-family: var(--font-sans);
-    font-size: 0.68rem;
+    font-size: 0.72rem;
     font-weight: 500;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--prussian);
 }
 
 .shop-cell-price {
-    font-family: var(--font-serif);
-    font-size: 0.88rem;
-    font-style: italic;
-    color: var(--prussian);
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    font-weight: 400;
+    color: var(--text-mid);
     white-space: nowrap;
+}
+
+/* Color swatches */
+.shop-cell-swatches {
+    display: flex;
+    gap: 0.28rem;
+    margin-top: 0.55rem;
+}
+
+.shop-cell-swatch {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.12);
+    flex-shrink: 0;
 }
 
 /* ── Lifestyle cell ──────────────────────────────── */
@@ -337,10 +349,6 @@
     display: block;
 }
 
-.shop-cell--lifestyle:hover img {
-    transform: scale(1.03);
-}
-
 /* Touch devices — always show View button */
 @media (hover: none) {
     .shop-btn-view {
@@ -355,7 +363,6 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: none;
         grid-auto-rows: 380px;
-        gap: 2px;
     }
 
     .sc-1, .sc-2, .sc-3, .sc-4,
