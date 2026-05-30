@@ -2,8 +2,45 @@
    CONTACT — contact.html
 ═══════════════════════════════════════════════════ */
 
+.contact-hero .hero-overlay {
+    background-image: url(imgs/bar.jpg);
+    background-position: center 45%;
+}
+
 .contact {
     padding: var(--section-pad) 0;
+}
+
+/* Contact form (uses shared .bk-field inputs) */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--cream-dark);
+}
+
+.contact-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.contact-form select {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    color: var(--prussian);
+    background: var(--white);
+    border: 1px solid var(--cream-dark);
+    border-radius: var(--radius);
+    padding: 0.7rem 0.85rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .contact-form-row { grid-template-columns: 1fr; }
 }
 
 .contact-inner {
@@ -36,41 +73,22 @@
     color: var(--text-mid);
 }
 
-.map-placeholder {
+.contact-map iframe {
     width: 100%;
-    height: 400px;
-    background: var(--cream-dark);
+    height: 460px;
+    border: 0;
     border-radius: var(--radius-lg);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    position: relative;
-    overflow: hidden;
-    border: 1px solid rgba(13,28,53,0.08);
-}
-
-.map-placeholder::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-        repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(13,28,53,0.04) 40px, rgba(13,28,53,0.04) 41px),
-        repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(13,28,53,0.04) 40px, rgba(13,28,53,0.04) 41px);
-}
-
-.map-label {
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: var(--text-mid);
-    position: relative;
-    z-index: 1;
+    display: block;
+    box-shadow: 0 18px 40px rgba(13,28,53,0.12);
 }
 
 
 /* ── Responsive ──────────────────────────────────── */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
     .contact-inner { grid-template-columns: 1fr; }
-    .contact-map { display: none; }
+    .contact-map iframe { height: 360px; }
+}
+
+@media (max-width: 480px) {
+    .contact-map iframe { height: 280px; }
 }

@@ -1,0 +1,115 @@
+<!-- ═══════════════════════════════════════
+      NAVIGATION
+════════════════════════════════════════ -->
+<nav id="navbar">
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+            <img src="logo/Deuces_Logo_Secondary_May.svg" alt="Deuces" class="nav-logo-img">
+        </a>
+
+        <ul class="nav-links-main">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link" data-nl="Home" data-en="Home">Home</a>
+            </li>
+            <li class="nav-item has-dropdown">
+                <a href="academy.html" class="nav-link" data-nl="Academie" data-en="Academy">Academy</a>
+                <div class="nav-dropdown">
+                    <a href="tennis.html"   class="nav-drop-link" data-nl="Tennis"   data-en="Tennis">Tennis</a>
+                    <a href="padel.html"    class="nav-drop-link" data-nl="Padel"    data-en="Padel">Padel</a>
+                    <a href="pro.html"      class="nav-drop-link" data-nl="Pro"      data-en="Pro">Pro</a>
+                    <a href="coaching.html" class="nav-drop-link" data-nl="Coaching" data-en="Coaching">Coaching</a>
+                </div>
+            </li>
+            <li class="nav-item has-dropdown">
+                <a href="club.html" class="nav-link" data-nl="Club" data-en="Club">Club</a>
+                <div class="nav-dropdown">
+                    <a href="story.html"      class="nav-drop-link" data-nl="Verhaal"      data-en="Story">Story</a>
+                    <a href="values.html"     class="nav-drop-link" data-nl="Waarden"      data-en="Values">Values</a>
+                    <a href="facilities.html" class="nav-drop-link" data-nl="Faciliteiten" data-en="Facilities">Facilities</a>
+                    <a href="pricing.html"    class="nav-drop-link" data-nl="Prijzen"      data-en="Pricing">Pricing</a>
+                    <a href="coaches.html"    class="nav-drop-link" data-nl="Coaches"      data-en="Coaches">Coaches</a>
+                </div>
+            </li>
+            <li class="nav-item has-dropdown">
+                <a href="events.html" class="nav-link" data-nl="Events" data-en="Events">Events</a>
+                <div class="nav-dropdown">
+                    <a href="matches.html" class="nav-drop-link" data-nl="Wedstrijden" data-en="Matches">Matches</a>
+                    <a href="camps.html"   class="nav-drop-link" data-nl="Kampen"      data-en="Camps">Camps</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a href="shop.html" class="nav-link" data-nl="Merch" data-en="Merch">Merch</a>
+            </li>
+            <li class="nav-item">
+                <a href="contact.html" class="nav-link" data-nl="Contact" data-en="Contact">Contact</a>
+            </li>
+        </ul>
+
+        <div class="nav-right">
+            <a href="booking.html" class="nav-cta-btn" data-nl="Boek een baan" data-en="Book a court">Book a court</a>
+            <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- ═══════════════════════════════════════
+      FULLSCREEN MENU OVERLAY (mobile)
+════════════════════════════════════════ -->
+<div class="menu-overlay" id="menuOverlay" aria-hidden="true">
+    <div class="menu-overlay-content">
+        <div class="menu-overlay-left">
+            <ul class="menu-overlay-list">
+                <li><a href="index.html" class="menu-overlay-link" data-img="home" data-nl="Home" data-en="Home">Home</a></li>
+
+                <li class="menu-overlay-group">
+                    <button type="button" class="menu-overlay-toggle" aria-expanded="false" aria-controls="menu-sub-academy" data-nl="Academie" data-en="Academy">
+                        <span>Academy</span>
+                        <svg class="menu-overlay-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <ul class="menu-overlay-sublist" id="menu-sub-academy" hidden>
+                        <li><a href="academy.html" class="menu-overlay-link menu-overlay-sublink" data-img="home"     data-nl="Academie Overzicht" data-en="Academy Overview">Academy Overview</a></li>
+                        <li><a href="tennis.html"  class="menu-overlay-link menu-overlay-sublink" data-img="tennis"   data-nl="Tennis"   data-en="Tennis">Tennis</a></li>
+                        <li><a href="padel.html"   class="menu-overlay-link menu-overlay-sublink" data-img="padel"    data-nl="Padel"    data-en="Padel">Padel</a></li>
+                        <li><a href="pro.html"     class="menu-overlay-link menu-overlay-sublink" data-img="padel"    data-nl="Pro"      data-en="Pro">Pro</a></li>
+                        <li><a href="coaching.html" class="menu-overlay-link menu-overlay-sublink" data-img="coaching" data-nl="Coaching" data-en="Coaching">Coaching</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-overlay-group">
+                    <button type="button" class="menu-overlay-toggle" aria-expanded="false" aria-controls="menu-sub-club" data-nl="Club" data-en="Club">
+                        <span>Club</span>
+                        <svg class="menu-overlay-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <ul class="menu-overlay-sublist" id="menu-sub-club" hidden>
+                        <li><a href="club.html"       class="menu-overlay-link menu-overlay-sublink" data-img="story"      data-nl="Club Overzicht" data-en="Club Overview">Club Overview</a></li>
+                        <li><a href="story.html"      class="menu-overlay-link menu-overlay-sublink" data-img="story"      data-nl="Ons Verhaal"    data-en="Our Story">Our Story</a></li>
+                        <li><a href="values.html"     class="menu-overlay-link menu-overlay-sublink" data-img="story"      data-nl="Waarden"        data-en="Values">Values</a></li>
+                        <li><a href="facilities.html" class="menu-overlay-link menu-overlay-sublink" data-img="facilities" data-nl="Faciliteiten"   data-en="Facilities">Facilities</a></li>
+                        <li><a href="pricing.html"    class="menu-overlay-link menu-overlay-sublink" data-img="story"      data-nl="Prijzen"        data-en="Pricing">Pricing</a></li>
+                        <li><a href="coaches.html"    class="menu-overlay-link menu-overlay-sublink" data-img="coaching"   data-nl="Coaches"        data-en="Coaches">Coaches</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-overlay-group">
+                    <button type="button" class="menu-overlay-toggle" aria-expanded="false" aria-controls="menu-sub-events" data-nl="Events" data-en="Events">
+                        <span>Events</span>
+                        <svg class="menu-overlay-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <ul class="menu-overlay-sublist" id="menu-sub-events" hidden>
+                        <li><a href="events.html"  class="menu-overlay-link menu-overlay-sublink" data-img="events" data-nl="Events Overzicht" data-en="Events Overview">Events Overview</a></li>
+                        <li><a href="matches.html" class="menu-overlay-link menu-overlay-sublink" data-img="events" data-nl="Wedstrijden"      data-en="Matches">Matches</a></li>
+                        <li><a href="camps.html"   class="menu-overlay-link menu-overlay-sublink" data-img="events" data-nl="Kampen"           data-en="Camps">Camps</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="shop.html"    class="menu-overlay-link" data-img="merch"   data-nl="Merch"   data-en="Merch">Merch</a></li>
+                <li><a href="contact.html" class="menu-overlay-link" data-img="contact" data-nl="Contact" data-en="Contact">Contact</a></li>
+            </ul>
+            <div class="menu-overlay-footer">
+                <a href="booking.html" class="btn btn-flame menu-overlay-cta" data-nl="Boek een Baan" data-en="Book a Court">Book a Court</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,102 @@
+/* ═══════════════════════════════════════════════════
+   PADEL PAGE
+═══════════════════════════════════════════════════ */
+
+.padel-hero .hero-overlay {
+    background-image: url(imgs/padel-duo-motion.jpeg);
+    background-position: center;
+}
+
+/* ── Split intro ───────────────────────────────── */
+.padel-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: center;
+}
+
+.padel-split-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.padel-split-img img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+}
+
+/* ── Why grid ──────────────────────────────────── */
+.padel-why { padding: var(--section-pad) 0; background: var(--prussian); }
+.padel-why .section-label { color: rgba(255,255,255,0.5); }
+.padel-why .section-title { color: var(--white); margin-bottom: clamp(32px, 4vw, 56px); }
+
+.padel-why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.padel-why-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius-lg);
+    padding: clamp(20px, 3vw, 36px);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.padel-why-num {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    font-style: italic;
+    color: var(--indigo);
+}
+
+.padel-why-card h4 { color: var(--white); font-size: 1rem; font-weight: 600; }
+.padel-why-card p  { color: rgba(255,255,255,0.55); font-size: 0.875rem; line-height: 1.6; }
+
+/* ── Programmes ────────────────────────────────── */
+.padel-prog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: clamp(32px, 4vw, 56px);
+}
+
+.padel-prog-card {
+    border: 1px solid var(--cream-dark);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: box-shadow var(--transition), transform var(--transition);
+}
+.padel-prog-card:hover {
+    box-shadow: 0 8px 32px rgba(13,28,53,0.1);
+    transform: translateY(-3px);
+}
+
+.padel-prog-card img { width: 100%; height: 200px; object-fit: cover; }
+
+.padel-prog-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.padel-prog-body h4 { font-size: 1.1rem; font-weight: 600; color: var(--prussian); }
+.padel-prog-body p  { font-size: 0.875rem; color: var(--text-mid); line-height: 1.6; }
+
+/* ── Responsive ────────────────────────────────── */
+@media (max-width: 1024px) {
+    .padel-why-grid { grid-template-columns: repeat(2, 1fr); }
+    .padel-prog-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+    .padel-split { grid-template-columns: 1fr; }
+    .padel-split-img img { height: 260px; }
+    .padel-why-grid { grid-template-columns: 1fr; }
+    .padel-prog-grid { grid-template-columns: 1fr; }
+}

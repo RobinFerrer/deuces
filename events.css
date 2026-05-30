@@ -1,0 +1,43 @@
+/* ═══════════════════════════════════════════════════
+   EVENTS — events.html (hub landing)
+═══════════════════════════════════════════════════ */
+
+/* Hero background override */
+.events-hero .hero-overlay {
+    background-image: url(imgs/padel-match-players.jpg);
+    background-position: center 40%;
+}
+
+/* Two-card grid (override default 4-col) */
+.events-explore {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 768px) {
+    .events-explore { grid-template-columns: 1fr; }
+    .events-explore .home-explore-card { border-right: none; border-bottom: 1px solid rgba(13,28,53,0.08); }
+    .events-explore .home-explore-card:last-child { border-bottom: none; }
+}
+
+/* Highlight strip — two-column editorial */
+.events-highlight {
+    padding: var(--section-pad) 0;
+}
+
+.events-highlight-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: center;
+}
+
+.events-highlight-text .body-text {
+    margin-bottom: 1.25rem;
+}
+
+@media (max-width: 768px) {
+    .events-highlight-inner {
+        grid-template-columns: 1fr;
+        gap: clamp(28px, 6vw, 48px);
+    }
+}

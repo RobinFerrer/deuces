@@ -3,72 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deuces — Facilities</title>
+    <title>Deuces, Facilities</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="story.css">
     <link rel="stylesheet" href="courts.css">
     <link rel="stylesheet" href="shop.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="facilities.css">
 </head>
 <body>
-
-    <!-- ═══════════════════════════════════════
-          NAVIGATION
-    ═══════════════════════════════════════ -->
-    <nav id="navbar">
-        <div class="nav-inner">
-            <a href="index.html" class="nav-logo">
-                <img src="logo/Deuces-Logo-Wordmark-NEG.svg" alt="Deuces" class="nav-logo-img">
-            </a>
-            <div class="nav-right">
-                <div class="lang-toggle" id="langToggle">
-                    <button class="lang-btn" data-lang="nl">NL</button>
-                    <span class="lang-sep">|</span>
-                    <button class="lang-btn active" data-lang="en">EN</button>
-                </div>
-                <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
-        </div>
-    </nav>
-
-    <!-- ═══════════════════════════════════════
-          FULLSCREEN MENU OVERLAY
-    ═══════════════════════════════════════ -->
-    <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
-        <div class="menu-overlay-content">
-            <div class="menu-overlay-right">
-                <div class="menu-overlay-imgs" id="menuOverlayImgs">
-                    <img src="imgs/menu-shelton-player-motion.png" class="menu-img" data-for="about" alt="Deuces tennis">
-                    <img src="imgs/menu-padel-players-motion.png" class="menu-img" data-for="courts" alt="courts">
-                    <img src="imgs/menu-gym-motion.png" class="menu-img" data-for="facilities" alt="facilities">
-                    <img src="imgs/menu-fh-player-motion.png" class="menu-img" data-for="coaching" alt="coaching">
-                    <img src="imgs/menu-padel-player-motion.png" class="menu-img" data-for="membership" alt="membership">
-                    <img src="imgs/menu-tiafou-player-motion.png" class="menu-img" data-for="shop" alt="shop">
-                    <img src="imgs/menu-facilities-motion.png" class="menu-img" data-for="contact" alt="contact">
-                </div>
-            </div>
-            <div class="menu-overlay-left">
-                <ul class="menu-overlay-list">
-                    <li><a href="about.html" class="menu-overlay-link" data-img="about" data-nl="Over Ons" data-en="About">About</a></li>
-                    <li><a href="courts.html" class="menu-overlay-link" data-img="courts" data-nl="Banen" data-en="Courts">Courts</a></li>
-                    <li><a href="facilities.html" class="menu-overlay-link" data-img="facilities" data-nl="Faciliteiten" data-en="Facilities">Facilities</a></li>
-                    <li><a href="coaching.html" class="menu-overlay-link" data-img="coaching" data-nl="Coaching" data-en="Coaching">Coaching</a></li>
-                    <li><a href="membership.html" class="menu-overlay-link" data-img="membership" data-nl="Lidmaatschap" data-en="Membership">Membership</a></li>
-                    <li><a href="shop.html" class="menu-overlay-link" data-img="shop" data-nl="Shop" data-en="Shop">Shop</a></li>
-                    <li><a href="contact.html" class="menu-overlay-link" data-img="contact" data-nl="Contact" data-en="Contact">Contact</a></li>
-                </ul>
-                <div class="menu-overlay-footer">
-                    <a href="courts.html" class="btn btn-flame menu-overlay-cta" data-nl="Baan Reserveren" data-en="Book a Court">Book a Court</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div id="header-placeholder"></div>
 
     <!-- PAGE HERO -->
     <section id="home" class="hero fac-hero">
@@ -89,7 +37,7 @@
             <div class="fac-intro-text">
                 <p class="section-label" data-nl="Wereld-Klasse" data-en="World-Class">World-Class</p>
                 <h2 data-nl="Gebouwd voor<br>elk deel van<br>jouw spel." data-en="Built for<br>every part of<br>your game.">Built for<br>every part of<br>your game.</h2>
-                <p data-nl="Deuces is meer dan banen. Ons complex biedt alles wat je nodig hebt — van een volledig uitgerust fitnesscentrum en een gezellig clubhuis tot een professionele pro shop en uitgebreide kleedkamers." data-en="Deuces is more than courts. Our complex provides everything you need — from a fully equipped fitness centre and a welcoming clubhouse to a professional pro shop and first-class changing rooms.">Deuces is more than courts. Our complex provides everything you need — from a fully equipped fitness centre and a welcoming clubhouse to a professional pro shop and first-class changing rooms.</p>
+                <p data-nl="Deuces is meer dan banen. Ons complex biedt alles wat je nodig hebt, van een volledig uitgerust fitnesscentrum en een gezellig clubhuis tot een professionele pro shop en uitgebreide kleedkamers." data-en="Deuces is more than courts. Our complex provides everything you need, from a fully equipped fitness centre and a welcoming clubhouse to a professional pro shop and first-class changing rooms.">Deuces is more than courts. Our complex provides everything you need, from a fully equipped fitness centre and a welcoming clubhouse to a professional pro shop and first-class changing rooms.</p>
                 <a href="contact.html" class="cp-ghost-btn" data-nl="Kom Langs" data-en="Plan a Visit">Plan a Visit</a>
             </div>
             <div class="fac-intro-media">
@@ -112,7 +60,7 @@
             <div class="fac-spotlight-text">
                 <p class="cp-eyebrow" data-nl="Fitness &amp; Training" data-en="Fitness &amp; Training">Fitness &amp; Training</p>
                 <h2 data-nl="Doelgericht gebouwd<br>voor <em>atleten.</em>" data-en="Purpose-built<br>for <em>athletes.</em>">Purpose-built<br>for <em>athletes.</em></h2>
-                <p data-nl="Ons fitnesscentrum is speciaal ontworpen voor racketsportspelers. Kracht, conditie en herstel — alles onder één dak, afgestemd op jouw sport." data-en="Our fitness centre is designed specifically for racket sport players. Strength, conditioning, and recovery — all under one roof, tailored to your sport.">Our fitness centre is designed specifically for racket sport players. Strength, conditioning, and recovery — all under one roof, tailored to your sport.</p>
+                <p data-nl="Ons fitnesscentrum is speciaal ontworpen voor racketsportspelers. Kracht, conditie en herstel, alles onder één dak, afgestemd op jouw sport." data-en="Our fitness centre is designed specifically for racket sport players. Strength, conditioning, and recovery, all under one roof, tailored to your sport.">Our fitness centre is designed specifically for racket sport players. Strength, conditioning, and recovery, all under one roof, tailored to your sport.</p>
                 <ul class="fac-feature-list">
                     <li data-nl="Kracht &amp; conditioneringszone" data-en="Strength &amp; conditioning zone">Strength &amp; conditioning zone</li>
                     <li data-nl="Cardio &amp; functionele training" data-en="Cardio &amp; functional training">Cardio &amp; functional training</li>
@@ -133,7 +81,7 @@
             <div class="fac-spotlight-text">
                 <p class="cp-eyebrow" data-nl="Clubhuis &amp; Bar" data-en="Clubhouse &amp; Bar">Clubhouse &amp; Bar</p>
                 <h2 data-nl="Het sociale hart<br>van <em>Deuces.</em>" data-en="The social heart<br>of <em>Deuces.</em>">The social heart<br>of <em>Deuces.</em></h2>
-                <p data-nl="Winnen of verliezen — het clubhuis is waar het allemaal samenkomt. Geniet van een drankje, bekijk de banen vanuit de lounge, of ontspan met je team na een geweldige wedstrijd." data-en="Win or lose, the clubhouse is where it all comes together. Enjoy a drink, watch the courts from the lounge, or unwind with your team after a great match.">Win or lose, the clubhouse is where it all comes together. Enjoy a drink, watch the courts from the lounge, or unwind with your team after a great match.</p>
+                <p data-nl="Winnen of verliezen, het clubhuis is waar het allemaal samenkomt. Geniet van een drankje, bekijk de banen vanuit de lounge, of ontspan met je team na een geweldige wedstrijd." data-en="Win or lose, the clubhouse is where it all comes together. Enjoy a drink, watch the courts from the lounge, or unwind with your team after a great match.">Win or lose, the clubhouse is where it all comes together. Enjoy a drink, watch the courts from the lounge, or unwind with your team after a great match.</p>
                 <ul class="fac-feature-list">
                     <li data-nl="Uitgebreide drank- en snackkaart" data-en="Full drinks & snack menu">Full drinks &amp; snack menu</li>
                     <li data-nl="Zicht op de banen vanuit de lounge" data-en="Court-view lounge seating">Court-view lounge seating</li>
@@ -152,7 +100,7 @@
                 <h2 class="section-title dark" data-nl="Alles Onder Één Dak" data-en="All Under One Roof">All Under One Roof</h2>
             </div>
 
-            <div class="fac-tiles-grid">
+            <div class="fac-tiles-grid card-carousel">
 
                 <div class="fac-tile animate-child">
                     <svg class="fac-tile-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
@@ -191,7 +139,7 @@
                         <path d="M4 30 Q4 34 8 34 L32 34 Q36 34 36 30"/>
                     </svg>
                     <h3 data-nl="Padelbanen" data-en="Padel Courts">Padel Courts</h3>
-                    <p data-nl="4 panoramische padelbanen — 2 overdekt, 2 openlucht — met glazen wanden rondom voor optimaal spektakel." data-en="4 panoramic padel courts — 2 covered, 2 open-air — with glass walls throughout for optimal spectacle.">4 panoramic padel courts — 2 covered, 2 open-air — with glass walls throughout for optimal spectacle.</p>
+                    <p data-nl="4 panoramische padelbanen: 2 overdekt, 2 openlucht, met glazen wanden rondom voor optimaal spektakel." data-en="4 panoramic padel courts: 2 covered, 2 open-air, with glass walls throughout for optimal spectacle.">4 panoramic padel courts: 2 covered, 2 open-air, with glass walls throughout for optimal spectacle.</p>
                     <a href="courts.html" class="fac-tile-link" data-nl="Ontdek" data-en="Discover">Discover</a>
                 </div>
 
@@ -205,7 +153,7 @@
                         <line x1="14" y1="24" x2="26" y2="24"/>
                     </svg>
                     <h3 data-nl="Fitness &amp; Training" data-en="Fitness &amp; Training">Fitness &amp; Training</h3>
-                    <p data-nl="Volledig uitgerust fitnesscentrum met kracht, cardio en functionele zones — speciaal ingericht voor racketsportspelers." data-en="Fully equipped fitness centre with strength, cardio, and functional zones — purpose-built for racket sport players.">Fully equipped fitness centre with strength, cardio, and functional zones — purpose-built for racket sport players.</p>
+                    <p data-nl="Volledig uitgerust fitnesscentrum met kracht, cardio en functionele zones, speciaal ingericht voor racketsportspelers." data-en="Fully equipped fitness centre with strength, cardio, and functional zones, purpose-built for racket sport players.">Fully equipped fitness centre with strength, cardio, and functional zones, purpose-built for racket sport players.</p>
                 </div>
 
                 <div class="fac-tile animate-child">
@@ -288,7 +236,7 @@
                 <p data-nl="Plan een bezoek en ervaar waarom Deuces het beste adres is voor tennis en padel in Gent." data-en="Plan a visit and discover why Deuces is the go-to address for tennis and padel in Ghent.">Plan a visit and discover why Deuces is the go-to address for tennis and padel in Ghent.</p>
                 <div class="fac-cta-btns">
                     <a href="contact.html" class="btn btn-flame" data-nl="Neem Contact Op" data-en="Get in Touch">Get in Touch</a>
-                    <a href="membership.html" class="cp-ghost-btn" data-nl="Lidmaatschap" data-en="View Membership">View Membership</a>
+                    <a href="pricing.html" class="cp-ghost-btn" data-nl="Lidmaatschap" data-en="View Membership">View Membership</a>
                 </div>
             </div>
             <div class="fac-cta-img">
@@ -307,7 +255,7 @@
                 <div class="footer-col">
                     <p class="footer-col-title" data-nl="Navigatie" data-en="Navigation">Navigation</p>
                     <ul>
-                        <li><a href="about.html" data-nl="Over Ons" data-en="About">About</a></li>
+                        <li><a href="story.html" data-nl="Over Ons" data-en="About">About</a></li>
                         <li><a href="courts.html" data-nl="Banen" data-en="Courts">Courts</a></li>
                         <li><a href="facilities.html" data-nl="Faciliteiten" data-en="Facilities">Facilities</a></li>
                         <li><a href="coaching.html" data-nl="Coaching" data-en="Coaching">Coaching</a></li>
@@ -316,7 +264,7 @@
                 <div class="footer-col">
                     <p class="footer-col-title" data-nl="Meer" data-en="More">More</p>
                     <ul>
-                        <li><a href="membership.html" data-nl="Lidmaatschap" data-en="Membership">Membership</a></li>
+                        <li><a href="pricing.html" data-nl="Lidmaatschap" data-en="Membership">Membership</a></li>
                         <li><a href="shop.html" data-nl="Shop" data-en="Shop">Shop</a></li>
                         <li><a href="contact.html" data-nl="Contact" data-en="Contact">Contact</a></li>
                         <li><a href="#" data-nl="Privacy Policy" data-en="Privacy Policy">Privacy Policy</a></li>

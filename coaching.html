@@ -3,100 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deuces — Tennis &amp; Padel Academy</title>
+    <title>Deuces — Coaching</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="story.css">
     <link rel="stylesheet" href="courts.css">
     <link rel="stylesheet" href="shop.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="coaching.css">
 </head>
 <body>
-
-    <!-- ═══════════════════════════════════════
-          NAVIGATION
-    ═══════════════════════════════════════ -->
-    <nav id="navbar">
-        <div class="nav-inner">
-            <a href="index.html" class="nav-logo">
-                <img src="logo/Deuces-Logo-Wordmark-NEG.svg" alt="Deuces" class="nav-logo-img">
-            </a>
-            <div class="nav-right">
-                <div class="lang-toggle" id="langToggle">
-                    <button class="lang-btn" data-lang="nl">NL</button>
-                    <span class="lang-sep">|</span>
-                    <button class="lang-btn active" data-lang="en">EN</button>
-                </div>
-                <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
-        </div>
-    </nav>
-
-    <!-- ═══════════════════════════════════════
-          FULLSCREEN MENU OVERLAY
-    ═══════════════════════════════════════ -->
-    <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
-        <div class="menu-overlay-content">
-            <div class="menu-overlay-right">
-                <div class="menu-overlay-imgs" id="menuOverlayImgs">
-                    <img src="imgs/menu-shelton-player-motion.png"
-                          class="menu-img"
-                          data-for="about"
-                          alt="Deuces tennis">
-                    <img src="imgs/menu-padel-players-motion.png"
-                          class="menu-img"
-                          data-for="courts"
-                          alt="courts">
-                    <img src="imgs/menu-gym-motion.png"
-                          class="menu-img"
-                          data-for="facilities"
-                          alt="facilities">
-                    <img src="imgs/menu-fh-player-motion.png"
-                          class="menu-img"
-                          data-for="coaching"
-                          alt="coaching">
-                    <img src="imgs/menu-padel-player-motion.png"
-                          class="menu-img"
-                          data-for="membership"
-                          alt="membership">
-                    <img src="imgs/menu-tiafou-player-motion.png"
-                          class="menu-img"
-                          data-for="shop"
-                          alt="shop">
-                    <img src="imgs/menu-facilities-motion.png"
-                          class="menu-img"
-                          data-for="contact"
-                          alt="contact">
-                </div>
-            </div>
-            <div class="menu-overlay-left">
-                <ul class="menu-overlay-list">
-                    <li><a href="about.html" class="menu-overlay-link" data-img="about" data-nl="Over Ons" data-en="About">About</a></li>
-                    <li><a href="courts.html" class="menu-overlay-link" data-img="courts" data-nl="Banen" data-en="Courts">Courts</a></li>
-                    <li><a href="facilities.html" class="menu-overlay-link" data-img="facilities" data-nl="Faciliteiten" data-en="Facilities">Facilities</a></li>
-                    <li><a href="coaching.html" class="menu-overlay-link" data-img="coaching" data-nl="Coaching" data-en="Coaching">Coaching</a></li>
-                    <li><a href="membership.html" class="menu-overlay-link" data-img="membership" data-nl="Lidmaatschap" data-en="Membership">Membership</a></li>
-                    <li><a href="shop.html" class="menu-overlay-link" data-img="shop" data-nl="Shop" data-en="Shop">Shop</a></li>
-                    <li><a href="contact.html" class="menu-overlay-link" data-img="contact" data-nl="Contact" data-en="Contact">Contact</a></li>
-                </ul>
-                <div class="menu-overlay-footer">
-                    <a href="courts.html" class="btn btn-flame menu-overlay-cta" data-nl="Baan Reserveren" data-en="Book a Court">Book a Court</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div id="header-placeholder"></div>
 
     <!-- PAGE HERO -->
-    <section id="home" class="hero">
+    <section id="home" class="hero coa-hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <p class="hero-eyebrow" data-nl="Over Ons" data-en="About Us">About Us</p>
-            <h1 class="hero-title" data-nl="Het verhaal van<br> Deuces" data-en="The Story of<br> Deuces">The Story of Deuces</h1>
+            <p class="hero-eyebrow" data-nl="Coaching" data-en="Coaching">Coaching</p>
+            <h1 class="hero-title" data-nl="Train met<br>de besten." data-en="Train with<br>the best.">Train with<br>the best.</h1>
         </div>
         <div class="hero-scroll-hint">
             <span data-nl="Ontdek" data-en="Discover">Discover</span>
@@ -104,96 +31,219 @@
         </div>
     </section>
 
-    <!-- ADULTS -->
-    <section class="coaching-program section-cream animate-section">
+    <!-- PROGRAMME GALLERY -->
+    <!-- Inspired by editorial gallery layout: split header, 4-col card grid -->
+    <section class="coa-programs animate-section">
         <div class="container">
-            <div class="tab-panel-inner">
-                <div class="tab-text">
-                    <span class="coaching-program-num" data-nl="01 — Volwassenen" data-en="01 — Adults">01 — Adults</span>
-                    <h3 data-nl="Lessen voor Volwassenen" data-en="Adult Lessons">Adult Lessons</h3>
-                    <p data-nl="Of je nu voor het eerst een racket vasthoudt of je spel wil verdiepen — onze volwassenenprogramma's zijn afgestemd op jouw niveau en doelen." data-en="Whether you're picking up a racket for the first time or deepening your game — our adult programs are tailored to your level and goals.">Whether you're picking up a racket for the first time or deepening your game — our adult programs are tailored to your level and goals.</p>
-                    <ul class="feature-list">
-                        <li data-nl="Groepslessen (max. 6 spelers)" data-en="Group lessons (max. 6 players)">Group lessons (max. 6 players)</li>
-                        <li data-nl="Niveauspecifieke trajecten: Beginner, Gevorderd, Competition" data-en="Level-specific tracks: Beginner, Advanced, Competition">Level-specific tracks: Beginner, Advanced, Competition</li>
-                        <li data-nl="Wekelijkse trainingen + clinics" data-en="Weekly training + clinics">Weekly training + clinics</li>
-                        <li data-nl="Video-analyse op aanvraag" data-en="Video analysis on request">Video analysis on request</li>
-                        <li data-nl="Toegang tot het Deuces competitieteam" data-en="Access to the Deuces competition team">Access to the Deuces competition team</li>
-                    </ul>
-                    <a href="membership.html" class="btn btn-flame" data-nl="Schrijf je in" data-en="Enroll Now">Enroll Now</a>
+            <div class="coa-programs-header">
+                <div>
+                    <p class="section-label dark" data-nl="Onze Programma's" data-en="Our Programmes">Our Programmes</p>
+                    <h2 class="coa-programs-title" data-nl="Elke speler<br>verdient het beste." data-en="Every player<br>deserves the best.">Every player<br>deserves the best.</h2>
                 </div>
-                <div class="tab-image">
-                    <div class="img-placeholder img-coaching-adults"></div>
+                <p class="coa-programs-sub" data-nl="Van je eerste les tot het allerhoogste competitieniveau — ontdek het programma dat bij jouw spel past." data-en="From your first lesson to the highest competitive level — discover the programme that fits your game.">From your first lesson to the highest competitive level — discover the programme that fits your game.</p>
+            </div>
+            <div class="coa-programs-grid card-carousel">
+                <a href="#adults" class="coa-program-card animate-child">
+                    <div class="coa-program-card-img">
+                        <img src="imgs/woman-tennis-fh.jpg" alt="Adult tennis lessons at Deuces">
+                    </div>
+                    <div class="coa-program-card-body">
+                        <span class="coa-program-num">01</span>
+                        <h3 data-nl="Volwassenen" data-en="Adults">Adults</h3>
+                        <span class="coa-program-link" data-nl="Ontdek" data-en="Discover">Discover →</span>
+                    </div>
+                </a>
+                <a href="#juniors" class="coa-program-card animate-child">
+                    <div class="coa-program-card-img">
+                        <img src="imgs/fh-competition-kid.jpg" alt="Junior programme at Deuces">
+                    </div>
+                    <div class="coa-program-card-body">
+                        <span class="coa-program-num">02</span>
+                        <h3 data-nl="Junioren" data-en="Juniors">Juniors</h3>
+                        <span class="coa-program-link" data-nl="Ontdek" data-en="Discover">Discover →</span>
+                    </div>
+                </a>
+                <a href="#padel" class="coa-program-card animate-child">
+                    <div class="coa-program-card-img">
+                        <img src="imgs/padel-trainer-racket-court.jpg" alt="Padel introduction at Deuces">
+                    </div>
+                    <div class="coa-program-card-body">
+                        <span class="coa-program-num">03</span>
+                        <h3 data-nl="Padel" data-en="Padel">Padel</h3>
+                        <span class="coa-program-link" data-nl="Ontdek" data-en="Discover">Discover →</span>
+                    </div>
+                </a>
+                <a href="#private" class="coa-program-card animate-child">
+                    <div class="coa-program-card-img">
+                        <img src="imgs/player-focus.jpg" alt="Private lessons at Deuces">
+                    </div>
+                    <div class="coa-program-card-body">
+                        <span class="coa-program-num">04</span>
+                        <h3 data-nl="Privélessen" data-en="Private">Private</h3>
+                        <span class="coa-program-link" data-nl="Ontdek" data-en="Discover">Discover →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── PROGRAMME DETAIL SECTIONS ───────────────── -->
+
+    <section id="adults" class="coa-programme animate-section">
+        <div class="container">
+            <div class="coa-programme-inner">
+                <div class="coa-programme-img">
+                    <img src="imgs/woman-tennis-fh.jpg" alt="Adult tennis lessons at Deuces">
+                </div>
+                <div class="coa-programme-content">
+                    <span class="coa-programme-num">01</span>
+                    <p class="section-label dark" data-nl="Volwassenen" data-en="Adults">Adults</p>
+                    <h2 data-nl="Het spel stopt<br><em>nooit.</em>" data-en="The game<br><em>never stops.</em>">The game<br><em>never stops.</em></h2>
+                    <p class="coa-programme-desc" data-nl="Groeps- en privélessen voor alle niveaus — van absolute beginner tot gevorderde speler. Wekelijkse trainingen, clinics en toegang tot het competitieteam." data-en="Group and private lessons for all levels — from absolute beginner to advanced player. Weekly training, clinics, and access to the competition team.">Group and private lessons for all levels — from absolute beginner to advanced player. Weekly training, clinics, and access to the competition team.</p>
+                    <ul class="coa-programme-features">
+                        <li data-nl="Groepslessen voor alle niveaus" data-en="Group sessions for all levels">Group sessions for all levels</li>
+                        <li data-nl="Wekelijkse training &amp; clinics" data-en="Weekly training &amp; clinics">Weekly training &amp; clinics</li>
+                        <li data-nl="Toegang tot het competitieteam" data-en="Competition team access">Competition team access</li>
+                        <li data-nl="Upgrade naar privélessen" data-en="Private lesson upgrades available">Private lesson upgrades available</li>
+                    </ul>
+                    <a href="pricing.html" class="btn btn-flame" data-nl="Schrijf je in" data-en="Enroll Now">Enroll Now</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- JUNIORS -->
-    <section class="coaching-program section-dark animate-section">
+    <section id="juniors" class="coa-programme coa-programme--alt animate-section">
         <div class="container">
-            <div class="tab-panel-inner">
-                <div class="tab-image">
-                    <div class="img-placeholder img-coaching-juniors"></div>
+            <div class="coa-programme-inner coa-programme-inner--rev">
+                <div class="coa-programme-img">
+                    <img src="imgs/fh-competition-kid.jpg" alt="Junior programme at Deuces">
                 </div>
-                <div class="tab-text">
-                    <span class="coaching-program-num" data-nl="02 — Junioren" data-en="02 — Juniors">02 — Juniors</span>
-                    <h3 data-nl="Juniorenprogramma" data-en="Junior Program">Junior Program</h3>
-                    <p data-nl="Van 5 tot 18 jaar — ons juniorenprogramma bouwt aan techniek, mentaliteit en teamgeest. Wij geloven in een holistische aanpak waarbij de speler centraal staat." data-en="From ages 5 to 18 — our junior program builds technique, mentality, and team spirit. We believe in a holistic approach where the player comes first.">From ages 5 to 18 — our junior program builds technique, mentality, and team spirit. We believe in a holistic approach where the player comes first.</p>
-                    <ul class="feature-list">
-                        <li data-nl="Mini-tennis (5–8 jaar)" data-en="Mini-tennis (ages 5–8)">Mini-tennis (ages 5–8)</li>
-                        <li data-nl="Techniektraining (8–14 jaar)" data-en="Technique training (ages 8–14)">Technique training (ages 8–14)</li>
-                        <li data-nl="Competitievoorbereiding (14–18 jaar)" data-en="Competition preparation (ages 14–18)">Competition preparation (ages 14–18)</li>
+                <div class="coa-programme-content">
+                    <span class="coa-programme-num">02</span>
+                    <p class="section-label dark" data-nl="Junioren" data-en="Juniors">Juniors</p>
+                    <h2 data-nl="Bouw de<br><em>volgende generatie.</em>" data-en="Build the<br><em>next generation.</em>">Build the<br><em>next generation.</em></h2>
+                    <p class="coa-programme-desc" data-nl="Van 5 tot 18 jaar: techniek, mentaliteit en teamgeest in een holistische omgeving. Mini-tennis, techniektraining, zomerkampen en interclubteams." data-en="Ages 5 to 18: technique, mentality, and team spirit in a holistic environment. Mini-tennis, technique training, summer camps, and interclub teams.">Ages 5 to 18: technique, mentality, and team spirit in a holistic environment. Mini-tennis, technique training, summer camps, and interclub teams.</p>
+                    <ul class="coa-programme-features">
+                        <li data-nl="Leeftijden 5–18 jaar" data-en="Ages 5 to 18">Ages 5 to 18</li>
+                        <li data-nl="Mini-tennis &amp; techniektraining" data-en="Mini-tennis &amp; technique training">Mini-tennis &amp; technique training</li>
                         <li data-nl="Zomerkampen" data-en="Summer camps">Summer camps</li>
-                        <li data-nl="Interclubteams" data-en="Interclub teams">Interclub teams</li>
+                        <li data-nl="Interclubteams" data-en="Interclub competition teams">Interclub competition teams</li>
                     </ul>
-                    <a href="membership.html" class="btn btn-flame" data-nl="Schrijf je in" data-en="Enroll Now">Enroll Now</a>
+                    <a href="pricing.html" class="btn btn-flame" data-nl="Schrijf je in" data-en="Enroll Now">Enroll Now</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PADEL INTRO -->
-    <section class="coaching-program section-cream animate-section">
+    <section id="padel" class="coa-programme animate-section">
         <div class="container">
-            <div class="tab-panel-inner">
-                <div class="tab-text">
-                    <span class="coaching-program-num" data-nl="03 — Padel Intro" data-en="03 — Padel Intro">03 — Padel Intro</span>
-                    <h3 data-nl="Padel Introductie" data-en="Padel Introduction">Padel Introduction</h3>
-                    <p data-nl="Padel is het snelst groeiende racketsport ter wereld. Bij Deuces leer je het spel kennen in een ontspannen en enthousiaste omgeving, begeleid door gecertificeerde padel-coaches." data-en="Padel is the world's fastest-growing racket sport. At Deuces, you'll discover the game in a relaxed and enthusiastic environment, guided by certified padel coaches.">Padel is the world's fastest-growing racket sport. At Deuces, you'll discover the game in a relaxed and enthusiastic environment, guided by certified padel coaches.</p>
-                    <ul class="feature-list">
-                        <li data-nl="Proefles van 90 minuten (inclusief materiaal)" data-en="90-minute trial lesson (equipment included)">90-minute trial lesson (equipment included)</li>
+            <div class="coa-programme-inner">
+                <div class="coa-programme-img">
+                    <img src="imgs/padel-trainer-racket-court.jpg" alt="Padel coaching at Deuces">
+                </div>
+                <div class="coa-programme-content">
+                    <span class="coa-programme-num">03</span>
+                    <p class="section-label dark" data-nl="Padel" data-en="Padel">Padel</p>
+                    <h2 data-nl="De snelst groeiende<br><em>racketsport.</em>" data-en="The world's fastest<br><em>growing sport.</em>">The world's fastest<br><em>growing sport.</em></h2>
+                    <p class="coa-programme-desc" data-nl="Ontdek het snelst groeiende racketsport ter wereld. Proefles van 90 minuten, 6-weekse introductiereeks en sociale padel-events, voor iedereen toegankelijk." data-en="Discover the world's fastest-growing racket sport. 90-minute trial lesson, 6-week introductory series, and social padel events — open to all levels.">Discover the world's fastest-growing racket sport. 90-minute trial lesson, 6-week introductory series, and social padel events — open to all levels.</p>
+                    <ul class="coa-programme-features">
+                        <li data-nl="90 minuten proefles" data-en="90-minute trial lesson">90-minute trial lesson</li>
                         <li data-nl="6-weekse introductiereeks" data-en="6-week introductory series">6-week introductory series</li>
-                        <li data-nl="Gemengde levels welkom" data-en="Mixed levels welcome">Mixed levels welcome</li>
-                        <li data-nl="Social padel events" data-en="Social padel events">Social padel events</li>
+                        <li data-nl="Sociale padel-events" data-en="Social padel events">Social padel events</li>
+                        <li data-nl="Toegankelijk voor alle niveaus" data-en="Open to all levels">Open to all levels</li>
                     </ul>
-                    <a href="membership.html" class="btn btn-flame" data-nl="Boek een Proefles" data-en="Book a Trial Lesson">Book a Trial Lesson</a>
-                </div>
-                <div class="tab-image">
-                    <div class="img-placeholder img-coaching-padel"></div>
+                    <a href="pricing.html" class="btn btn-flame" data-nl="Schrijf je in" data-en="Enroll Now">Enroll Now</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PRIVATE LESSONS -->
-    <section class="coaching-program section-dark animate-section">
+    <section id="private" class="coa-programme coa-programme--alt animate-section">
         <div class="container">
-            <div class="tab-panel-inner">
-                <div class="tab-image">
-                    <div class="img-placeholder img-coaching-private"></div>
+            <div class="coa-programme-inner coa-programme-inner--rev">
+                <div class="coa-programme-img">
+                    <img src="imgs/player-focus.jpg" alt="Private lessons at Deuces">
                 </div>
-                <div class="tab-text">
-                    <span class="coaching-program-num" data-nl="04 — Privélessen" data-en="04 — Private Lessons">04 — Private Lessons</span>
-                    <h3 data-nl="Privélessen" data-en="Private Lessons">Private Lessons</h3>
-                    <p data-nl="Maximale progressie in minimale tijd. Onze privélessen zijn volledig op maat — afgestemd op jouw techniek, tactiek en competitieniveau." data-en="Maximum progress in minimum time. Our private lessons are fully tailored — aligned to your technique, tactics, and competitive level.">Maximum progress in minimum time. Our private lessons are fully tailored — aligned to your technique, tactics, and competitive level.</p>
-                    <ul class="feature-list">
-                        <li data-nl="1-op-1 met gecertificeerde coach" data-en="1-on-1 with certified coach">1-on-1 with certified coach</li>
-                        <li data-nl="Flexibele planning, 7 dagen per week" data-en="Flexible scheduling, 7 days a week">Flexible scheduling, 7 days a week</li>
-                        <li data-nl="Persoonlijk trainingsplan" data-en="Personalised training plan">Personalised training plan</li>
-                        <li data-nl="Duo-lessen beschikbaar" data-en="Duo lessons available">Duo lessons available</li>
+                <div class="coa-programme-content">
+                    <span class="coa-programme-num">04</span>
+                    <p class="section-label dark" data-nl="Privélessen" data-en="Private">Private</p>
+                    <h2 data-nl="Maximale progressie,<br><em>jouw tempo.</em>" data-en="Maximum progress,<br><em>your pace.</em>">Maximum progress,<br><em>your pace.</em></h2>
+                    <p class="coa-programme-desc" data-nl="Maximale progressie in minimale tijd. 1-op-1 met een gecertificeerde coach, volledig afgestemd op jouw techniek, tactiek en doelen. Flexibel gepland, 7 dagen per week." data-en="Maximum progress in minimum time. 1-on-1 with a certified coach, fully tailored to your technique, tactics, and goals. Flexibly scheduled, 7 days a week.">Maximum progress in minimum time. 1-on-1 with a certified coach, fully tailored to your technique, tactics, and goals. Flexibly scheduled, 7 days a week.</p>
+                    <ul class="coa-programme-features">
+                        <li data-nl="1-op-1 met een gecertificeerde coach" data-en="1-on-1 with a certified coach">1-on-1 with a certified coach</li>
+                        <li data-nl="Volledig op maat gemaakt plan" data-en="Fully personalised training plan">Fully personalised training plan</li>
                         <li data-nl="Video-analyse inbegrepen" data-en="Video analysis included">Video analysis included</li>
+                        <li data-nl="Flexibel gepland, 7 dagen per week" data-en="Flexible scheduling, 7 days a week">Flexible scheduling, 7 days a week</li>
                     </ul>
-                    <a href="contact.html" class="btn btn-flame" data-nl="Contacteer Ons" data-en="Contact Us">Contact Us</a>
+                    <a href="pricing.html" class="btn btn-flame" data-nl="Schrijf je in" data-en="Enroll Now">Enroll Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW WE COACH — staggered editorial layout like image 2 reference -->
+    <section class="coa-how animate-section">
+        <div class="container">
+            <div class="coa-how-header">
+                <p class="section-label dark" data-nl="Onze Aanpak" data-en="Our Approach">Our Approach</p>
+                <h2 class="coa-how-title" data-nl="Hoe Wij Coachen" data-en="How We Coach">How We Coach</h2>
+            </div>
+            <div class="coa-how-items">
+
+                <div class="coa-how-item animate-child">
+                    <div class="coa-how-text">
+                        <p class="cp-eyebrow" data-nl="01 — Analyseer" data-en="01 — Assess">01 — Assess</p>
+                        <h3 data-nl="We beginnen bij jouw spel" data-en="We start with your game">We start with your game</h3>
+                        <p data-nl="Elke speler begint met een gedetailleerde analyse van niveau, techniek en doelen. Dit vormt de basis van een trainingspad dat maximale progressie oplevert." data-en="Every player starts with a detailed analysis of their level, technique, and goals. This forms the foundation of a training path built for maximum progress.">Every player starts with a detailed analysis of their level, technique, and goals. This forms the foundation of a training path built for maximum progress.</p>
+                    </div>
+                    <div class="coa-how-divider"></div>
+                    <div class="coa-how-img">
+                        <img src="imgs/closeup-player.jpg" alt="Player assessment at Deuces">
+                    </div>
+                </div>
+
+                <div class="coa-how-item coa-how-item--rev animate-child">
+                    <div class="coa-how-text">
+                        <p class="cp-eyebrow" data-nl="02 — Train" data-en="02 — Train">02 — Train</p>
+                        <h3 data-nl="Doelgerichte, gestructureerde sessies" data-en="Purposeful, structured sessions">Purposeful, structured sessions</h3>
+                        <p data-nl="Elke sessie is ontworpen met een doel. Drills, wedstrijdspel en video-review worden gecombineerd om techniek, tactiek en fysieke conditie te ontwikkelen." data-en="Every session is designed with intent. Drills, match play, and video review are combined to develop your technique, tactics, and physical conditioning.">Every session is designed with intent. Drills, match play, and video review are combined to develop your technique, tactics, and physical conditioning.</p>
+                    </div>
+                    <div class="coa-how-divider"></div>
+                    <div class="coa-how-img">
+                        <img src="imgs/padel-trainer-racket-court-basket.jpg" alt="Training session at Deuces">
+                    </div>
+                </div>
+
+                <div class="coa-how-item animate-child">
+                    <div class="coa-how-text">
+                        <p class="cp-eyebrow" data-nl="03 — Progressie" data-en="03 — Progress">03 — Progress</p>
+                        <h3 data-nl="We meten wat telt" data-en="We measure what matters">We measure what matters</h3>
+                        <p data-nl="We volgen je ontwikkeling in elke fase, delen voortgangsrapporten en passen je plan aan naarmate je groeit. Jouw succes is onze maatstaf." data-en="We track your development at every stage, sharing progress reports and adjusting your plan as you grow. Your success is our benchmark.">We track your development at every stage, sharing progress reports and adjusting your plan as you grow. Your success is our benchmark.</p>
+                    </div>
+                    <div class="coa-how-divider"></div>
+                    <div class="coa-how-img">
+                        <img src="imgs/serve-tennis-player.jpg" alt="Player progress at Deuces">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="coa-cta animate-section">
+        <div class="coa-cta-bg">
+            <img src="imgs/bh-player.jpg" alt="Train at Deuces">
+        </div>
+        <div class="coa-cta-overlay"></div>
+        <div class="container coa-cta-inner">
+            <div class="coa-cta-text">
+                <p class="section-label" data-nl="Begin Vandaag" data-en="Start Today">Start Today</p>
+                <h2 data-nl="Klaar om je spel<br>te <em>verbeteren?</em>" data-en="Ready to elevate<br>your <em>game?</em>">Ready to elevate<br>your <em>game?</em></h2>
+                <p data-nl="Schrijf je vandaag in en ontdek welk programma het beste bij jou past. Of neem contact op voor een vrijblijvend gesprek met een van onze coaches." data-en="Enroll today and discover which programme suits you best. Or get in touch for a no-obligation chat with one of our coaches.">Enroll today and discover which programme suits you best. Or get in touch for a no-obligation chat with one of our coaches.</p>
+                <div class="coa-cta-btns">
+                    <a href="pricing.html" class="btn btn-flame" data-nl="Schrijf je in" data-en="Enroll Now">Enroll Now</a>
+                    <a href="contact.html" class="cp-ghost-btn" data-nl="Contacteer Ons" data-en="Contact Us">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -209,7 +259,7 @@
                 <div class="footer-col">
                     <p class="footer-col-title" data-nl="Navigatie" data-en="Navigation">Navigation</p>
                     <ul>
-                        <li><a href="about.html" data-nl="Over Ons" data-en="About">About</a></li>
+                        <li><a href="story.html" data-nl="Over Ons" data-en="About">About</a></li>
                         <li><a href="courts.html" data-nl="Banen" data-en="Courts">Courts</a></li>
                         <li><a href="facilities.html" data-nl="Faciliteiten" data-en="Facilities">Facilities</a></li>
                         <li><a href="coaching.html" data-nl="Coaching" data-en="Coaching">Coaching</a></li>
@@ -218,7 +268,7 @@
                 <div class="footer-col">
                     <p class="footer-col-title" data-nl="Meer" data-en="More">More</p>
                     <ul>
-                        <li><a href="membership.html" data-nl="Lidmaatschap" data-en="Membership">Membership</a></li>
+                        <li><a href="pricing.html" data-nl="Lidmaatschap" data-en="Membership">Membership</a></li>
                         <li><a href="shop.html" data-nl="Shop" data-en="Shop">Shop</a></li>
                         <li><a href="contact.html" data-nl="Contact" data-en="Contact">Contact</a></li>
                         <li><a href="#" data-nl="Privacy Policy" data-en="Privacy Policy">Privacy Policy</a></li>

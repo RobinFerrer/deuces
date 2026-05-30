@@ -1,41 +1,34 @@
 /* ═══════════════════════════════════════════════════
-   COURTS — shared component (index.html + courts.html + about.html)
+   COURTS PAGE — courts.html
 ═══════════════════════════════════════════════════ */
 
-/* ── Court image placeholders ────────────────────── */
-.img-indoor {
-    height: 240px;
-    background: url(imgs/shelton-slice-motion.jpeg);
-    background-size: cover;
-    background-position: center;
-}
-.img-indoor::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, transparent 40%, rgba(13,28,53,0.6) 100%);
+/* ── Courts-page hero override ───────────────────── */
+.courts-hero-bg {
+    background-image: url(imgs/overhead-tennis-courts.jpg) !important;
+    background-position: center 30% !important;
 }
 
-.img-outdoor {
-    height: 240px;
-    background: url(imgs/alcaraz-gravel-motion.jpeg);
-    background-size: cover;
-    background-position: center;
-}
-.img-outdoor::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 40%, rgba(10,20,14,0.6) 100%); }
 
-.img-padel {
-    height: 240px;
-    background: url(imgs/padel-duo-motion.jpeg);
-    background-size: cover;
-    background-position: center;
-}
-.img-padel::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 40%, rgba(13,28,53,0.6) 100%); }
-
-
-/* ── Courts section ──────────────────────────────── */
+/* ══════════════════════════════════════════════════
+   COURTS SECTION — homepage (index.html)
+══════════════════════════════════════════════════ */
 .courts {
+    background: var(--cream);
     padding: var(--section-pad) 0;
+}
+
+.courts-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: clamp(40px, 5vw, 64px);
+}
+
+.courts-header-sub {
+    max-width: 36ch;
+    text-align: right;
+    margin: 0;
 }
 
 .courts-grid {
@@ -45,85 +38,129 @@
 }
 
 .court-card {
+    display: flex;
+    flex-direction: column;
     background: var(--white);
     border-radius: var(--radius-lg);
     overflow: hidden;
+    text-decoration: none;
     transition: transform var(--transition), box-shadow var(--transition);
 }
-/* .court-card:hover {
+.court-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 20px 48px rgba(13,28,53,0.12);
-} */
+    box-shadow: 0 20px 48px rgba(13,28,53,0.1);
+}
 
-.court-card-body {
-    padding: 1.75rem;
+.court-card-img {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
 }
-.court-card-body h3 {
-    font-family: var(--font-serif);
-    font-size: 1.35rem;
-    font-style: normal;
-    text-transform: uppercase;
-    color: var(--prussian);
-    margin-bottom: 0.75rem;
-    margin-top: 0.5rem;
+.court-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s var(--ease-out);
 }
-.court-card-body p {
-    font-size: 0.875rem;
-    line-height: 1.75;
-    color: var(--text-mid);
-    margin-bottom: 0.25rem;
+.court-card:hover .court-card-img img {
+    transform: scale(1.04);
+}
+
+.court-card-overlay {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .court-badge {
     display: inline-block;
-    font-size: 0.65rem;
+    font-size: 0.58rem;
     font-weight: 600;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
     background: var(--flame);
     color: var(--white);
-    padding: 0.25rem 0.6rem;
-    border-radius: 2px;
+    padding: 0.28rem 0.7rem;
+    border-radius: var(--radius);
 }
-.court-badge.indigo { background: var(--indigo); }
+.court-badge--indigo { background: var(--indigo); }
 
-
-/* ── Responsive ──────────────────────────────────── */
-@media (max-width: 800px) {
-  .courts-grid {
-    grid-template-columns: 1fr;
-    margin: 0 auto;
-    padding: 0 2rem;
-  }
+.court-count {
+    font-family: var(--font-serif);
+    font-size: 0.85rem;
+    font-style: italic;
+    color: rgba(255,255,255,0.8);
 }
 
-@media (max-width: 500px) {
-  .courts-grid {
+.court-card-body {
+    padding: 1.5rem 1.75rem 1.75rem;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    max-width: 480px;
-    margin: 0 auto;
-  }
+    flex: 1;
+}
+.court-card-body h3 {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    color: var(--prussian);
+    margin-bottom: 0.6rem;
+}
+.court-card-body p {
+    font-size: 0.83rem;
+    line-height: 1.75;
+    color: var(--text-mid);
+    flex: 1;
+    margin-bottom: 1.25rem;
 }
 
+.court-link {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--flame);
+    transition: letter-spacing var(--transition);
+}
+.court-card:hover .court-link {
+    letter-spacing: 0.15em;
+}
 
-/* ══════════════════════════════════════════════════
-   COURTS PAGE — Editorial layout (courts.html only)
-══════════════════════════════════════════════════ */
+.courts-cta {
+    text-align: center;
+    margin-top: clamp(40px, 5vw, 64px);
+}
 
-/* Shared ghost button */
+/* ── Responsive ──────────────────────────────────── */
+@media (max-width: 1024px) {
+    .courts-header { flex-direction: column; align-items: flex-start; }
+    .courts-header-sub { text-align: left; max-width: 52ch; }
+    .courts-grid { grid-template-columns: 1fr; max-width: 480px; }
+}
+
+@media (max-width: 768px) {
+    .courts-grid { max-width: 100%; }
+    .court-card-img { aspect-ratio: 16 / 9; }
+}
+
+/* ── Shared ghost button ─────────────────────────── */
 .cp-ghost-btn {
     display: inline-block;
     font-family: var(--font-sans);
-    font-size: 0.63rem;
-    font-weight: 400;
+    font-size: 0.65rem;
+    font-weight: 500;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--prussian);
     border: 1px solid rgba(13,28,53,0.35);
-    padding: 0.8rem 2.2rem;
-    border-radius: 100px;
+    padding: 0.85rem 2.2rem;
+    border-radius: var(--radius);
     transition: var(--transition);
     text-decoration: none;
 }
@@ -132,21 +169,49 @@
     color: var(--white);
     border-color: var(--prussian);
 }
-.cp-ghost-btn--white {
+
+/* Ghost button on dark (prussian) backgrounds */
+.cp-ghost-btn--dark {
     color: var(--white);
     border-color: rgba(255,255,255,0.45);
 }
-.cp-ghost-btn--white:hover {
+.cp-ghost-btn--dark:hover {
     background: var(--white);
     color: var(--prussian);
     border-color: var(--white);
 }
 
-/* ── Intro section ───────────────────────────────── */
+.cp-ghost-btn--dark-outline {
+    color: rgba(255,255,255,0.55);
+    border-color: rgba(255,255,255,0.2);
+}
+.cp-ghost-btn--dark-outline:hover {
+    color: var(--white);
+    border-color: rgba(255,255,255,0.5);
+}
+
+/* ── Eyebrow label ───────────────────────────────── */
+.cp-eyebrow {
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--flame);
+    margin-bottom: 1rem;
+}
+.cp-eyebrow--dim {
+    color: rgba(255,255,255,0.45);
+}
+
+
+/* ══════════════════════════════════════════════════
+   EDITORIAL INTRO
+══════════════════════════════════════════════════ */
 .cp-intro {
     background: var(--cream);
     padding: var(--section-pad) 0;
-    padding-bottom: calc(var(--section-pad) + 3rem);
+    padding-bottom: calc(var(--section-pad) + 4rem);
 }
 
 .cp-intro-inner {
@@ -161,7 +226,7 @@
 }
 
 .cp-img-main {
-    border-radius: 14px;
+    border-radius: var(--radius-lg);
     overflow: hidden;
     aspect-ratio: 3 / 4;
 }
@@ -174,10 +239,10 @@
 
 .cp-img-secondary {
     position: absolute;
-    bottom: -3rem;
+    bottom: -4rem;
     right: -2rem;
     width: 46%;
-    border-radius: 12px;
+    border-radius: var(--radius-lg);
     overflow: hidden;
     aspect-ratio: 2 / 3;
     box-shadow: 0 16px 48px rgba(13,28,53,0.2);
@@ -190,7 +255,7 @@
 }
 
 .cp-intro-text {
-    padding-bottom: 3rem;
+    padding-bottom: 4rem;
 }
 .cp-intro-text h2 {
     font-family: var(--font-serif);
@@ -200,6 +265,7 @@
     line-height: 1.15;
     margin-bottom: 1.75rem;
 }
+.cp-intro-text h2 em { font-style: italic; }
 .cp-intro-text p {
     font-size: 0.875rem;
     line-height: 1.85;
@@ -208,127 +274,302 @@
     max-width: 40ch;
 }
 
-/* ── Spotlight section ───────────────────────────── */
-.cp-spotlight {
-    background: var(--cream);
-    padding: var(--section-pad) 0;
+
+/* ══════════════════════════════════════════════════
+   STATS STRIP
+══════════════════════════════════════════════════ */
+.cp-stats {
+    background: var(--white);
+    padding: clamp(40px, 5vw, 64px) 0;
     border-top: 1px solid rgba(13,28,53,0.07);
+    border-bottom: 1px solid rgba(13,28,53,0.07);
 }
 
-.cp-spotlight-inner {
-    display: grid;
-    grid-template-columns: 1fr 1.15fr;
-    gap: clamp(40px, 6vw, 80px);
+.cp-stats-inner {
+    display: flex;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.cp-eyebrow {
+.cp-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 1.25rem clamp(24px, 5vw, 64px);
+    text-align: center;
+}
+
+.cp-stat-num {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--prussian);
+    line-height: 1;
+}
+
+.cp-stat-label {
     font-size: 0.6rem;
     font-weight: 500;
-    letter-spacing: 0.28em;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--flame);
-    margin-bottom: 0.9rem;
+    color: var(--text-mid);
 }
 
-.cp-spotlight-text h2 {
+.cp-stat-divider {
+    width: 1px;
+    height: 36px;
+    background: rgba(13,28,53,0.1);
+    flex-shrink: 0;
+}
+
+
+/* ══════════════════════════════════════════════════
+   WAYS TO PLAY — dark prussian section
+══════════════════════════════════════════════════ */
+.cp-ways {
+    background: var(--prussian);
+    overflow: hidden;
+}
+
+.cp-ways-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 80vh;
+}
+
+.cp-ways-text {
+    padding: clamp(56px, 8vw, 112px) clamp(24px, 6vw, 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cp-ways-text h2 {
     font-family: var(--font-serif);
-    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
     font-weight: 400;
-    color: var(--prussian);
-    line-height: 1.2;
-    margin-bottom: 1.5rem;
+    color: var(--white);
+    line-height: 1.15;
+    margin-bottom: 2.5rem;
 }
-.cp-spotlight-text h2 em { font-style: italic; }
+.cp-ways-text h2 em {
+    font-style: italic;
+    color: rgba(255,255,255,0.6);
+}
 
-.cp-spotlight-text p {
+.cp-ways-list {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    margin-bottom: 2.5rem;
+}
+
+.cp-ways-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.1rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    text-decoration: none;
+    transition: color var(--transition);
+}
+.cp-ways-item:hover {
+    color: var(--white);
+}
+
+.cp-ways-arrow {
+    font-size: 0.9rem;
+    opacity: 0.35;
+    transition: opacity var(--transition), transform var(--transition);
+}
+.cp-ways-item:hover .cp-ways-arrow {
+    opacity: 1;
+    transform: translateX(4px);
+}
+
+.cp-ways-text > p {
     font-size: 0.875rem;
     line-height: 1.85;
-    color: var(--text-mid);
-    margin-bottom: 2rem;
+    color: rgba(255,255,255,0.55);
+    max-width: 40ch;
+    margin-bottom: 2.5rem;
 }
 
-.cp-spotlight-img {
-    border-radius: 14px;
+.cp-ways-mosaic {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 8px 8px 8px 0;
+    min-height: 600px;
+}
+
+.cp-ways-col {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 100%;
+}
+
+.cp-ways-col--offset {
+    margin-top: 56px;
+    margin-bottom: -56px;
+}
+
+.cp-ways-img {
+    overflow: hidden;
+    flex: 1;
+    min-height: 120px;
+}
+.cp-ways-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s var(--ease-out);
+}
+.cp-ways-img:hover img {
+    transform: scale(1.04);
+}
+
+
+/* ══════════════════════════════════════════════════
+   COURT DETAILS — alternating rows
+══════════════════════════════════════════════════ */
+.cp-details {
+    background: var(--cream);
+    padding: var(--section-pad) 0;
+}
+
+.cp-detail-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: center;
+    padding: clamp(48px, 6vw, 80px) 0;
+    border-bottom: 1px solid rgba(13,28,53,0.07);
+}
+.cp-detail-row:first-child { padding-top: 0; }
+.cp-detail-row:last-child  { border-bottom: none; padding-bottom: 0; }
+
+.cp-detail-row--reverse          { direction: rtl; }
+.cp-detail-row--reverse > *      { direction: ltr; }
+
+.cp-detail-img {
+    position: relative;
+    border-radius: var(--radius-lg);
     overflow: hidden;
     aspect-ratio: 4 / 3;
 }
-.cp-spotlight-img img {
+.cp-detail-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
 }
 
-/* ── Court types (dark) ──────────────────────────── */
-.cp-types {
+.cp-detail-badge {
+    position: absolute;
+    bottom: 1.25rem;
+    left: 1.25rem;
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
     background: var(--prussian);
-    padding: var(--section-pad) 0;
-    text-align: center;
-}
-
-.cp-types-title {
-    font-family: var(--font-serif);
-    font-size: clamp(1.6rem, 3vw, 2.4rem);
-    font-weight: 400;
     color: var(--white);
-    margin-bottom: clamp(40px, 6vw, 64px);
+    padding: 0.35rem 0.85rem;
+    border-radius: var(--radius);
 }
 
-.cp-types-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0;
-    margin-bottom: clamp(40px, 6vw, 56px);
-    border-top: 1px solid rgba(255,255,255,0.1);
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+.cp-detail-text h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+    font-weight: 400;
+    color: var(--prussian);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+.cp-detail-text h2 em { font-style: italic; }
+
+.cp-detail-text > p {
+    font-size: 0.875rem;
+    line-height: 1.85;
+    color: var(--text-mid);
+    margin-bottom: 2rem;
+    max-width: 44ch;
 }
 
-.cp-type-card {
+.cp-detail-features {
+    list-style: none;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 0.6rem;
-    padding: clamp(32px, 5vw, 56px) clamp(16px, 3vw, 40px);
+    border-top: 1px solid rgba(13,28,53,0.1);
+}
+.cp-detail-features li {
+    font-size: 0.83rem;
+    font-weight: 300;
+    color: var(--text-mid);
+    padding: 0.75rem 0 0.75rem 1.3rem;
+    border-bottom: 1px solid rgba(13,28,53,0.1);
+    position: relative;
+    line-height: 1.4;
+}
+.cp-detail-features li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--flame);
 }
 
-.cp-type-card + .cp-type-card {
-    border-left: 1px solid rgba(255,255,255,0.1);
+
+/* ══════════════════════════════════════════════════
+   GALLERY BAND
+══════════════════════════════════════════════════ */
+.cp-gallery {
+    background: var(--white);
+    overflow: hidden;
 }
 
-.cp-type-icon {
-    width: 38px;
-    height: 38px;
-    color: rgba(255,255,255,0.55);
-    margin-bottom: 0.6rem;
+.cp-gallery-track {
+    display: flex;
+    gap: 6px;
+    height: clamp(220px, 28vw, 360px);
 }
 
-.cp-type-name {
-    font-size: 0.58rem;
-    font-weight: 600;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--white);
-    margin: 0;
+.cp-gallery-img {
+    flex: 0 0 auto;
+    width: clamp(200px, 20vw, 300px);
+    overflow: hidden;
+}
+.cp-gallery-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s var(--ease-out);
+}
+.cp-gallery-img:hover img {
+    transform: scale(1.05);
 }
 
-.cp-type-count {
-    font-family: var(--font-serif);
-    font-size: 1rem;
-    font-style: italic;
-    color: rgba(255,255,255,0.4);
-    margin: 0;
-}
 
-.cp-type-desc {
-    font-size: 0.78rem;
-    line-height: 1.75;
-    color: rgba(255,255,255,0.58);
-    margin: 0;
-    max-width: 26ch;
-}
-
-/* ── Useful info ─────────────────────────────────── */
+/* ══════════════════════════════════════════════════
+   USEFUL INFO
+══════════════════════════════════════════════════ */
 .cp-useful {
     background: var(--cream);
     padding: var(--section-pad) 0;
@@ -342,7 +583,7 @@
 }
 
 .cp-useful-img {
-    border-radius: 14px;
+    border-radius: var(--radius-lg);
     overflow: hidden;
     aspect-ratio: 3 / 4;
     position: sticky;
@@ -388,30 +629,103 @@
 }
 
 .cp-info-item p:last-child {
-    font-size: 0.82rem;
+    font-size: 0.83rem;
     line-height: 1.75;
     color: var(--text-mid);
     margin: 0;
 }
 
-/* ── Responsive ──────────────────────────────────── */
-@media (max-width: 960px) {
+
+/* ══════════════════════════════════════════════════
+   BOOKING CTA — dark
+══════════════════════════════════════════════════ */
+.cp-cta {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: var(--section-pad) 0;
+    background: var(--prussian);
+}
+
+.cp-cta-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url(imgs/fh-motion-gravel.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.12;
+}
+
+.cp-cta-inner {
+    position: relative;
+    z-index: 1;
+}
+
+.cp-cta-inner h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(2.4rem, 5vw, 4.2rem);
+    font-weight: 400;
+    color: var(--white);
+    line-height: 1.15;
+    margin: 1rem 0 1.5rem;
+}
+.cp-cta-inner h2 em {
+    font-style: italic;
+    color: rgba(255,255,255,0.6);
+}
+
+.cp-cta-inner > p {
+    font-size: 0.875rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.55);
+    max-width: 44ch;
+    margin: 0 auto 2.5rem;
+}
+
+.cp-cta-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+/* ══════════════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
     .cp-intro-inner,
-    .cp-spotlight-inner,
-    .cp-useful-inner { grid-template-columns: 1fr; }
-
-    .cp-img-secondary { display: none; }
-    .cp-intro { padding-bottom: var(--section-pad); }
-    .cp-intro-text { padding-bottom: 0; }
-
-    .cp-types-grid { grid-template-columns: 1fr; }
-    .cp-type-card + .cp-type-card {
-        border-left: none;
-        border-top: 1px solid rgba(255,255,255,0.1);
+    .cp-useful-inner {
+        grid-template-columns: 1fr;
     }
+    .cp-img-secondary  { display: none; }
+    .cp-intro          { padding-bottom: var(--section-pad); }
+    .cp-intro-text     { padding-bottom: 0; }
+
+    .cp-ways-inner     { grid-template-columns: 1fr; }
+    .cp-ways-mosaic    {
+        display: flex;
+        height: 280px;
+        padding: 0 0 8px;
+    }
+    .cp-ways-col           { flex-direction: row; }
+    .cp-ways-col--offset   { margin-top: 0; margin-bottom: 0; }
+    .cp-ways-col:last-child { display: none; }
+
+    .cp-detail-row          { grid-template-columns: 1fr; }
+    .cp-detail-row--reverse { direction: ltr; }
 
     .cp-useful-img {
         position: static;
         aspect-ratio: 16 / 9;
     }
+
+    .cp-stat-divider { display: none; }
+}
+
+@media (max-width: 768px) {
+    .cp-ways-mosaic    { height: 200px; }
+    .cp-gallery-track  { height: 160px; }
+    .cp-gallery-img    { width: clamp(140px, 55vw, 240px); }
+    .cp-stats-inner    { display: grid; grid-template-columns: 1fr 1fr; }
 }

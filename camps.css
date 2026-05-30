@@ -1,0 +1,148 @@
+/* ═══════════════════════════════════════════════════
+   CAMPS PAGE
+═══════════════════════════════════════════════════ */
+
+.camps-hero .hero-overlay {
+    background-image: url(imgs/fh-competition-kid.jpg);
+    background-position: center 30%;
+}
+
+/* ── Camp cards ────────────────────────────────── */
+.camps-section {
+    padding: var(--section-pad) 0;
+    background: var(--prussian);
+}
+
+.camps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+}
+
+.camp-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: border-color var(--transition), transform var(--transition);
+}
+.camp-card:hover {
+    border-color: rgba(255,255,255,0.25);
+    transform: translateY(-4px);
+}
+
+.camp-card-img { position: relative; height: 200px; overflow: hidden; }
+.camp-card-img img { width: 100%; height: 100%; object-fit: cover; }
+
+.camp-age-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: var(--prussian);
+    color: var(--white);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+}
+.camp-age-badge--indigo { background: var(--indigo); }
+.camp-age-badge--ocean  { background: var(--ocean-mist); color: var(--prussian); }
+
+.camp-card-body {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.camp-card-body .section-label { color: rgba(255,255,255,0.45); }
+.camp-card-body h3 { color: var(--white); font-size: 1.1rem; font-weight: 600; }
+.camp-card-body > p { color: rgba(255,255,255,0.55); font-size: 0.875rem; line-height: 1.6; flex: 1; }
+
+.camp-details {
+    list-style: none;
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+.camp-details li {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.45);
+    padding-left: 1rem;
+    position: relative;
+}
+.camp-details li::before { content: '–'; position: absolute; left: 0; }
+
+.camp-price {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    font-style: italic;
+    color: var(--white);
+    margin-top: 0.75rem;
+}
+.camp-price span { font-size: 0.85rem; font-style: normal; font-family: var(--font-sans); opacity: 0.6; }
+
+.camp-card-body .btn { margin-top: 0.5rem; align-self: flex-start; }
+
+/* ── Dates ─────────────────────────────────────── */
+.camp-dates-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: clamp(32px, 4vw, 48px);
+}
+
+.camp-date-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid var(--cream-dark);
+    border-radius: var(--radius-lg);
+    background: var(--white);
+}
+
+.camp-date-period {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--prussian);
+    opacity: 0.5;
+}
+
+.camp-date-range {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--prussian);
+}
+
+.camp-date-status {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    align-self: flex-start;
+    margin-top: 0.25rem;
+}
+.camp-date-status--open { background: rgba(184,224,74,0.15); color: #5a7a00; }
+.camp-date-status--full { background: rgba(236,103,44,0.12); color: var(--flame-dark); }
+
+/* ── Responsive ────────────────────────────────── */
+@media (max-width: 1024px) {
+    .camps-grid { grid-template-columns: repeat(2, 1fr); }
+    .camp-dates-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+    .camps-grid { grid-template-columns: 1fr; }
+    .camp-dates-grid { grid-template-columns: 1fr; }
+}

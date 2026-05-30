@@ -8,95 +8,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="story.css">
     <link rel="stylesheet" href="courts.css">
     <link rel="stylesheet" href="shop.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="contact.css">
 </head>
 <body>
-
-    <!-- ═══════════════════════════════════════
-          NAVIGATION
-    ═══════════════════════════════════════ -->
-    <nav id="navbar">
-        <div class="nav-inner">
-            <a href="index.html" class="nav-logo">
-                <img src="logo/Deuces-Logo-Wordmark-NEG.svg" alt="Deuces" class="nav-logo-img">
-            </a>
-            <div class="nav-right">
-                <div class="lang-toggle" id="langToggle">
-                    <button class="lang-btn" data-lang="nl">NL</button>
-                    <span class="lang-sep">|</span>
-                    <button class="lang-btn active" data-lang="en">EN</button>
-                </div>
-                <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
-        </div>
-    </nav>
-
-    <!-- ═══════════════════════════════════════
-          FULLSCREEN MENU OVERLAY
-    ═══════════════════════════════════════ -->
-    <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
-        <div class="menu-overlay-content">
-            <div class="menu-overlay-right">
-                <div class="menu-overlay-imgs" id="menuOverlayImgs">
-                    <img src="imgs/menu-shelton-player-motion.png"
-                          class="menu-img"
-                          data-for="about"
-                          alt="Deuces tennis">
-                    <img src="imgs/menu-padel-players-motion.png"
-                          class="menu-img"
-                          data-for="courts"
-                          alt="courts">
-                    <img src="imgs/menu-gym-motion.png"
-                          class="menu-img"
-                          data-for="facilities"
-                          alt="facilities">
-                    <img src="imgs/menu-fh-player-motion.png"
-                          class="menu-img"
-                          data-for="coaching"
-                          alt="coaching">
-                    <img src="imgs/menu-padel-player-motion.png"
-                          class="menu-img"
-                          data-for="membership"
-                          alt="membership">
-                    <img src="imgs/menu-tiafou-player-motion.png"
-                          class="menu-img"
-                          data-for="shop"
-                          alt="shop">
-                    <img src="imgs/menu-facilities-motion.png"
-                          class="menu-img"
-                          data-for="contact"
-                          alt="contact">
-                </div>
-            </div>
-            <div class="menu-overlay-left">
-                <ul class="menu-overlay-list">
-                    <li><a href="about.html" class="menu-overlay-link" data-img="about" data-nl="Over Ons" data-en="About">About</a></li>
-                    <li><a href="courts.html" class="menu-overlay-link" data-img="courts" data-nl="Banen" data-en="Courts">Courts</a></li>
-                    <li><a href="facilities.html" class="menu-overlay-link" data-img="facilities" data-nl="Faciliteiten" data-en="Facilities">Facilities</a></li>
-                    <li><a href="coaching.html" class="menu-overlay-link" data-img="coaching" data-nl="Coaching" data-en="Coaching">Coaching</a></li>
-                    <li><a href="membership.html" class="menu-overlay-link" data-img="membership" data-nl="Lidmaatschap" data-en="Membership">Membership</a></li>
-                    <li><a href="shop.html" class="menu-overlay-link" data-img="shop" data-nl="Shop" data-en="Shop">Shop</a></li>
-                    <li><a href="contact.html" class="menu-overlay-link" data-img="contact" data-nl="Contact" data-en="Contact">Contact</a></li>
-                </ul>
-                <div class="menu-overlay-footer">
-                    <a href="courts.html" class="btn btn-flame menu-overlay-cta" data-nl="Baan Reserveren" data-en="Book a Court">Book a Court</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div id="header-placeholder"></div>
 
     <!-- PAGE HERO -->
-    <section id="home" class="hero">
+    <section id="home" class="hero contact-hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <p class="hero-eyebrow" data-nl="Over Ons" data-en="About Us">About Us</p>
-            <h1 class="hero-title" data-nl="Het verhaal van<br> Deuces" data-en="The Story of<br> Deuces">The Story of Deuces</h1>
+            <p class="hero-eyebrow" data-nl="Contact" data-en="Contact">Contact</p>
+            <h1 class="hero-title" data-nl="Kom<br>Langs." data-en="Come<br>Visit.">Come<br>Visit.</h1>
+            <p class="hero-sub" data-nl="Bezoek ons, schrijf ons of bel even — we helpen je graag op weg." data-en="Visit us, write to us or give us a call — we'll help you on your way.">Visit us, write to us or give us a call — we'll help you on your way.</p>
         </div>
         <div class="hero-scroll-hint">
             <span data-nl="Ontdek" data-en="Discover">Discover</span>
@@ -113,7 +41,7 @@
                 <div class="contact-details">
                     <div class="contact-block">
                         <p class="contact-label" data-nl="Adres" data-en="Address">Address</p>
-                        <p>Tennislaan 12<br>9000 Ghent, Belgium</p>
+                        <p>Sportlaan 5<br>9220 Hamme, Belgium</p>
                     </div>
                     <div class="contact-block">
                         <p class="contact-label" data-nl="Openingsuren" data-en="Opening Hours">Opening Hours</p>
@@ -121,20 +49,88 @@
                     </div>
                     <div class="contact-block">
                         <p class="contact-label" data-nl="Contact" data-en="Contact">Contact</p>
-                        <p>info@deuces.be<br>+32 9 123 45 67</p>
+                        <p>info@deuces.be<br>+32 52 47 12 78</p>
                     </div>
                 </div>
             </div>
             <div class="contact-map">
-                <div class="map-placeholder">
-                    <div class="map-pin">
-                        <svg width="32" height="40" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16 0C7.163 0 0 7.163 0 16C0 28 16 40 16 40C16 40 32 28 32 16C32 7.163 24.837 0 16 0Z" fill="#EC672C"/>
-                            <circle cx="16" cy="16" r="6" fill="white"/>
-                        </svg>
+                <iframe
+                    src="https://www.google.com/maps?q=Tennisclub+%2778+Hamme+Belgium&z=15&output=embed"
+                    title="Deuces — TC '78 Hamme map"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT FORM -->
+    <section class="spotlight spotlight--cream animate-section">
+        <div class="container spotlight-inner">
+            <div class="spotlight-text">
+                <p class="spotlight-eyebrow" data-nl="Schrijf Ons" data-en="Write Us">Write Us</p>
+                <h2 data-nl="Een vraag,<br>een wens,<br>een <em>idee?</em>" data-en="A question,<br>a wish,<br>an <em>idea?</em>">A question,<br>a wish,<br>an <em>idea?</em></h2>
+                <p data-nl="We reageren binnen één werkdag. Voor reserveringen verwijzen we je graag naar de online boekingstool — sneller en altijd up-to-date." data-en="We reply within one business day. For court bookings, use our online booking tool — faster and always up-to-date.">We reply within one business day. For court bookings, use our online booking tool — faster and always up-to-date.</p>
+                <a href="booking.html" class="btn btn-outline-dark" data-nl="Boek een Baan" data-en="Book a Court">Book a Court</a>
+            </div>
+            <form class="contact-form" onsubmit="event.preventDefault(); this.querySelector('button[type=submit]').textContent = 'Sent ✓';">
+                <div class="contact-form-row">
+                    <div class="bk-field">
+                        <label for="cName" data-nl="Naam" data-en="Name">Name</label>
+                        <input id="cName" type="text" required placeholder="Your name">
                     </div>
-                    <p class="map-label" data-nl="Tennislaan 12, Gent" data-en="Tennislaan 12, Ghent">Tennislaan 12, Ghent</p>
+                    <div class="bk-field">
+                        <label for="cEmail" data-nl="E-mail" data-en="Email">Email</label>
+                        <input id="cEmail" type="email" required placeholder="you@example.com">
+                    </div>
                 </div>
+                <div class="bk-field">
+                    <label for="cTopic" data-nl="Onderwerp" data-en="Topic">Topic</label>
+                    <select id="cTopic">
+                        <option data-nl="Algemene vraag" data-en="General enquiry">General enquiry</option>
+                        <option data-nl="Lidmaatschap" data-en="Membership">Membership</option>
+                        <option data-nl="Proefles" data-en="Trial lesson">Trial lesson</option>
+                        <option data-nl="Coaching" data-en="Coaching">Coaching</option>
+                        <option data-nl="Evenementen" data-en="Events">Events</option>
+                    </select>
+                </div>
+                <div class="bk-field">
+                    <label for="cMessage" data-nl="Bericht" data-en="Message">Message</label>
+                    <textarea id="cMessage" rows="4" required placeholder="How can we help?"></textarea>
+                </div>
+                <button type="submit" class="btn btn-flame" data-nl="Verstuur" data-en="Send">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-white animate-section" style="padding: var(--section-pad) 0;">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label dark" data-nl="Veelgestelde Vragen" data-en="Frequently Asked">Frequently Asked</p>
+                <h2 class="section-title dark" data-nl="Eerst even<br>checken." data-en="A quick<br>check first.">A quick<br>check first.</h2>
+            </div>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary data-nl="Moet ik lid zijn om een baan te boeken?" data-en="Do I need to be a member to book a court?">Do I need to be a member to book a court?</summary>
+                    <p data-nl="Nee. Niet-leden kunnen dag-tot-dag boeken via de online tool. Leden krijgen tot 14 dagen vooraf toegang en 30% lager tarief." data-en="No. Non-members can book day-to-day through the online tool. Members get access up to 14 days ahead and a 30% lower rate.">No. Non-members can book day-to-day through the online tool. Members get access up to 14 days ahead and a 30% lower rate.</p>
+                </details>
+                <details class="faq-item">
+                    <summary data-nl="Hebben jullie rackets te huur?" data-en="Do you have rackets to rent?">Do you have rackets to rent?</summary>
+                    <p data-nl="Ja, zowel tennis- als padelrackets zijn te huur aan de receptie voor €5 per sessie. Padelballen zijn inbegrepen bij de baanhuur." data-en="Yes — tennis and padel rackets are available at reception for €5 per session. Padel balls are included in your court rental.">Yes — tennis and padel rackets are available at reception for €5 per session. Padel balls are included in your court rental.</p>
+                </details>
+                <details class="faq-item">
+                    <summary data-nl="Hoe werkt een proefles?" data-en="How does a trial lesson work?">How does a trial lesson work?</summary>
+                    <p data-nl="Een proefles is 30 minuten en gratis voor nieuwe leden. Onze coach beoordeelt je niveau en stelt een geschikt programma voor. Geen verplichting." data-en="A trial lesson is 30 minutes and free for new members. Our coach assesses your level and suggests a suitable program. No commitment.">A trial lesson is 30 minutes and free for new members. Our coach assesses your level and suggests a suitable program. No commitment.</p>
+                </details>
+                <details class="faq-item">
+                    <summary data-nl="Is er parking?" data-en="Is there parking?">Is there parking?</summary>
+                    <p data-nl="Ja — 60 gratis plaatsen, inclusief 4 voor elektrische voertuigen met laadpalen en 6 fietsstallingen." data-en="Yes — 60 free spaces, including 4 EV chargers and 6 covered bike racks.">Yes — 60 free spaces, including 4 EV chargers and 6 covered bike racks.</p>
+                </details>
+                <details class="faq-item">
+                    <summary data-nl="Kan ik een privé-evenement boeken?" data-en="Can I book a private event?">Can I book a private event?</summary>
+                    <p data-nl="Zeker. We organiseren regelmatig clinics, bedrijfsuitjes en verjaardagen. Contacteer ons via het formulier voor een offerte op maat." data-en="Absolutely. We regularly host clinics, corporate days and birthdays. Use the form above for a tailored quote.">Absolutely. We regularly host clinics, corporate days and birthdays. Use the form above for a tailored quote.</p>
+                </details>
             </div>
         </div>
     </section>
@@ -149,7 +145,7 @@
                 <div class="footer-col">
                     <p class="footer-col-title" data-nl="Navigatie" data-en="Navigation">Navigation</p>
                     <ul>
-                        <li><a href="about.html" data-nl="Over Ons" data-en="About">About</a></li>
+                        <li><a href="story.html" data-nl="Over Ons" data-en="About">About</a></li>
                         <li><a href="courts.html" data-nl="Banen" data-en="Courts">Courts</a></li>
                         <li><a href="facilities.html" data-nl="Faciliteiten" data-en="Facilities">Facilities</a></li>
                         <li><a href="coaching.html" data-nl="Coaching" data-en="Coaching">Coaching</a></li>
@@ -158,7 +154,7 @@
                 <div class="footer-col">
                     <p class="footer-col-title" data-nl="Meer" data-en="More">More</p>
                     <ul>
-                        <li><a href="membership.html" data-nl="Lidmaatschap" data-en="Membership">Membership</a></li>
+                        <li><a href="pricing.html" data-nl="Lidmaatschap" data-en="Membership">Membership</a></li>
                         <li><a href="shop.html" data-nl="Shop" data-en="Shop">Shop</a></li>
                         <li><a href="contact.html" data-nl="Contact" data-en="Contact">Contact</a></li>
                         <li><a href="#" data-nl="Privacy Policy" data-en="Privacy Policy">Privacy Policy</a></li>

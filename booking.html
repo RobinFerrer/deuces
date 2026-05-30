@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deuces — Book a Court</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <!-- PAGE HERO -->
+    <section class="hero booking-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-eyebrow" data-nl="Reserveren" data-en="Reservations">Reservations</p>
+            <h1 class="hero-title" data-nl="Boek een<br>Baan." data-en="Book a<br>Court.">Book a<br>Court.</h1>
+            <p class="hero-sub" data-nl="Kies een sport, datum en tijd. Boekingen openen 14 dagen vooraf." data-en="Pick a sport, date and time. Bookings open 14 days in advance.">Pick a sport, date and time. Bookings open 14 days in advance.</p>
+        </div>
+        <div class="hero-scroll-hint">
+            <span data-nl="Ontdek" data-en="Discover">Discover</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- BOOKING TOOL -->
+    <section class="bk-tool">
+        <div class="container">
+
+            <!-- Date + sport controls -->
+            <div class="bk-controls">
+                <div class="bk-date">
+                    <button class="bk-date-nav" id="bkDatePrev" aria-label="Previous day">‹</button>
+                    <div class="bk-date-display" id="bkDateDisplay">
+                        <span class="bk-date-day" id="bkDateDay">Saturday</span>
+                        <span class="bk-date-full" id="bkDateFull">30 May 2026</span>
+                    </div>
+                    <button class="bk-date-nav" id="bkDateNext" aria-label="Next day">›</button>
+                </div>
+
+                <div class="bk-tabs" role="tablist">
+                    <button class="bk-tab active" data-sport="padel" role="tab" aria-selected="true">Padel</button>
+                    <button class="bk-tab" data-sport="tennis-clay" role="tab" aria-selected="false">Tennis — Gravel</button>
+                    <button class="bk-tab" data-sport="tennis-hard" role="tab" aria-selected="false">Tennis — Indoor</button>
+                </div>
+            </div>
+
+            <!-- Info banner -->
+            <div class="bk-banner">
+                <span class="bk-banner-dot"></span>
+                <p data-nl="Log in om een reservatie te bevestigen. Je kan al wel beschikbaarheid bekijken." data-en="Log in to confirm a reservation. You can still preview availability below.">Log in to confirm a reservation. You can still preview availability below.</p>
+                <a href="#" class="bk-banner-link" data-nl="Inloggen" data-en="Sign in">Sign in</a>
+            </div>
+
+            <!-- Court grid -->
+            <div class="bk-grid-wrap">
+                <div class="bk-grid-head">
+                    <div class="bk-grid-meta">
+                        <span class="bk-meta-count" id="bkCourtCount">4</span>
+                        <span data-nl="banen beschikbaar" data-en="courts available">courts available</span>
+                    </div>
+                    <div class="bk-grid-hint" data-nl="Tip: klik om te starten, klik aangrenzende blokken om te verlengen — max 4 blokken (2 uur)." data-en="Tip: click to start, click adjacent blocks to extend — max 4 blocks (2 hours).">
+                        Tip: click to start, click adjacent blocks to extend — max 4 blocks (2 hours).
+                    </div>
+                </div>
+
+                <!-- Mobile-only court selector (injected by booking.js) -->
+                <div class="bk-court-tabs" id="bkCourtTabs" role="tablist"></div>
+
+                <div class="bk-grid" id="bkGrid" data-sport="padel" data-active-court="0">
+                    <!-- Time column + court columns are injected by booking.js -->
+                </div>
+            </div>
+
+            <!-- Legend -->
+            <div class="bk-legend">
+                <span class="bk-legend-item"><span class="bk-swatch bk-swatch--free"></span><span data-nl="Beschikbaar" data-en="Available">Available</span></span>
+                <span class="bk-legend-item"><span class="bk-swatch bk-swatch--selected"></span><span data-nl="Geselecteerd" data-en="Selected">Selected</span></span>
+                <span class="bk-legend-item"><span class="bk-swatch bk-swatch--booked"></span><span data-nl="Bezet" data-en="Booked">Booked</span></span>
+                <span class="bk-legend-item"><span class="bk-swatch bk-swatch--past"></span><span data-nl="Verlopen" data-en="Closed">Closed</span></span>
+            </div>
+
+            <!-- Sticky selection bar -->
+            <div class="bk-action-bar" id="bkActionBar" aria-hidden="true">
+                <div class="bk-action-bar-info">
+                    <span class="bk-action-bar-label" data-nl="Jouw selectie" data-en="Your selection">Your selection</span>
+                    <span class="bk-action-bar-value" id="bkActionBarValue">—</span>
+                </div>
+                <div class="bk-action-bar-actions">
+                    <button type="button" class="btn-outline-dark" id="bkClearSelection" data-nl="Wis" data-en="Clear">Clear</button>
+                    <button type="button" class="btn btn-flame" id="bkOpenModal" data-nl="Reserveer" data-en="Book">Book</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- POLICY -->
+    <section class="bk-policy animate-section">
+        <div class="container bk-policy-inner">
+            <div>
+                <p class="section-label" data-nl="Voorwaarden" data-en="Policies">Policies</p>
+                <h2 class="section-title" data-nl="Wat je moet<br>weten." data-en="What you<br>should know.">What you<br>should know.</h2>
+            </div>
+            <ul class="bk-policy-list">
+                <li>
+                    <h4 data-nl="Boekingsvenster" data-en="Booking window">Booking window</h4>
+                    <p data-nl="Leden kunnen tot 14 dagen vooruit boeken. Niet-leden boeken op de dag zelf, afhankelijk van beschikbaarheid." data-en="Members can book up to 14 days ahead. Non-members can book on the day itself, subject to availability.">Members can book up to 14 days ahead. Non-members can book on the day itself, subject to availability.</p>
+                </li>
+                <li>
+                    <h4 data-nl="Annuleren" data-en="Cancellation">Cancellation</h4>
+                    <p data-nl="Annuleren tot 4 uur voor de reservering is kosteloos. Daarna wordt het bedrag verrekend." data-en="Cancellations up to 4 hours before your slot are free. After that the fee is charged.">Cancellations up to 4 hours before your slot are free. After that the fee is charged.</p>
+                </li>
+                <li>
+                    <h4 data-nl="Tarieven" data-en="Pricing">Pricing</h4>
+                    <p data-nl="Padel vanaf €24 per uur. Tennis vanaf €18 per uur. Leden krijgen 30% korting." data-en="Padel from €24 per hour. Tennis from €18 per hour. Members get 30% off.">Padel from €24 per hour. Tennis from €18 per hour. Members get 30% off.</p>
+                </li>
+                <li>
+                    <h4 data-nl="Spelers" data-en="Players">Players</h4>
+                    <p data-nl="Maximaal 4 spelers voor padel en doubles, 2 voor singles. Spelers moeten ingelogd zijn om te bevestigen." data-en="Up to 4 players for padel and doubles, 2 for singles. All players must be signed in to confirm.">Up to 4 players for padel and doubles, 2 for singles. All players must be signed in to confirm.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- BOOKING MODAL (hidden by default) -->
+    <div class="bk-modal" id="bkModal" aria-hidden="true">
+        <div class="bk-modal-backdrop" data-modal-close></div>
+        <div class="bk-modal-card" role="dialog" aria-modal="true" aria-labelledby="bkModalTitle">
+
+            <button class="bk-modal-close" data-modal-close aria-label="Close">×</button>
+
+            <header class="bk-modal-head">
+                <p class="section-label dark" data-nl="Reservering" data-en="Reservation">Reservation</p>
+                <h3 id="bkModalTitle" data-nl="Bevestig je baan" data-en="Confirm your booking">Confirm your booking</h3>
+            </header>
+
+            <div class="bk-modal-summary">
+                <div class="bk-modal-row">
+                    <span class="bk-modal-label" data-nl="Sport" data-en="Sport">Sport</span>
+                    <span class="bk-modal-val" id="bkModalSport">Padel</span>
+                </div>
+                <div class="bk-modal-row">
+                    <span class="bk-modal-label" data-nl="Baan" data-en="Court">Court</span>
+                    <span class="bk-modal-val" id="bkModalCourt">2. The Bullet</span>
+                </div>
+                <div class="bk-modal-row">
+                    <span class="bk-modal-label" data-nl="Datum" data-en="Date">Date</span>
+                    <span class="bk-modal-val" id="bkModalDate">Saturday, 30 May 2026</span>
+                </div>
+                <div class="bk-modal-row">
+                    <span class="bk-modal-label" data-nl="Tijd" data-en="Time">Time</span>
+                    <span class="bk-modal-val" id="bkModalTime">11:30 — 13:00</span>
+                </div>
+            </div>
+
+            <form class="bk-modal-form" onsubmit="event.preventDefault(); document.getElementById('bkModal').classList.remove('open'); document.getElementById('bkClearSelection').click();">
+                <div class="bk-field">
+                    <label for="bkPlayer" data-nl="Speler" data-en="Lead player">Lead player</label>
+                    <input type="text" id="bkPlayer" placeholder="Your name" required>
+                </div>
+
+                <div class="bk-field">
+                    <label for="bkNote" data-nl="Opmerking" data-en="Comment (optional)">Comment (optional)</label>
+                    <textarea id="bkNote" rows="2" placeholder="Anything we should know"></textarea>
+                </div>
+
+                <div class="bk-modal-total">
+                    <div>
+                        <span class="bk-modal-label" data-nl="Te betalen" data-en="Total">Total</span>
+                        <span class="bk-modal-total-val">€ 28,00</span>
+                    </div>
+                    <p class="bk-modal-hint" data-nl="Je wordt na bevestiging doorgestuurd naar de betaalpagina." data-en="You'll be redirected to payment after confirming.">You'll be redirected to payment after confirming.</p>
+                </div>
+
+                <div class="bk-modal-actions">
+                    <button type="button" class="btn btn-outline-dark" data-modal-close data-nl="Annuleren" data-en="Cancel">Cancel</button>
+                    <button type="submit" class="btn btn-flame" data-nl="Bevestigen en betalen" data-en="Confirm &amp; pay">Confirm &amp; pay</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-top">
+                <a href="index.html" class="footer-logo" data-nl="Deuces" data-en="Deuces">Deuces</a>
+                <p class="footer-tagline" data-nl="Tennis &amp; Padel Academie" data-en="Tennis &amp; Padel Academy">Tennis &amp; Padel Academy</p>
+            </div>
+            <div class="footer-mid">
+                <div class="footer-col">
+                    <p class="footer-col-title" data-nl="Navigatie" data-en="Navigation">Navigation</p>
+                    <ul>
+                        <li><a href="academy.html" data-nl="Academie" data-en="Academy">Academy</a></li>
+                        <li><a href="club.html" data-nl="Club" data-en="Club">Club</a></li>
+                        <li><a href="events.html" data-nl="Events" data-en="Events">Events</a></li>
+                        <li><a href="courts.html" data-nl="Banen" data-en="Courts">Courts</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <p class="footer-col-title" data-nl="Meer" data-en="More">More</p>
+                    <ul>
+                        <li><a href="pricing.html" data-nl="Lidmaatschap" data-en="Membership">Membership</a></li>
+                        <li><a href="shop.html" data-nl="Shop" data-en="Shop">Shop</a></li>
+                        <li><a href="contact.html" data-nl="Contact" data-en="Contact">Contact</a></li>
+                        <li><a href="#" data-nl="Privacy Policy" data-en="Privacy Policy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <p class="footer-col-title" data-nl="Volg Ons" data-en="Follow Us">Follow Us</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-nl="© 2025 Deuces Tennis &amp; Padel Academie. Dit is een website voor educatieve doeleinden alleen. Dit is geen echte website." data-en="© 2025 Deuces Tennis &amp; Padel Academy. This is a website for educational purposes only. This is not a real website.">© 2025 Deuces Tennis &amp; Padel Academy. This is a website for educational purposes only. This is not a real website.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="booking.js"></script>
+</body>
+</html>

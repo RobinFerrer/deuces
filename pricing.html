@@ -8,90 +8,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="story.css">
     <link rel="stylesheet" href="courts.css">
     <link rel="stylesheet" href="shop.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="coaching.css">
     <link rel="stylesheet" href="facilities.css">
-    <link rel="stylesheet" href="membership.css">
+    <link rel="stylesheet" href="pricing.css">
 </head>
 <body>
-
-    <!-- ═══════════════════════════════════════
-          NAVIGATION
-    ═══════════════════════════════════════ -->
-    <nav id="navbar">
-        <div class="nav-inner">
-            <a href="index.html" class="nav-logo">
-                <img src="logo/Deuces-Logo-Wordmark-NEG.svg" alt="Deuces" class="nav-logo-img">
-            </a>
-            <div class="nav-right">
-                <div class="lang-toggle" id="langToggle">
-                    <button class="lang-btn" data-lang="nl">NL</button>
-                    <span class="lang-sep">|</span>
-                    <button class="lang-btn active" data-lang="en">EN</button>
-                </div>
-                <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
-        </div>
-    </nav>
-
-    <!-- ═══════════════════════════════════════
-          FULLSCREEN MENU OVERLAY
-    ═══════════════════════════════════════ -->
-    <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
-        <div class="menu-overlay-content">
-            <div class="menu-overlay-right">
-                <div class="menu-overlay-imgs" id="menuOverlayImgs">
-                    <img src="imgs/menu-shelton-player-motion.png"
-                          class="menu-img"
-                          data-for="about"
-                          alt="Deuces tennis">
-                    <img src="imgs/menu-padel-players-motion.png"
-                          class="menu-img"
-                          data-for="courts"
-                          alt="courts">
-                    <img src="imgs/menu-gym-motion.png"
-                          class="menu-img"
-                          data-for="facilities"
-                          alt="facilities">
-                    <img src="imgs/menu-fh-player-motion.png"
-                          class="menu-img"
-                          data-for="coaching"
-                          alt="coaching">
-                    <img src="imgs/menu-padel-player-motion.png"
-                          class="menu-img"
-                          data-for="membership"
-                          alt="membership">
-                    <img src="imgs/menu-tiafou-player-motion.png"
-                          class="menu-img"
-                          data-for="shop"
-                          alt="shop">
-                    <img src="imgs/menu-facilities-motion.png"
-                          class="menu-img"
-                          data-for="contact"
-                          alt="contact">
-                </div>
-            </div>
-            <div class="menu-overlay-left">
-                <ul class="menu-overlay-list">
-                    <li><a href="about.html" class="menu-overlay-link" data-img="about" data-nl="Over Ons" data-en="About">About</a></li>
-                    <li><a href="courts.html" class="menu-overlay-link" data-img="courts" data-nl="Banen" data-en="Courts">Courts</a></li>
-                    <li><a href="facilities.html" class="menu-overlay-link" data-img="facilities" data-nl="Faciliteiten" data-en="Facilities">Facilities</a></li>
-                    <li><a href="coaching.html" class="menu-overlay-link" data-img="coaching" data-nl="Coaching" data-en="Coaching">Coaching</a></li>
-                    <li><a href="membership.html" class="menu-overlay-link" data-img="membership" data-nl="Lidmaatschap" data-en="Membership">Membership</a></li>
-                    <li><a href="shop.html" class="menu-overlay-link" data-img="shop" data-nl="Shop" data-en="Shop">Shop</a></li>
-                    <li><a href="contact.html" class="menu-overlay-link" data-img="contact" data-nl="Contact" data-en="Contact">Contact</a></li>
-                </ul>
-                <div class="menu-overlay-footer">
-                    <a href="courts.html" class="btn btn-flame menu-overlay-cta" data-nl="Baan Reserveren" data-en="Book a Court">Book a Court</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div id="header-placeholder"></div>
 
     <!-- PAGE HERO -->
     <section id="home" class="hero">
@@ -114,7 +41,7 @@
                 <h2 class="section-title dark" data-nl="Lidmaatschappen" data-en="Memberships">Memberships</h2>
                 <p class="section-sub dark" data-nl="Transparante prijzen. Geen verborgen kosten. Annuleer wanneer je wil." data-en="Transparent pricing. No hidden fees. Cancel any time.">Transparent pricing. No hidden fees. Cancel any time.</p>
             </div>
-            <div class="membership-grid">
+            <div class="membership-grid card-carousel">
                 <div id="standard" class="membership-card animate-child">
                     <div class="membership-header-block">
                         <p class="membership-tier" data-nl="Standaard" data-en="Standard">Standard</p>
@@ -176,7 +103,7 @@
                     <h2 class="section-title dark" data-nl="Junior Lidmaatschap" data-en="Junior Membership">Junior Membership</h2>
                     <p class="section-sub dark" data-nl="Voor jeugdspelers van 5 tot 18 jaar. Speciaal ontworpen voor ontwikkeling, fun en teamspirit." data-en="For players aged 5 to 18. Designed for development, fun and team spirit.">For players aged 5 to 18. Designed for development, fun and team spirit.</p>
                 </div>
-                <div class="membership-grid" style="grid-template-columns: 1fr 1fr; max-width: 720px; margin: 0 auto;">
+                <div class="membership-grid card-carousel" style="grid-template-columns: 1fr 1fr; max-width: 720px; margin: 0 auto;">
                     <div class="membership-card animate-child">
                         <div class="membership-header-block">
                             <p class="membership-tier" data-nl="Junior Basis" data-en="Junior Basic">Junior Basic</p>
@@ -211,6 +138,55 @@
         </div>
     </section>
 
+    <!-- WHY MEMBERSHIP -->
+    <section class="spotlight animate-section">
+        <div class="container spotlight-inner">
+            <div class="spotlight-img">
+                <img src="imgs/overhead-tennis-courts.jpg" alt="Member benefits">
+            </div>
+            <div class="spotlight-text">
+                <p class="spotlight-eyebrow" data-nl="Waarom Lid Worden" data-en="Why Become a Member">Why Become a Member</p>
+                <h2 data-nl="Lidmaatschap<br>betaalt zich <em>terug.</em>" data-en="Membership<br><em>pays</em> for itself.">Membership<br><em>pays</em> for itself.</h2>
+                <p data-nl="Eén baan per week voor leden kost jaarlijks minder dan dezelfde baan voor niet-leden. Daarbij komt vroege toegang tot toernooien, gratis kleedkamer, gym-gebruik en korting in de shop." data-en="One court a week for members costs less per year than the same court at non-member rates. On top of that: early tournament access, free changing room, gym use, and shop discount.">One court a week for members costs less per year than the same court at non-member rates. On top of that: early tournament access, free changing room, gym use, and shop discount.</p>
+                <ul class="spotlight-list">
+                    <li data-nl="14 dagen vooraf boeken" data-en="Book up to 14 days ahead">Book up to 14 days ahead</li>
+                    <li data-nl="Vrij gebruik van fitnesscentrum" data-en="Free use of the fitness centre">Free use of the fitness centre</li>
+                    <li data-nl="Vroege inschrijving voor kampen" data-en="Early sign-up for camps">Early sign-up for camps</li>
+                    <li data-nl="Geen administratiekosten op boekingen" data-en="No booking admin fees">No booking admin fees</li>
+                </ul>
+                <a href="booking.html" class="btn btn-outline-dark" data-nl="Bekijk Beschikbaarheid" data-en="View Availability">View Availability</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-cream animate-section" style="padding: var(--section-pad) 0;">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label dark" data-nl="Veelgestelde Vragen" data-en="Frequently Asked">Frequently Asked</p>
+                <h2 class="section-title dark" data-nl="Voor je<br>aanmeldt." data-en="Before you<br>sign up.">Before you<br>sign up.</h2>
+            </div>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary data-nl="Kan ik een proefperiode krijgen?" data-en="Can I try a trial period?">Can I try a trial period?</summary>
+                    <p data-nl="Ja. Vraag aan de receptie een gratis weekpas — geldig voor één bezoek aan een groepsles en één baanreservering. Geen verplichting." data-en="Yes. Ask reception for a free weekly pass — valid for one group class visit and one court booking. No obligation.">Yes. Ask reception for a free weekly pass — valid for one group class visit and one court booking. No obligation.</p>
+                </details>
+                <details class="faq-item">
+                    <summary data-nl="Wat is de minimumtermijn?" data-en="What's the minimum term?">What's the minimum term?</summary>
+                    <p data-nl="Lidmaatschappen lopen per kalenderjaar. Tijdens het jaar instappen kan: je betaalt pro rata voor de resterende maanden." data-en="Memberships run by calendar year. You can join mid-year and pay pro rata for the remaining months.">Memberships run by calendar year. You can join mid-year and pay pro rata for the remaining months.</p>
+                </details>
+                <details class="faq-item">
+                    <summary data-nl="Is er een korting voor gezinnen?" data-en="Is there a family discount?">Is there a family discount?</summary>
+                    <p data-nl="Vanaf het derde gezinslid krijg je 20% korting per extra lid. Vraag het pakket aan via contact." data-en="From the third family member onwards you get a 20% discount per extra member. Request the package via contact.">From the third family member onwards you get a 20% discount per extra member. Request the package via contact.</p>
+                </details>
+                <details class="faq-item">
+                    <summary data-nl="Kan ik tijdelijk pauzeren?" data-en="Can I pause my membership?">Can I pause my membership?</summary>
+                    <p data-nl="Eén keer per jaar kun je je lidmaatschap voor 1–3 maanden pauzeren (bv. bij blessure of reis). Stuur een bericht via het contactformulier." data-en="Once per year you can pause your membership for 1–3 months (e.g. injury or travel). Send a message through the contact form.">Once per year you can pause your membership for 1–3 months (e.g. injury or travel). Send a message through the contact form.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="container footer-inner">
             <div class="footer-top">
@@ -221,7 +197,7 @@
                 <div class="footer-col">
                     <p class="footer-col-title" data-nl="Navigatie" data-en="Navigation">Navigation</p>
                     <ul>
-                        <li><a href="about.html" data-nl="Over Ons" data-en="About">About</a></li>
+                        <li><a href="story.html" data-nl="Over Ons" data-en="About">About</a></li>
                         <li><a href="courts.html" data-nl="Banen" data-en="Courts">Courts</a></li>
                         <li><a href="facilities.html" data-nl="Faciliteiten" data-en="Facilities">Facilities</a></li>
                         <li><a href="coaching.html" data-nl="Coaching" data-en="Coaching">Coaching</a></li>
@@ -230,7 +206,7 @@
                 <div class="footer-col">
                     <p class="footer-col-title" data-nl="Meer" data-en="More">More</p>
                     <ul>
-                        <li><a href="membership.html" data-nl="Lidmaatschap" data-en="Membership">Membership</a></li>
+                        <li><a href="pricing.html" data-nl="Lidmaatschap" data-en="Membership">Membership</a></li>
                         <li><a href="shop.html" data-nl="Shop" data-en="Shop">Shop</a></li>
                         <li><a href="contact.html" data-nl="Contact" data-en="Contact">Contact</a></li>
                         <li><a href="#" data-nl="Privacy Policy" data-en="Privacy Policy">Privacy Policy</a></li>

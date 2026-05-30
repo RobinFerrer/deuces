@@ -328,7 +328,7 @@
 
 
 /* ── Responsive ──────────────────────────────────── */
-@media (max-width: 960px) {
+@media (max-width: 1024px) {
     .fac-intro-inner,
     .fac-spotlight-inner,
     .fac-cta-inner {
@@ -349,9 +349,13 @@
     .fac-cta-img { display: none; }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .fac-tiles-grid {
-        grid-template-columns: 1fr;
+        border: none;
+    }
+    .fac-tiles-grid .fac-tile {
+        border: 1px solid rgba(13,28,53,0.13);
+        border-radius: var(--radius-lg);
     }
 
     .fac-image-break-caption p {

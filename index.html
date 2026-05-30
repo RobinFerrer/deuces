@@ -8,87 +8,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="story.css">
     <link rel="stylesheet" href="courts.css">
     <link rel="stylesheet" href="shop.css">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-
-    <!-- ═══════════════════════════════════════
-          NAVIGATION
-    ═══════════════════════════════════════ -->
-    <nav id="navbar">
-        <div class="nav-inner">
-            <a href="index.html" class="nav-logo">
-                <img src="logo/Deuces-Logo-Wordmark-NEG.svg" alt="Deuces" class="nav-logo-img">
-            </a>
-            <div class="nav-right">
-                <div class="lang-toggle" id="langToggle">
-                    <button class="lang-btn" data-lang="nl">NL</button>
-                    <span class="lang-sep">|</span>
-                    <button class="lang-btn active" data-lang="en">EN</button>
-                </div>
-                <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
-        </div>
-    </nav>
-
-    <!-- ═══════════════════════════════════════
-          FULLSCREEN MENU OVERLAY
-    ═══════════════════════════════════════ -->
-    <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
-        <div class="menu-overlay-content">
-            <div class="menu-overlay-right">
-                <div class="menu-overlay-imgs" id="menuOverlayImgs">
-                    <img src="imgs/menu-shelton-player-motion.png"
-                          class="menu-img"
-                          data-for="about"
-                          alt="Deuces tennis">
-                    <img src="imgs/menu-padel-players-motion.png"
-                          class="menu-img"
-                          data-for="courts"
-                          alt="courts">
-                    <img src="imgs/menu-gym-motion.png"
-                          class="menu-img"
-                          data-for="facilities"
-                          alt="facilities">
-                    <img src="imgs/menu-fh-player-motion.png"
-                          class="menu-img"
-                          data-for="coaching"
-                          alt="coaching">
-                    <img src="imgs/menu-padel-player-motion.png"
-                          class="menu-img"
-                          data-for="membership"
-                          alt="membership">
-                    <img src="imgs/menu-tiafou-player-motion.png"
-                          class="menu-img"
-                          data-for="shop"
-                          alt="shop">
-                    <img src="imgs/menu-facilities-motion.png"
-                          class="menu-img"
-                          data-for="contact"
-                          alt="contact">
-                </div>
-            </div>
-            <div class="menu-overlay-left">
-                <ul class="menu-overlay-list">
-                    <li><a href="about.html" class="menu-overlay-link" data-img="about" data-nl="Over Ons" data-en="About">About</a></li>
-                    <li><a href="courts.html" class="menu-overlay-link" data-img="courts" data-nl="Banen" data-en="Courts">Courts</a></li>
-                    <li><a href="facilities.html" class="menu-overlay-link" data-img="facilities" data-nl="Faciliteiten" data-en="Facilities">Facilities</a></li>
-                    <li><a href="coaching.html" class="menu-overlay-link" data-img="coaching" data-nl="Coaching" data-en="Coaching">Coaching</a></li>
-                    <li><a href="membership.html" class="menu-overlay-link" data-img="membership" data-nl="Lidmaatschap" data-en="Membership">Membership</a></li>
-                    <li><a href="shop.html" class="menu-overlay-link" data-img="shop" data-nl="Shop" data-en="Shop">Shop</a></li>
-                    <li><a href="contact.html" class="menu-overlay-link" data-img="contact" data-nl="Contact" data-en="Contact">Contact</a></li>
-                </ul>
-                <div class="menu-overlay-footer">
-                    <a href="courts.html" class="btn btn-flame menu-overlay-cta" data-nl="Baan Reserveren" data-en="Book a Court">Book a Court</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div id="header-placeholder"></div>
 
     <!-- ═══════════════════════════════════════
           HERO
@@ -113,11 +40,11 @@
     <!-- ═══════════════════════════════════════
           EXPLORE STRIP
     ═══════════════════════════════════════ -->
-    <div class="home-explore">
-        <a href="about.html" class="home-explore-card">
+    <div class="home-explore card-carousel">
+        <a href="story.html" class="home-explore-card">
             <span class="card-label" data-nl="Academie" data-en="Academy">Academy</span>
             <h3 data-nl="Over Ons" data-en="About Us">About Us</h3>
-            <p data-nl="Meer dan een academie — een gemeenschap van spelers die geloven in het spel." data-en="More than an academy — a community of players who believe in the game.">More than an academy — a community of players who believe in the game.</p>
+            <p data-nl="Meer dan een academie, een gemeenschap van spelers die geloven in het spel." data-en="More than an academy, a community of players who believe in the game.">More than an academy, a community of players who believe in the game.</p>
             <span class="card-arrow" data-nl="Ontdek →" data-en="Discover →">Discover →</span>
         </a>
         <a href="courts.html" class="home-explore-card">
@@ -129,10 +56,10 @@
         <a href="coaching.html" class="home-explore-card">
             <span class="card-label" data-nl="Expertise" data-en="Expertise">Expertise</span>
             <h3 data-nl="Coaching" data-en="Coaching">Coaching</h3>
-            <p data-nl="Van beginners tot wedstrijdspelers — het juiste programma voor elk niveau." data-en="From beginners to competitors — the right program for every level.">From beginners to competitors — the right program for every level.</p>
+            <p data-nl="Van beginners tot wedstrijdspelers, het juiste programma voor elk niveau." data-en="From beginners to competitors, the right program for every level.">From beginners to competitors, the right program for every level.</p>
             <span class="card-arrow" data-nl="Programma's →" data-en="Programs →">Programs →</span>
         </a>
-        <a href="membership.html" class="home-explore-card">
+        <a href="pricing.html" class="home-explore-card">
             <span class="card-label" data-nl="Lidmaatschap" data-en="Membership">Membership</span>
             <h3 data-nl="Word Lid" data-en="Join Us">Join Us</h3>
             <p data-nl="Kies het lidmaatschap dat bij jou past. Vanaf €49/maand." data-en="Choose the membership that fits you. Starting from €49/month.">Choose the membership that fits you. Starting from €49/month.</p>
@@ -147,16 +74,16 @@
         <div class="container home-split">
             <div class="home-split-img">
                 <div class="img-placeholder img-about">
-                    <div class="img-inner-label" data-nl="Deuces — Beleef het Spel" data-en="Deuces — Feel the Game">Deuces — Feel the Game</div>
+                    <div class="img-inner-label" data-nl="Deuces, Beleef het Spel" data-en="Deuces, Feel the Game">Deuces, Feel the Game</div>
                 </div>
             </div>
             <div class="home-split-text about-text">
                 <p class="section-label dark" data-nl="Ons Verhaal" data-en="Our Story">Our Story</p>
                 <h2 class="section-title dark" data-nl="Spelen. <br>Pauzeren. <br>Herhalen." data-en="Play. <br>Pause. <br>Repeat.">Play. <br>Pause. <br>Repeat.</h2>
-                <p class="body-text dark" data-nl="Deuces is meer dan een academie — het is een gemeenschap van spelers die geloven dat het spel begint bij de juiste sfeer. Onze binnenbanen en buitenbanen zijn ontworpen voor zowel de beginner als de doorgewinterde wedstrijdspeler." data-en="Deuces is more than an academy — it is a community of players who believe the game begins with the right atmosphere. Our indoor and outdoor courts are designed for both the beginner and the seasoned competitor.">Deuces is more than an academy — it is a community of players who believe the game begins with the right atmosphere. Our indoor and outdoor courts are designed for both the beginner and the seasoned competitor.</p>
-                <p class="body-text dark" data-nl="Van een krachtige service tot een fijngevoelige slice — bij Deuces wordt elke slag begeleid door ervaren coaches die passie ademen voor het spel." data-en="From a powerful serve to a delicate slice — at Deuces, every stroke is guided by experienced coaches who breathe passion for the game.">From a powerful serve to a delicate slice — at Deuces, every stroke is guided by experienced coaches who breathe passion for the game.</p>
+                <p class="body-text dark" data-nl="Deuces is meer dan een academie, het is een gemeenschap van spelers die geloven dat het spel begint bij de juiste sfeer. Onze binnenbanen en buitenbanen zijn ontworpen voor zowel de beginner als de doorgewinterde wedstrijdspeler." data-en="Deuces is more than an academy, it is a community of players who believe the game begins with the right atmosphere. Our indoor and outdoor courts are designed for both the beginner and the seasoned competitor.">Deuces is more than an academy, it is a community of players who believe the game begins with the right atmosphere. Our indoor and outdoor courts are designed for both the beginner and the seasoned competitor.</p>
+                <p class="body-text dark" data-nl="Van een krachtige service tot een fijngevoelige slice, bij Deuces wordt elke slag begeleid door ervaren coaches die passie ademen voor het spel." data-en="From a powerful serve to a delicate slice, at Deuces, every stroke is guided by experienced coaches who breathe passion for the game.">From a powerful serve to a delicate slice, at Deuces, every stroke is guided by experienced coaches who breathe passion for the game.</p>
                 <div style="text-align:left; margin-top: clamp(40px,6vw,72px);">
-                  <a href="about.html" class="btn btn-outline" data-nl="Bekijk meer" data-en="Discover More">Discover More</a>
+                  <a href="story.html" class="btn btn-outline" data-nl="Bekijk meer" data-en="Discover More">Discover More</a>
               </div>
             </div>
         </div>
@@ -165,45 +92,60 @@
     <!-- ═══════════════════════════════════════
          COURTS
     ═══════════════════════════════════════ -->
-    <section class="courts section-dark animate-section">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-label" data-nl="Spelen" data-en="Play">Play</p>
-                <h2 class="section-title" data-nl="Onze Banen" data-en="Our Courts">Our Courts</h2>
-                <p class="section-sub" data-nl="Professionele banen voor elk niveau, in een omgeving die ademt." data-en="Professional courts for every level, in an environment that breathes.">Professional courts for every level, in an environment that breathes.</p>
+    <section class="courts animate-section">
+        <div class="courts-header container">
+            <div>
+                <p class="section-label dark" data-nl="Spelen" data-en="Play">Play</p>
+                <h2 class="section-title dark" data-nl="Onze Banen" data-en="Our Courts">Our Courts</h2>
             </div>
-            <div class="courts-grid">
-                <div class="court-card animate-child">
-                    <div class="img-placeholder img-indoor"></div>
-                    <div class="court-card-body">
+            <p class="section-sub dark courts-header-sub" data-nl="Professionele banen voor elk niveau, in een omgeving die ademt." data-en="Professional courts for every level, in an environment that breathes.">Professional courts for every level, in an environment that breathes.</p>
+        </div>
+        <div class="courts-grid container">
+            <a href="courts.html#indoor" class="court-card animate-child">
+                <div class="court-card-img">
+                    <img src="imgs/indoor.jpg" alt="Indoor tennis courts at Deuces">
+                    <div class="court-card-overlay">
                         <span class="court-badge" data-nl="Tennis" data-en="Tennis">Tennis</span>
-                        <h3 data-nl="Binnenbanen" data-en="Indoor Courts">Indoor Courts</h3>
-                        <p data-nl="Acht geconditioneerde binnenbanen met professionele hardcourt-bekleding. Klimaatbeheersing en LED-verlichting voor optimale omstandigheden het hele jaar door." data-en="Eight climate-controlled indoor courts with professional hardcourt surfaces. Year-round optimal conditions with LED lighting.">Eight climate-controlled indoor courts with professional hardcourt surfaces. Year-round optimal conditions with LED lighting.</p>
-                        <a href="courts.html" class="btn-text" data-nl="Baan Boeken →" data-en="Book Now →">Book Now →</a>
+                        <span class="court-count">8 Courts</span>
                     </div>
                 </div>
-                <div class="court-card animate-child">
-                    <div class="img-placeholder img-outdoor"></div>
-                    <div class="court-card-body">
+                <div class="court-card-body">
+                    <h3 data-nl="Binnenbanen" data-en="Indoor Courts">Indoor Courts</h3>
+                    <p data-nl="Klimaatgecontroleerde hardcourt-bekleding met professionele LED-verlichting, het hele jaar door." data-en="Climate-controlled hardcourt surfaces with professional LED lighting, year-round.">Climate-controlled hardcourt surfaces with professional LED lighting, year-round.</p>
+                    <span class="court-link" data-nl="Meer info →" data-en="Book Now →">Book Now →</span>
+                </div>
+            </a>
+            <a href="courts.html#outdoor" class="court-card animate-child">
+                <div class="court-card-img">
+                    <img src="imgs/gravel-court.jpg" alt="Outdoor clay courts at Deuces">
+                    <div class="court-card-overlay">
                         <span class="court-badge" data-nl="Tennis" data-en="Tennis">Tennis</span>
-                        <h3 data-nl="Buitenbanen" data-en="Outdoor Courts">Outdoor Courts</h3>
-                        <p data-nl="Zes graniet-banen aan de open lucht, omringd door groen. Ideaal voor de zomercompetitie en recreatief spel in de zon." data-en="Six outdoor clay courts surrounded by greenery. Perfect for summer competition and recreational play under the open sky.">Six outdoor clay courts surrounded by greenery. Perfect for summer competition and recreational play under the open sky.</p>
-                        <a href="courts.html" class="btn-text" data-nl="Baan Boeken →" data-en="Book Now →">Book Now →</a>
+                        <span class="court-count">6 Courts</span>
                     </div>
                 </div>
-                <div class="court-card animate-child">
-                    <div class="img-placeholder img-padel"></div>
-                    <div class="court-card-body">
-                        <span class="court-badge indigo" data-nl="Padel" data-en="Padel">Padel</span>
-                        <h3 data-nl="Padelbanen" data-en="Padel Courts">Padel Courts</h3>
-                        <p data-nl="Vier panoramische padelbanen, overdekt en in openlucht. De perfecte combinatie van kracht en verbinding — voor elk niveau." data-en="Four panoramic padel courts, covered and open-air. The perfect blend of power and connection — for every level.">Four panoramic padel courts, covered and open-air. The perfect blend of power and connection — for every level.</p>
-                        <a href="courts.html" class="btn-text" data-nl="Baan Boeken →" data-en="Book Now →">Book Now →</a>
+                <div class="court-card-body">
+                    <h3 data-nl="Buitenbanen" data-en="Outdoor Clay">Outdoor Clay</h3>
+                    <p data-nl="Premium gravelbanen onder de open hemel. Ideaal voor zomercompetitie en recreatief spel." data-en="Premium clay courts open to the sky. Ideal for summer competition and recreational play.">Premium clay courts open to the sky. Ideal for summer competition and recreational play.</p>
+                    <span class="court-link" data-nl="Meer info →" data-en="Book Now →">Book Now →</span>
+                </div>
+            </a>
+            <a href="courts.html#padel" class="court-card animate-child">
+                <div class="court-card-img">
+                    <img src="imgs/padel-court-5.jpg" alt="Padel courts at Deuces">
+                    <div class="court-card-overlay">
+                        <span class="court-badge court-badge--indigo" data-nl="Padel" data-en="Padel">Padel</span>
+                        <span class="court-count">4 Courts</span>
                     </div>
                 </div>
-            </div>
-            <div style="text-align:center; margin-top: clamp(40px,6vw,72px);">
-                <a href="courts.html" class="btn btn-flame" data-nl="Boek een Baan" data-en="Book a Court">Book a Court</a>
-            </div>
+                <div class="court-card-body">
+                    <h3 data-nl="Padelbanen" data-en="Padel Courts">Padel Courts</h3>
+                    <p data-nl="Vier panoramische banen: overdekt en openlucht. De perfecte combinatie van kracht en verbinding." data-en="Four panoramic courts: covered and open-air. The perfect blend of power and connection.">Four panoramic courts: covered and open-air. The perfect blend of power and connection.</p>
+                    <span class="court-link" data-nl="Meer info →" data-en="Book Now →">Book Now →</span>
+                </div>
+            </a>
+        </div>
+        <div class="courts-cta">
+            <a href="courts.html" class="btn btn-flame" data-nl="Boek een Baan" data-en="Book a Court">Book a Court</a>
         </div>
     </section>
 
@@ -215,19 +157,19 @@
             <div class="section-header">
                 <p class="section-label dark" data-nl="Expertise" data-en="Expertise">Expertise</p>
                 <h2 class="section-title dark" data-nl="Coaching &amp; Programma's" data-en="Coaching &amp; Programs">Coaching &amp; Programs</h2>
-                <p class="section-sub dark" data-nl="Van beginners tot wedstrijdspelers — wij hebben het juiste programma voor jou." data-en="From beginners to competitive players — we have the right program for you.">From beginners to competitive players — we have the right program for you.</p>
+                <p class="section-sub dark" data-nl="Van beginners tot wedstrijdspelers, wij hebben het juiste programma voor jou." data-en="From beginners to competitive players, we have the right program for you.">From beginners to competitive players, we have the right program for you.</p>
             </div>
-            <div class="coaching-overview-grid">
+            <div class="coaching-overview-grid card-carousel">
                 <div class="coaching-overview-card animate-child">
                     <span class="card-label" data-nl="01" data-en="01">01</span>
                     <h4 data-nl="Volwassenen" data-en="Adult Lessons">Adult Lessons</h4>
-                    <p data-nl="Groepslessen afgestemd op jouw niveau — van beginner tot competition." data-en="Group lessons tailored to your level — from beginner to competition.">Group lessons tailored to your level — from beginner to competition.</p>
+                    <p data-nl="Groepslessen afgestemd op jouw niveau, van beginner tot competition." data-en="Group lessons tailored to your level, from beginner to competition.">Group lessons tailored to your level, from beginner to competition.</p>
                     <a href="coaching.html" class="btn-text" data-nl="Meer info →" data-en="Learn More →">Learn More →</a>
                 </div>
                 <div class="coaching-overview-card animate-child">
                     <span class="card-label" data-nl="02" data-en="02">02</span>
                     <h4 data-nl="Junioren" data-en="Junior Program">Junior Program</h4>
-                    <p data-nl="Van 5 tot 18 jaar — techniek, mentaliteit en teamgeest in een holistische aanpak." data-en="Ages 5 to 18 — technique, mentality, and team spirit through a holistic approach.">Ages 5 to 18 — technique, mentality, and team spirit through a holistic approach.</p>
+                    <p data-nl="Van 5 tot 18 jaar: techniek, mentaliteit en teamgeest in een holistische aanpak." data-en="Ages 5 to 18: technique, mentality, and team spirit through a holistic approach.">Ages 5 to 18: technique, mentality, and team spirit through a holistic approach.</p>
                     <a href="coaching.html" class="btn-text" data-nl="Meer info →" data-en="Learn More →">Learn More →</a>
                 </div>
                 <div class="coaching-overview-card animate-child">
@@ -239,7 +181,7 @@
                 <div class="coaching-overview-card animate-child">
                     <span class="card-label" data-nl="04" data-en="04">04</span>
                     <h4 data-nl="Privélessen" data-en="Private Lessons">Private Lessons</h4>
-                    <p data-nl="Maximale progressie in minimale tijd — volledig op maat van jouw techniek en doelen." data-en="Maximum progress in minimum time — fully tailored to your technique and goals.">Maximum progress in minimum time — fully tailored to your technique and goals.</p>
+                    <p data-nl="Maximale progressie in minimale tijd, volledig op maat van jouw techniek en doelen." data-en="Maximum progress in minimum time, fully tailored to your technique and goals.">Maximum progress in minimum time, fully tailored to your technique and goals.</p>
                     <a href="coaching.html" class="btn-text" data-nl="Meer info →" data-en="Learn More →">Learn More →</a>
                 </div>
             </div>
@@ -261,10 +203,10 @@
             </div>
         </div>
         <div class="container">
-            <div class="mem-grid">
+            <div class="mem-grid card-carousel">
 
                 <!-- Standard -->
-                <a href="membership.html#standard" class="mem-card mem-card--plain animate-child">
+                <a href="pricing.html#standard" class="mem-card mem-card--plain animate-child">
                     <div class="mem-card-header">
                         <p class="mem-card-name" data-nl="Standaard" data-en="Standard">Standard</p>
                         <div class="mem-card-price">€<span>49</span></div>
@@ -280,7 +222,7 @@
                 </a>
 
                 <!-- Premium -->
-                <a href="membership.html#premium" class="mem-card mem-card--plain animate-child">
+                <a href="pricing.html#premium" class="mem-card mem-card--plain animate-child">
                     <div class="mem-card-header">
                         <p class="mem-card-name" data-nl="Premium" data-en="Premium">Premium</p>
                         <div class="mem-card-price">€<span>89</span></div>
@@ -297,7 +239,7 @@
                 </a>
 
                 <!-- Elite -->
-                <a href="membership.html#elite" class="mem-card mem-card--plain animate-child">
+                <a href="pricing.html#elite" class="mem-card mem-card--plain animate-child">
                     <div class="mem-card-header">
                         <p class="mem-card-name" data-nl="Elite" data-en="Elite">Elite</p>
                         <div class="mem-card-price">€<span>149</span></div>
@@ -316,7 +258,7 @@
             </div>
         </div>
         <div style="text-align:center; margin-top: clamp(40px,6vw,72px);">
-                <a href="membership.html" class="btn btn-outline" data-nl="bekijk alle lidmaatschappen" data-en="View all memberships">View all memberships</a>
+                <a href="pricing.html" class="btn btn-outline" data-nl="bekijk alle lidmaatschappen" data-en="View all memberships">View all memberships</a>
             </div>
     </section>
 
@@ -330,7 +272,7 @@
                 <h2 class="section-title" data-nl="Shop" data-en="Shop">Shop</h2>
                 <p class="section-sub" data-nl="Draag het merk. Voel het spel." data-en="Wear the brand. Feel the game.">Wear the brand. Feel the game.</p>
             </div>
-            <div class="shop-grid">
+            <div class="shop-grid card-carousel">
                 <div class="product-card animate-child">
                     <div class="product-img img-product-cap">
                         <div class="product-badge" data-nl="Nieuw" data-en="New">New</div>
@@ -340,7 +282,7 @@
                         <p class="product-sub" data-nl="Lees het spel. Draag het plan." data-en="Read the game. Wear the plan.">Read the game. Wear the plan.</p>
                         <div class="product-footer">
                             <span class="product-price">€ 35</span>
-                            <a href="shop.html" class="btn-cart" data-nl="Bekijk" data-en="View">View</a>
+                            <a href="product.html?id=tactical-tee" class="btn-cart" data-nl="Bekijk" data-en="View">View</a>
                         </div>
                     </div>
                 </div>
@@ -351,7 +293,7 @@
                         <p class="product-sub" data-nl="Een naam. Geen uitleg nodig." data-en="One name. No explanation needed.">One name. No explanation needed.</p>
                         <div class="product-footer">
                             <span class="product-price">€ 35</span>
-                            <a href="shop.html" class="btn-cart" data-nl="Bekijk" data-en="View">View</a>
+                            <a href="product.html?id=deuces-tee" class="btn-cart" data-nl="Bekijk" data-en="View">View</a>
                         </div>
                     </div>
                 </div>
@@ -362,7 +304,7 @@
                         <p class="product-sub" data-nl="Zie je op de andere kant van het net." data-en="See you on the other side of the net.">See you on the other side of the net.</p>
                         <div class="product-footer">
                             <span class="product-price">€ 50</span>
-                            <a href="shop.html" class="btn-cart" data-nl="Bekijk" data-en="View">View</a>
+                            <a href="product.html?id=court-hoodie" class="btn-cart" data-nl="Bekijk" data-en="View">View</a>
                         </div>
                     </div>
                 </div>
@@ -373,7 +315,7 @@
                         <p class="product-sub" data-nl="Geschiedenis laat een merk achter." data-en="History leaves a mark.">History leaves a mark.</p>
                         <div class="product-footer">
                             <span class="product-price">€ 35</span>
-                            <a href="shop.html" class="btn-cart" data-nl="Bekijk" data-en="View">View</a>
+                            <a href="product.html?id=wimbledon-70-tee" class="btn-cart" data-nl="Bekijk" data-en="View">View</a>
                         </div>
                     </div>
                 </div>
@@ -410,7 +352,7 @@
                 <div class="footer-col">
                     <p class="footer-col-title" data-nl="Navigatie" data-en="Navigation">Navigation</p>
                     <ul>
-                        <li><a href="about.html" data-nl="Over Ons" data-en="About">About</a></li>
+                        <li><a href="story.html" data-nl="Over Ons" data-en="About">About</a></li>
                         <li><a href="courts.html" data-nl="Banen" data-en="Courts">Courts</a></li>
                         <li><a href="facilities.html" data-nl="Faciliteiten" data-en="Facilities">Facilities</a></li>
                         <li><a href="coaching.html" data-nl="Coaching" data-en="Coaching">Coaching</a></li>
@@ -419,7 +361,7 @@
                 <div class="footer-col">
                     <p class="footer-col-title" data-nl="Meer" data-en="More">More</p>
                     <ul>
-                        <li><a href="membership.html" data-nl="Lidmaatschap" data-en="Membership">Membership</a></li>
+                        <li><a href="pricing.html" data-nl="Lidmaatschap" data-en="Membership">Membership</a></li>
                         <li><a href="shop.html" data-nl="Shop" data-en="Shop">Shop</a></li>
                         <li><a href="contact.html" data-nl="Contact" data-en="Contact">Contact</a></li>
                         <li><a href="#" data-nl="Privacy Policy" data-en="Privacy Policy">Privacy Policy</a></li>

@@ -1,0 +1,113 @@
+/* ═══════════════════════════════════════════════════
+   COACHES PAGE
+═══════════════════════════════════════════════════ */
+
+.coaches-hero .hero-overlay {
+    background-image: url(imgs/blur-net.jpg);
+    background-position: center;
+}
+
+/* ── Coaches grid ──────────────────────────────── */
+.coaches-section {
+    padding: var(--section-pad) 0;
+}
+
+.coaches-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: clamp(40px, 5vw, 64px);
+}
+
+.coach-card {
+    border: 1px solid var(--cream-dark);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: var(--white);
+    transition: box-shadow var(--transition), transform var(--transition);
+}
+.coach-card:hover {
+    box-shadow: 0 12px 40px rgba(13,28,53,0.1);
+    transform: translateY(-4px);
+}
+
+/* Image */
+.coach-img { position: relative; height: 280px; overflow: hidden; }
+.coach-img img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+
+.coach-badge {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    background: var(--prussian);
+    color: var(--white);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+}
+.coach-badge--indigo { background: var(--indigo); }
+.coach-badge--flame  { background: var(--flame); }
+
+/* Body */
+.coach-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.coach-body h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--prussian);
+}
+
+.coach-role {
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--indigo);
+}
+
+.coach-bio {
+    font-size: 0.875rem;
+    color: var(--text-mid);
+    line-height: 1.6;
+    margin-top: 0.25rem;
+}
+
+.coach-certs {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--cream-dark);
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.coach-certs li {
+    font-size: 0.78rem;
+    color: var(--text-mid);
+    padding-left: 1rem;
+    position: relative;
+}
+.coach-certs li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--indigo);
+}
+
+/* ── Responsive ────────────────────────────────── */
+@media (max-width: 1024px) {
+    .coaches-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+    .coaches-grid { grid-template-columns: 1fr; }
+    .coach-img { height: 240px; }
+}

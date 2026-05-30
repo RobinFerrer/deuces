@@ -4,7 +4,8 @@
 
 /* ── About image placeholder ─────────────────────── */
 .img-about {
-    height: 560px;
+    aspect-ratio: 4 / 5;
+    min-height: 360px;
     background:url(imgs/overhead-tennis-courts.jpg);
     background-size: cover;
     background-position: center;
@@ -49,7 +50,7 @@
 
 
 /* ── Responsive ──────────────────────────────────── */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
     .about-inner { grid-template-columns: 1fr; }
     .about-image { display: none; }
     .section-title br { display: none;}
@@ -158,7 +159,7 @@
     border-color: var(--white);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
     .about-services-inner {
         grid-template-columns: 1fr;
     }

@@ -1,0 +1,117 @@
+/* ═══════════════════════════════════════════════════
+   PRO PAGE
+═══════════════════════════════════════════════════ */
+
+.pro-hero .hero-overlay {
+    background-image: url(imgs/djoko-grass-motion.jpeg);
+    background-position: center 30%;
+}
+
+/* ── Split intro ───────────────────────────────── */
+.pro-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: center;
+}
+
+.pro-split-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.pro-split-text em { font-style: italic; font-family: var(--font-serif); }
+
+.pro-split-img img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+}
+
+/* ── Includes grid ─────────────────────────────── */
+.pro-includes {
+    padding: var(--section-pad) 0;
+    background: var(--prussian);
+}
+
+.pro-includes .section-label { color: rgba(255,255,255,0.5); }
+.pro-includes .section-title { color: var(--white); margin-bottom: clamp(32px, 4vw, 56px); }
+
+.pro-includes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.pro-include-item {
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.pro-include-num {
+    font-family: var(--font-serif);
+    font-size: 1.75rem;
+    font-style: italic;
+    color: var(--indigo);
+    line-height: 1;
+}
+
+.pro-include-item h4 { color: var(--white); font-size: 1rem; font-weight: 600; }
+.pro-include-item p  { color: rgba(255,255,255,0.55); font-size: 0.875rem; line-height: 1.6; }
+
+/* ── CTA section ───────────────────────────────── */
+.pro-cta {
+    position: relative;
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.pro-cta-bg {
+    position: absolute;
+    inset: 0;
+}
+.pro-cta-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.pro-cta-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(13,28,53,0.9) 40%, rgba(13,28,53,0.5));
+}
+
+.pro-cta-inner {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: clamp(60px, 9vw, 120px) clamp(20px, 4vw, 48px);
+}
+
+.pro-cta-inner .section-label { color: rgba(255,255,255,0.5); }
+.pro-cta-inner h2 { color: var(--white); font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 700; line-height: 1.15; }
+.pro-cta-inner h2 em { font-style: italic; font-family: var(--font-serif); color: var(--flame); }
+.pro-cta-inner p  { color: rgba(255,255,255,0.7); max-width: 480px; }
+
+/* ── Responsive ────────────────────────────────── */
+@media (max-width: 768px) {
+    .pro-split { grid-template-columns: 1fr; }
+    .pro-split-img img { height: 280px; }
+    .pro-includes-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+    .pro-includes-grid { grid-template-columns: 1fr; }
+}

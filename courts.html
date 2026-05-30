@@ -3,96 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deuces — Tennis &amp; Padel Academy</title>
+    <title>Deuces — Courts</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="about.css">
-    <link rel="stylesheet" href="courts.css">
-    <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="courts.css">
 </head>
 <body>
+    <div id="header-placeholder"></div>
 
     <!-- ═══════════════════════════════════════
-          NAVIGATION
+          HERO
     ═══════════════════════════════════════ -->
-    <nav id="navbar">
-        <div class="nav-inner">
-            <a href="index.html" class="nav-logo">
-                <img src="logo/Deuces-Logo-Wordmark-NEG.svg" alt="Deuces" class="nav-logo-img">
-            </a>
-            <div class="nav-right">
-                <div class="lang-toggle" id="langToggle">
-                    <button class="lang-btn" data-lang="nl">NL</button>
-                    <span class="lang-sep">|</span>
-                    <button class="lang-btn active" data-lang="en">EN</button>
-                </div>
-                <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
-        </div>
-    </nav>
-
-    <!-- ═══════════════════════════════════════
-          FULLSCREEN MENU OVERLAY
-    ═══════════════════════════════════════ -->
-    <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
-        <div class="menu-overlay-content">
-            <div class="menu-overlay-right">
-                <div class="menu-overlay-imgs" id="menuOverlayImgs">
-                    <img src="imgs/menu-shelton-player-motion.png"
-                          class="menu-img"
-                          data-for="about"
-                          alt="Deuces tennis">
-                    <img src="imgs/menu-padel-players-motion.png"
-                          class="menu-img"
-                          data-for="courts"
-                          alt="courts">
-                    <img src="imgs/menu-gym-motion.png"
-                          class="menu-img"
-                          data-for="facilities"
-                          alt="facilities">
-                    <img src="imgs/menu-fh-player-motion.png"
-                          class="menu-img"
-                          data-for="coaching"
-                          alt="coaching">
-                    <img src="imgs/menu-padel-player-motion.png"
-                          class="menu-img"
-                          data-for="membership"
-                          alt="membership">
-                    <img src="imgs/menu-tiafou-player-motion.png"
-                          class="menu-img"
-                          data-for="shop"
-                          alt="shop">
-                    <img src="imgs/menu-facilities-motion.png"
-                          class="menu-img"
-                          data-for="contact"
-                          alt="contact">
-                </div>
-            </div>
-            <div class="menu-overlay-left">
-                <ul class="menu-overlay-list">
-                    <li><a href="about.html" class="menu-overlay-link" data-img="about" data-nl="Over Ons" data-en="About">About</a></li>
-                    <li><a href="courts.html" class="menu-overlay-link" data-img="courts" data-nl="Banen" data-en="Courts">Courts</a></li>
-                    <li><a href="facilities.html" class="menu-overlay-link" data-img="facilities" data-nl="Faciliteiten" data-en="Facilities">Facilities</a></li>
-                    <li><a href="coaching.html" class="menu-overlay-link" data-img="coaching" data-nl="Coaching" data-en="Coaching">Coaching</a></li>
-                    <li><a href="membership.html" class="menu-overlay-link" data-img="membership" data-nl="Lidmaatschap" data-en="Membership">Membership</a></li>
-                    <li><a href="shop.html" class="menu-overlay-link" data-img="shop" data-nl="Shop" data-en="Shop">Shop</a></li>
-                    <li><a href="contact.html" class="menu-overlay-link" data-img="contact" data-nl="Contact" data-en="Contact">Contact</a></li>
-                </ul>
-                <div class="menu-overlay-footer">
-                    <a href="courts.html" class="btn btn-flame menu-overlay-cta" data-nl="Baan Reserveren" data-en="Book a Court">Book a Court</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- PAGE HERO -->
     <section id="home" class="hero">
-        <div class="hero-overlay"></div>
+        <div class="hero-overlay courts-hero-bg"></div>
         <div class="hero-content">
             <p class="hero-eyebrow" data-nl="Onze Banen" data-en="Our Courts">Our Courts</p>
             <h1 class="hero-title" data-nl="Gebouwd om<br>te spelen." data-en="Built to<br>play.">Built to<br>play.</h1>
@@ -103,107 +30,234 @@
         </div>
     </section>
 
-    <!-- EDITORIAL INTRO -->
+    <!-- ═══════════════════════════════════════
+          EDITORIAL INTRO
+    ═══════════════════════════════════════ -->
     <section class="cp-intro animate-section">
         <div class="container cp-intro-inner">
             <div class="cp-intro-media">
                 <div class="cp-img-main">
-                    <img src="imgs/fh-player.jpg" alt="Tennis at Deuces">
+                    <img src="imgs/overhead-tennis-courts.jpg" alt="Tennis courts aerial view">
                 </div>
                 <div class="cp-img-secondary">
                     <img src="imgs/padel-bh-low-volley.jpg" alt="Padel at Deuces">
                 </div>
             </div>
             <div class="cp-intro-text">
-                <h2 data-en="Play where<br>champions train." data-nl="Speel waar<br>kampioenen trainen.">Play where<br>champions train.</h2>
-                <p data-en="From championship hardcourts to sun-lit clay, every court at Deuces is built to bring out your best game. Whether you're stepping on for the first time or preparing for competition — this is your court." data-nl="Van kampioenschapshardcourts tot zonbeschenen gravel, elke baan bij Deuces is gebouwd om jouw beste spel naar boven te halen.">From championship hardcourts to sun-lit clay, every court at Deuces is built to bring out your best game. Whether you're stepping on for the first time or preparing for competition — this is your court.</p>
+                <p class="cp-eyebrow" data-en="The Experience" data-nl="De Ervaring">The Experience</p>
+                <h2 data-en="Play where<br>champions<br>train." data-nl="Speel waar<br>kampioenen<br>trainen.">Play where<br>champions<br>train.</h2>
+                <p data-en="From championship hardcourts to sun-lit clay, every court at Deuces is built to bring out your best game. Whether you're stepping on for the first time or preparing for competition, this is your court." data-nl="Van kampioenschapshardcourts tot zonbeschenen gravel, elke baan bij Deuces is gebouwd om jouw beste spel naar boven te halen.">From championship hardcourts to sun-lit clay, every court at Deuces is built to bring out your best game. Whether you're stepping on for the first time or preparing for competition. This is your court.</p>
                 <a href="contact.html" class="cp-ghost-btn" data-en="Book a Court" data-nl="Baan Boeken">Book a Court</a>
             </div>
         </div>
     </section>
 
-    <!-- SPOTLIGHT -->
-    <section class="cp-spotlight animate-section">
-        <div class="container cp-spotlight-inner">
-            <div class="cp-spotlight-text">
-                <p class="cp-eyebrow" data-en="Outdoor Courts" data-nl="Buitenbanen">Outdoor Courts</p>
-                <h2 data-en="In the Heart of<br><em>Deuces</em>" data-nl="In het Hart van<br><em>Deuces</em>">In the Heart of<br><em>Deuces</em></h2>
-                <p data-en="Step onto our six clay courts, each set beneath open skies and surrounded by the energy of the game. Designed for those who believe the best rallies happen in the sun — and that every match is a moment worth living." data-nl="Stap op onze zes gravelcourts, elk onder de open hemel en omgeven door de energie van het spel.">Step onto our six clay courts, each set beneath open skies and surrounded by the energy of the game. Designed for those who believe the best rallies happen in the sun — and that every match is a moment worth living.</p>
-                <a href="contact.html" class="cp-ghost-btn" data-en="Book Now" data-nl="Reserveer Nu">Book Now</a>
+    <!-- ═══════════════════════════════════════
+          STATS STRIP
+    ═══════════════════════════════════════ -->
+    <section class="cp-stats animate-section">
+        <div class="container cp-stats-inner">
+            <div class="cp-stat">
+                <span class="cp-stat-num">18</span>
+                <span class="cp-stat-label" data-en="Premium Courts" data-nl="Premium Banen">Premium Courts</span>
             </div>
-            <div class="cp-spotlight-img">
-                <img src="imgs/alcaraz-gravel-motion.jpeg" alt="Outdoor clay courts at Deuces">
+            <div class="cp-stat-divider"></div>
+            <div class="cp-stat">
+                <span class="cp-stat-num">07–22</span>
+                <span class="cp-stat-label" data-en="Open Daily" data-nl="Dagelijks Open">Open Daily</span>
+            </div>
+            <div class="cp-stat-divider"></div>
+            <div class="cp-stat">
+                <span class="cp-stat-num">3</span>
+                <span class="cp-stat-label" data-en="Surface Types" data-nl="Ondergronden">Surface Types</span>
+            </div>
+            <div class="cp-stat-divider"></div>
+            <div class="cp-stat">
+                <span class="cp-stat-num">12m</span>
+                <span class="cp-stat-label" data-en="Average Booking" data-nl="Gemiddelde Boeking">Average Booking</span>
             </div>
         </div>
     </section>
 
-    <!-- COURT TYPES -->
-    <section class="cp-types animate-section">
+    <!-- ═══════════════════════════════════════
+          WAYS TO PLAY — dark editorial
+    ═══════════════════════════════════════ -->
+    <section class="cp-ways animate-section">
+        <div class="cp-ways-inner">
+            <div class="cp-ways-text">
+                <h2 data-en="Courts for<br>Every Kind<br>of Game" data-nl="Banen voor<br>Elk Soort<br>Spel">Courts for<br>Every Kind<br>of Game</h2>
+
+                <div class="cp-ways-list">
+                    <a href="#indoor" class="cp-ways-item">
+                        <span data-en="Indoor Tennis" data-nl="Indoor Tennis">Indoor Tennis</span>
+                        <span class="cp-ways-arrow">→</span>
+                    </a>
+                    <a href="#outdoor" class="cp-ways-item">
+                        <span data-en="Outdoor Clay" data-nl="Buiten Gravel">Outdoor Clay</span>
+                        <span class="cp-ways-arrow">→</span>
+                    </a>
+                    <a href="#padel" class="cp-ways-item">
+                        <span data-en="Padel Courts" data-nl="Padelbanen">Padel Courts</span>
+                        <span class="cp-ways-arrow">→</span>
+                    </a>
+                </div>
+
+                <p data-en="Deuces offers a full range of premium courts, from fast indoor hardcourts to sun-drenched clay and panoramic padel. Every surface is maintained to the highest standard, ready for competition or casual play." data-nl="Deuces biedt een volledig aanbod aan premium banen, van snelle indoor hardcourts tot zonnige gravel en panoramische padelbanen. Elk oppervlak wordt onderhouden op het hoogste niveau.">Deuces offers a full range of premium courts, from fast indoor hardcourts to sun-drenched clay and panoramic padel. Every surface is maintained to the highest standard, ready for competition or casual play.</p>
+
+                <a href="contact.html" class="cp-ghost-btn cp-ghost-btn--dark" data-en="Book a Court →" data-nl="Baan Boeken →">Book a Court →</a>
+            </div>
+            <div class="cp-ways-mosaic">
+                <div class="cp-ways-col">
+                    <div class="cp-ways-img">
+                        <img src="imgs/indoor.jpg" alt="Indoor tennis courts">
+                    </div>
+                    <div class="cp-ways-img">
+                        <img src="imgs/padel-court-2.jpg" alt="Padel court">
+                    </div>
+                    <div class="cp-ways-img">
+                        <img src="imgs/gravel-court.jpg" alt="Clay court">
+                    </div>
+                </div>
+                <div class="cp-ways-col cp-ways-col--offset">
+                    <div class="cp-ways-img">
+                        <img src="imgs/padel-court-4.jpg" alt="Padel court view">
+                    </div>
+                    <div class="cp-ways-img">
+                        <img src="imgs/padel-court-7.jpg" alt="Courts at dusk">
+                    </div>
+                    <div class="cp-ways-img">
+                        <img src="imgs/padel-court-6.jpg" alt="Court overview">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+          COURT DETAILS
+    ═══════════════════════════════════════ -->
+    <section class="cp-details animate-section">
         <div class="container">
-            <h2 class="cp-types-title" data-en="Our Courts" data-nl="Onze Banen">Our Courts</h2>
-            <div class="cp-types-grid">
-                <div class="cp-type-card">
-                    <svg class="cp-type-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="6" y="16" width="36" height="24" rx="1.5"/>
-                        <path d="M6 24h36M6 32h36M18 16v24M30 16v24"/>
-                        <path d="M14 10h20l4 6H10l4-6z"/>
-                    </svg>
-                    <p class="cp-type-name" data-en="Indoor Tennis" data-nl="Indoor Tennis">Indoor Tennis</p>
-                    <p class="cp-type-count">8 Courts</p>
-                    <p class="cp-type-desc" data-en="Climate-controlled hardcourt surfaces with professional LED lighting for year-round optimal play." data-nl="Klimaatgecontroleerde hardcourt oppervlakken met professionele LED-verlichting.">Climate-controlled hardcourt surfaces with professional LED lighting for year-round optimal play.</p>
+
+            <!-- Indoor Tennis -->
+            <div class="cp-detail-row" id="indoor">
+                <div class="cp-detail-img">
+                    <img src="imgs/indoor.jpg" alt="Indoor tennis at Deuces">
+                    <div class="cp-detail-badge" data-en="8 Courts" data-nl="8 Banen">8 Courts</div>
                 </div>
-                <div class="cp-type-card">
-                    <svg class="cp-type-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="24" cy="22" r="9"/>
-                        <path d="M24 6v4M24 38v4M8 22H4M44 22h-4M11.5 9.5l2.8 2.8M33.7 31.7l2.8 2.8M11.5 34.5l2.8-2.8M33.7 12.3l2.8-2.8"/>
-                        <path d="M10 40c3.5-5 8-8 14-8s10.5 3 14 8"/>
-                    </svg>
-                    <p class="cp-type-name" data-en="Outdoor Clay" data-nl="Buiten Gravel">Outdoor Clay</p>
-                    <p class="cp-type-count">6 Courts</p>
-                    <p class="cp-type-desc" data-en="Premium clay surfaces open to the sky. Ideal for summer competition and recreational play in the sun." data-nl="Premium graveloppervlakken onder de open hemel. Ideaal voor zomercompetitie en recreatief spel.">Premium clay surfaces open to the sky. Ideal for summer competition and recreational play in the sun.</p>
-                </div>
-                <div class="cp-type-card">
-                    <svg class="cp-type-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="7" y="12" width="34" height="24" rx="1.5"/>
-                        <path d="M7 24h34M19 12v24M29 12v24"/>
-                        <path d="M7 12v24M41 12v24"/>
-                        <path d="M3 16h4M3 32h4M41 16h4M41 32h4"/>
-                    </svg>
-                    <p class="cp-type-name" data-en="Padel Courts" data-nl="Padelbanen">Padel Courts</p>
-                    <p class="cp-type-count">4 Courts</p>
-                    <p class="cp-type-desc" data-en="Panoramic covered and open-air courts. The perfect blend of power and connection for every level." data-nl="Panoramische overdekte en openlucht banen. De perfecte mix van kracht en verbinding.">Panoramic covered and open-air courts. The perfect blend of power and connection for every level.</p>
+                <div class="cp-detail-text">
+                    <p class="cp-eyebrow" data-en="Indoor Tennis" data-nl="Indoor Tennis">Indoor Tennis</p>
+                    <h2 data-en="Year-Round<br>Hardcourt" data-nl="Het Hele Jaar<br>Hardcourt">Year-Round<br>Hardcourt</h2>
+                    <p data-en="Eight climate-controlled hardcourt surfaces with professional LED lighting. Play at your best regardless of season, weather, or time of day. Our indoor courts are the home of Deuces competition and training programmes." data-nl="Acht klimaatgecontroleerde hardcourt oppervlakken met professionele LED-verlichting. Speel op je best, ongeacht seizoen, weer of tijdstip. Onze indoor banen zijn de thuisbasis van de Deuces competitie en trainingsprogramma's.">Eight climate-controlled hardcourt surfaces with professional LED lighting. Play at your best regardless of season, weather, or time of day. Our indoor courts are the home of Deuces competition and training programmes.</p>
+                    <ul class="cp-detail-features">
+                        <li data-en="Professional LED lighting" data-nl="Professionele LED-verlichting">Professional LED lighting</li>
+                        <li data-en="Climate controlled" data-nl="Klimaatgecontroleerd">Climate controlled</li>
+                        <li data-en="Spectator gallery" data-nl="Tribunes voor toeschouwers">Spectator gallery</li>
+                        <li data-en="Ball machine available" data-nl="Ballenkanon beschikbaar">Ball machine available</li>
+                    </ul>
                 </div>
             </div>
-            <a href="contact.html" class="cp-ghost-btn cp-ghost-btn--white" data-en="Book a Court" data-nl="Baan Boeken">Book a Court</a>
+
+            <!-- Outdoor Clay -->
+            <div class="cp-detail-row cp-detail-row--reverse" id="outdoor">
+                <div class="cp-detail-img">
+                    <img src="imgs/alcaraz-gravel-motion.jpeg" alt="Outdoor clay courts at Deuces">
+                    <div class="cp-detail-badge" data-en="6 Courts" data-nl="6 Banen">6 Courts</div>
+                </div>
+                <div class="cp-detail-text">
+                    <p class="cp-eyebrow" data-en="Outdoor Clay" data-nl="Buiten Gravel">Outdoor Clay</p>
+                    <h2 data-en="Under the<br>Open Sky" data-nl="Onder de<br>Open Hemel">Under the<br>Open Sky</h2>
+                    <p data-en="Six premium clay surfaces bathed in natural light. Designed for those who believe the best rallies happen in the sun, ideal for summer competition, club matches, and long recreational sessions that stretch into the evening." data-nl="Zes premium graveloppervlakken in natuurlijk licht. Ontworpen voor wie de beste rally's in de zon wil spelen, ideaal voor zomercompetitie, clubwedstrijden en lange recreatieve sessies.">Six premium clay surfaces bathed in natural light. Designed for those who believe the best rallies happen in the sun, ideal for summer competition, club matches, and long recreational sessions that stretch into the evening.</p>
+                    <ul class="cp-detail-features">
+                        <li data-en="Premium red clay surface" data-nl="Premium rood gravel">Premium red clay surface</li>
+                        <li data-en="Floodlit for evening play" data-nl="Verlicht voor avondspel">Floodlit for evening play</li>
+                        <li data-en="Courtside seating" data-nl="Zitplaatsen langs de baan">Courtside seating</li>
+                        <li data-en="Open April – October" data-nl="Open april – oktober">Open April – October</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Padel -->
+            <div class="cp-detail-row" id="padel">
+                <div class="cp-detail-img">
+                    <img src="imgs/padel-court-5.jpg" alt="Padel courts at Deuces">
+                    <div class="cp-detail-badge" data-en="4 Courts" data-nl="4 Banen">4 Courts</div>
+                </div>
+                <div class="cp-detail-text">
+                    <p class="cp-eyebrow" data-en="Padel Courts" data-nl="Padelbanen">Padel Courts</p>
+                    <h2 data-en="Power &amp;<br>Connection" data-nl="Kracht &amp;<br>Verbinding">Power &amp;<br>Connection</h2>
+                    <p data-en="Four panoramic courts, two covered and two open-air. Padel at Deuces is about more than the game: it's about the energy, the social play, and that feeling when a wall-shot comes back perfectly. Beginner to advanced, all welcome." data-nl="Vier panoramische banen, twee overdekt en twee openlucht. Padel bij Deuces gaat verder dan het spel: het gaat om de energie, het sociale spel en dat gevoel wanneer een wand-shot perfect terugkomt.">Four panoramic courts, two covered and two open-air. Padel at Deuces is about more than the game: it's about the energy, the social play, and that feeling when a wall-shot comes back perfectly. Beginner to advanced, all welcome.</p>
+                    <ul class="cp-detail-features">
+                        <li data-en="2 covered + 2 open-air" data-nl="2 overdekt + 2 openlucht">2 covered + 2 open-air</li>
+                        <li data-en="Panoramic glass walls" data-nl="Panoramische glazen wanden">Panoramic glass walls</li>
+                        <li data-en="Racket rental on site" data-nl="Racketverhuur ter plaatse">Racket rental on site</li>
+                        <li data-en="Intro clinics available" data-nl="Intro klinieken beschikbaar">Intro clinics available</li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- USEFUL INFO -->
+    <!-- ═══════════════════════════════════════
+          GALLERY BAND
+    ═══════════════════════════════════════ -->
+    <section class="cp-gallery animate-section">
+        <div class="cp-gallery-track">
+            <div class="cp-gallery-img"><img src="imgs/padel-court-1.jpg" alt="Padel court"></div>
+            <div class="cp-gallery-img"><img src="imgs/stretch-court-gravel.jpg" alt="Clay court stretch"></div>
+            <div class="cp-gallery-img"><img src="imgs/padel-court-3.jpg" alt="Padel court view"></div>
+            <div class="cp-gallery-img"><img src="imgs/fh-motion-gravel.jpg" alt="Clay court play"></div>
+            <div class="cp-gallery-img"><img src="imgs/padel-court-8.jpg" alt="Padel court evening"></div>
+            <div class="cp-gallery-img"><img src="imgs/overhead-tennis-courts.jpg" alt="Aerial courts view"></div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+          USEFUL INFO
+    ═══════════════════════════════════════ -->
     <section class="cp-useful animate-section">
         <div class="container cp-useful-inner">
             <div class="cp-useful-img">
-                <img src="imgs/indoor.jpg" alt="Indoor courts at Deuces">
+                <img src="imgs/blur-net.jpg" alt="Courts at Deuces">
             </div>
             <div class="cp-useful-text">
-                <h2 data-en="Useful <em>Info</em>" data-nl="Handige <em>Info</em>">Useful <em>Info</em></h2>
+                <p class="cp-eyebrow" data-en="Good to Know" data-nl="Handig om te Weten">Good to Know</p>
+                <h2 data-en="Everything<br>you need to<br>get on court" data-nl="Alles wat je<br>nodig hebt om<br>de baan op te gaan">Everything<br>you need to<br>get on court</h2>
                 <div class="cp-info-items">
                     <div class="cp-info-item">
                         <p class="cp-info-label" data-en="Booking" data-nl="Reserveren">Booking</p>
-                        <p data-en="Book online or at the front desk. Courts are open daily from 07:00 to 22:00." data-nl="Reserveer online of aan de receptie. Banen zijn dagelijks open van 07:00 tot 22:00.">Book online or at the front desk. Courts are open daily from 07:00 to 22:00.</p>
+                        <p data-en="Book online or at the front desk. Courts are open daily from 07:00 to 22:00. Same-day bookings welcome subject to availability." data-nl="Reserveer online of aan de receptie. Banen zijn dagelijks open van 07:00 tot 22:00. Boekingen op dezelfde dag zijn welkom afhankelijk van beschikbaarheid.">Book online or at the front desk. Courts are open daily from 07:00 to 22:00. Same-day bookings welcome subject to availability.</p>
                     </div>
                     <div class="cp-info-item">
                         <p class="cp-info-label" data-en="Court Hire" data-nl="Baanhuur">Court Hire</p>
-                        <p data-en="Rackets and balls available to rent at reception. Coaching can be added to any booking." data-nl="Rackets en ballen te huur aan de receptie. Coaching kan bij elke reservering worden toegevoegd.">Rackets and balls available to rent at reception. Coaching can be added to any booking.</p>
+                        <p data-en="Rackets and balls available to rent at reception. Coaching can be added to any booking. All equipment is cleaned and maintained between sessions." data-nl="Rackets en ballen te huur aan de receptie. Coaching kan bij elke reservering worden toegevoegd. Al het materiaal wordt tussen sessies gereinigd en onderhouden.">Rackets and balls available to rent at reception. Coaching can be added to any booking. All equipment is cleaned and maintained between sessions.</p>
                     </div>
                     <div class="cp-info-item">
                         <p class="cp-info-label" data-en="Membership" data-nl="Lidmaatschap">Membership</p>
-                        <p data-en="Members enjoy priority booking, discounted rates, and full access to all Deuces courts." data-nl="Leden genieten van prioriteitsreserveringen, kortingen en volledige toegang tot alle banen.">Members enjoy priority booking, discounted rates, and full access to all Deuces courts.</p>
+                        <p data-en="Members enjoy priority booking, discounted rates, and full access to all 18 Deuces courts. Flexible monthly and annual plans available." data-nl="Leden genieten van prioriteitsreserveringen, kortingen en volledige toegang tot alle 18 banen van Deuces. Flexibele maandelijkse en jaarlijkse plannen beschikbaar.">Members enjoy priority booking, discounted rates, and full access to all 18 Deuces courts. Flexible monthly and annual plans available.</p>
                     </div>
                     <div class="cp-info-item">
                         <p class="cp-info-label" data-en="Dress Code" data-nl="Kledingvoorschrift">Dress Code</p>
-                        <p data-en="Non-marking soles required on all courts. Appropriate sportswear expected at all times." data-nl="Niet-afgevende zolen vereist op alle banen. Passend sportkleding te allen tijde verwacht.">Non-marking soles required on all courts. Appropriate sportswear expected at all times.</p>
+                        <p data-en="Non-marking soles required on all courts. Appropriate sportswear expected at all times. Changing rooms and showers available at the facility." data-nl="Niet-afgevende zolen vereist op alle banen. Passend sportkleding te allen tijde verwacht. Kleedkamers en douches beschikbaar in de faciliteit.">Non-marking soles required on all courts. Appropriate sportswear expected at all times. Changing rooms and showers available at the facility.</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+          BOOKING CTA
+    ═══════════════════════════════════════ -->
+    <section class="cp-cta animate-section">
+        <div class="cp-cta-bg"></div>
+        <div class="container cp-cta-inner">
+            <p class="cp-eyebrow cp-eyebrow--light" data-en="Ready to Play" data-nl="Klaar om te Spelen">Ready to Play</p>
+            <h2 data-en="Your court<br>is waiting." data-nl="Jouw baan<br>staat klaar.">Your court<br>is waiting.</h2>
+            <p data-en="Whether it's a quick hit after work or a full day of competition, step on and make it yours." data-nl="Of het nu een snelle hit is na het werk of een volledige dag competitie, stap op en maak het van jou.">Whether it's a quick hit after work or a full day of competition, step on and make it yours.</p>
+            <div class="cp-cta-actions">
+                <a href="contact.html" class="cp-ghost-btn cp-ghost-btn--dark" data-en="Book a Court" data-nl="Baan Boeken">Book a Court</a>
+                <a href="pricing.html" class="cp-ghost-btn cp-ghost-btn--dark-outline" data-en="View Membership" data-nl="Bekijk Lidmaatschap">View Membership</a>
             </div>
         </div>
     </section>
@@ -218,7 +272,7 @@
                 <div class="footer-col">
                     <p class="footer-col-title" data-nl="Navigatie" data-en="Navigation">Navigation</p>
                     <ul>
-                        <li><a href="about.html" data-nl="Over Ons" data-en="About">About</a></li>
+                        <li><a href="story.html" data-nl="Over Ons" data-en="About">About</a></li>
                         <li><a href="courts.html" data-nl="Banen" data-en="Courts">Courts</a></li>
                         <li><a href="facilities.html" data-nl="Faciliteiten" data-en="Facilities">Facilities</a></li>
                         <li><a href="coaching.html" data-nl="Coaching" data-en="Coaching">Coaching</a></li>
@@ -227,7 +281,7 @@
                 <div class="footer-col">
                     <p class="footer-col-title" data-nl="Meer" data-en="More">More</p>
                     <ul>
-                        <li><a href="membership.html" data-nl="Lidmaatschap" data-en="Membership">Membership</a></li>
+                        <li><a href="pricing.html" data-nl="Lidmaatschap" data-en="Membership">Membership</a></li>
                         <li><a href="shop.html" data-nl="Shop" data-en="Shop">Shop</a></li>
                         <li><a href="contact.html" data-nl="Contact" data-en="Contact">Contact</a></li>
                         <li><a href="#" data-nl="Privacy Policy" data-en="Privacy Policy">Privacy Policy</a></li>
@@ -250,7 +304,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p data-nl="© 2025 Deuces Tennis &amp; Padel Academie. Dit is een website voor educatieve doeleinden alleen. Dit is geen echte website." data-en="© 2025 Deuces Tennis &amp; Padel Academy. This is a website for educational purposes only. This is not a real website.">© 2025 Deuces Tennis &amp; Padel Academy. This is a website for educational purposes only. This is not a real website.</p>
+                <p data-nl="© 2025 Deuces Tennis &amp; Padel Academie. Dit is een website voor educatieve doeleinden alleen." data-en="© 2025 Deuces Tennis &amp; Padel Academy. This is a website for educational purposes only.">© 2025 Deuces Tennis &amp; Padel Academy. This is a website for educational purposes only.</p>
             </div>
         </div>
     </footer>

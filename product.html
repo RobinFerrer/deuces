@@ -8,88 +8,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="story.css">
     <link rel="stylesheet" href="courts.css">
     <link rel="stylesheet" href="shop.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="product.css">
 </head>
 <body>
-
-    <!-- ═══════════════════════════════════════
-          NAVIGATION
-    ═══════════════════════════════════════ -->
-    <nav id="navbar">
-        <div class="nav-inner" id="nav-pdp-shop">
-            <a href="index.html" class="nav-logo">
-                <img src="logo/Deuces-Logo-Wordmark-NEG.svg" alt="Deuces" class="nav-logo-img">
-            </a>
-            <div class="nav-right">
-                <div class="lang-toggle" id="langToggle">
-                    <button class="lang-btn" data-lang="nl">NL</button>
-                    <span class="lang-sep">|</span>
-                    <button class="lang-btn active" data-lang="en">EN</button>
-                </div>
-                <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
-        </div>
-    </nav>
-
-    <!-- ═══════════════════════════════════════
-          FULLSCREEN MENU OVERLAY
-    ═══════════════════════════════════════ -->
-    <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
-        <div class="menu-overlay-content">
-            <div class="menu-overlay-right">
-                <div class="menu-overlay-imgs" id="menuOverlayImgs">
-                    <img src="imgs/menu-shelton-player-motion.png"
-                          class="menu-img"
-                          data-for="about"
-                          alt="Deuces tennis">
-                    <img src="imgs/menu-padel-players-motion.png"
-                          class="menu-img"
-                          data-for="courts"
-                          alt="courts">
-                    <img src="imgs/menu-gym-motion.png"
-                          class="menu-img"
-                          data-for="facilities"
-                          alt="facilities">
-                    <img src="imgs/menu-fh-player-motion.png"
-                          class="menu-img"
-                          data-for="coaching"
-                          alt="coaching">
-                    <img src="imgs/menu-padel-player-motion.png"
-                          class="menu-img"
-                          data-for="membership"
-                          alt="membership">
-                    <img src="imgs/menu-tiafou-player-motion.png"
-                          class="menu-img"
-                          data-for="shop"
-                          alt="shop">
-                    <img src="imgs/menu-facilities-motion.png"
-                          class="menu-img"
-                          data-for="contact"
-                          alt="contact">
-                </div>
-            </div>
-            <div class="menu-overlay-left">
-                <ul class="menu-overlay-list">
-                    <li><a href="about.html" class="menu-overlay-link" data-img="about" data-nl="Over Ons" data-en="About">About</a></li>
-                    <li><a href="courts.html" class="menu-overlay-link" data-img="courts" data-nl="Banen" data-en="Courts">Courts</a></li>
-                    <li><a href="facilities.html" class="menu-overlay-link" data-img="facilities" data-nl="Faciliteiten" data-en="Facilities">Facilities</a></li>
-                    <li><a href="coaching.html" class="menu-overlay-link" data-img="coaching" data-nl="Coaching" data-en="Coaching">Coaching</a></li>
-                    <li><a href="membership.html" class="menu-overlay-link" data-img="membership" data-nl="Lidmaatschap" data-en="Membership">Membership</a></li>
-                    <li><a href="shop.html" class="menu-overlay-link" data-img="shop" data-nl="Shop" data-en="Shop">Shop</a></li>
-                    <li><a href="contact.html" class="menu-overlay-link" data-img="contact" data-nl="Contact" data-en="Contact">Contact</a></li>
-                </ul>
-                <div class="menu-overlay-footer">
-                    <a href="courts.html" class="btn btn-flame menu-overlay-cta" data-nl="Baan Reserveren" data-en="Book a Court">Book a Court</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div id="header-placeholder"></div>
 
     <!-- ═══════════════════════════════════════
           BREADCRUMB
@@ -98,7 +25,7 @@
         <div class="container">
             <a href="shop.html" data-en="Shop" data-nl="Shop">Shop</a>
             <span class="pdp-bc-sep">/</span>
-            <span data-en="Tactics Blue Tee" data-nl="Tactics Blauw T-shirt">Tactics Blue Tee</span>
+            <span id="pdpBreadcrumbName">Tactics Blue Tee</span>
         </div>
     </nav>
 
@@ -133,7 +60,7 @@
                 <h1 class="pdp-name" data-en="Tactics Blue Tee" data-nl="Tactics Blauw T-shirt">Tactics Blue Tee</h1>
 
                 <!-- Description -->
-                <p class="pdp-desc" data-en="A lightweight performance tee built for on-court movement. The Tactics graphic nods to the strategy behind every shot — wearable both on the baseline and off it. Made from breathable, ring-spun cotton for all-day comfort." data-nl="Een lichtgewicht performance T-shirt voor beweging op de baan. De Tactics print verwijst naar de strategie achter elk schot — draagbaar op de baseline en er ver buiten. Gemaakt van ademend, ring-gesponnen katoen voor comfort de hele dag.">A lightweight performance tee built for on-court movement. The Tactics graphic nods to the strategy behind every shot — wearable both on the baseline and off it. Made from breathable, ring-spun cotton for all-day comfort.</p>
+                <p class="pdp-desc" data-en="A lightweight performance tee built for on-court movement. The Tactics graphic nods to the strategy behind every shot, wearable both on the baseline and off it. Made from breathable, ring-spun cotton for all-day comfort." data-nl="Een lichtgewicht performance T-shirt voor beweging op de baan. De Tactics print verwijst naar de strategie achter elk schot, draagbaar op de baseline en er ver buiten. Gemaakt van ademend, ring-gesponnen katoen voor comfort de hele dag.">A lightweight performance tee built for on-court movement. The Tactics graphic nods to the strategy behind every shot, wearable both on the baseline and off it. Made from breathable, ring-spun cotton for all-day comfort.</p>
 
                 <!-- Size selector -->
                 <div class="pdp-size-wrap">
@@ -167,7 +94,7 @@
 
                 <!-- Price -->
                 <div class="pdp-price-row">
-                    <span class="pdp-price">€ 59.00</span>
+                    <span class="pdp-price" id="pdpPrice">€ 59.00</span>
                     <span class="pdp-shipping" data-en="Free shipping from €100" data-nl="Gratis verzending vanaf €100">Free shipping from €100</span>
                 </div>
 
@@ -219,7 +146,7 @@
         <div class="pdp-story-left">
             <div class="pdp-story-text">
                 <h2 class="pdp-story-headline" data-en="Made with precision&nbsp;— for the court" data-nl="Gemaakt met precisie&nbsp;— voor de baan">Made with precision&nbsp;— for the court</h2>
-                <p class="pdp-story-body" data-en="Every Deuces piece is designed to move with you. Lightweight, durable, and built for the demands of competitive play — on the baseline and beyond." data-nl="Elk Deuces stuk is ontworpen om met jou mee te bewegen. Lichtgewicht, duurzaam en gebouwd voor de eisen van competitief spel — op de baseline en verder.">Every Deuces piece is designed to move with you. Lightweight, durable, and built for the demands of competitive play — on the baseline and beyond.</p>
+                <p class="pdp-story-body" data-en="Every Deuces piece is designed to move with you. Lightweight, durable, and built for the demands of competitive play, on the baseline and beyond." data-nl="Elk Deuces stuk is ontworpen om met jou mee te bewegen. Lichtgewicht, duurzaam en gebouwd voor de eisen van competitief spel, op de baseline en verder.">Every Deuces piece is designed to move with you. Lightweight, durable, and built for the demands of competitive play, on the baseline and beyond.</p>
             </div>
             <div class="pdp-story-thumbs">
                 <div class="pdp-story-thumb">
@@ -256,57 +183,57 @@
         <div class="yml-scroll-wrap">
             <div class="yml-scroll" id="ymlScroll">
 
-                <a href="product.html" class="yml-card">
+                <a href="product.html?id=deuces-white-tee" class="yml-card">
                     <div class="yml-card-img">
-                        <img src="imgs/mockups/Deuces-Front-Blue-Tee.png" alt="Deuces Blue Tee" loading="lazy">
+                        <img src="imgs/mockups/Deuces-Front-White-Tee.png" alt="Deuces White Tee" loading="lazy">
                     </div>
                     <div class="yml-card-info">
                         <span class="yml-card-label" data-en="Essentials" data-nl="Essentials">Essentials</span>
-                        <h4 class="yml-card-name" data-en="Deuces Blue Tee" data-nl="Deuces Blauw T-shirt">Deuces Blue Tee</h4>
+                        <h4 class="yml-card-name" data-en="Deuces White Tee" data-nl="Deuces Wit T-shirt">Deuces White Tee</h4>
                         <span class="yml-card-price">€ 55</span>
                     </div>
                 </a>
 
-                <a href="product.html" class="yml-card">
+                <a href="product.html?id=cage-blue-tee" class="yml-card">
                     <div class="yml-card-img">
-                        <img src="imgs/mockups/Court-Blue-Tee.png" alt="Court Blue Tee" loading="lazy">
-                    </div>
-                    <div class="yml-card-info">
-                        <span class="yml-card-label" data-en="Padel Series" data-nl="Padel Reeks">Padel Series</span>
-                        <h4 class="yml-card-name" data-en="Court Blue Tee" data-nl="Court Blauw T-shirt">Court Blue Tee</h4>
-                        <span class="yml-card-price">€ 55</span>
-                    </div>
-                </a>
-
-                <a href="product.html" class="yml-card">
-                    <div class="yml-card-img">
-                        <img src="imgs/mockups/BJKvsMC-Blue-Tee.png" alt="BJK vs MC Blue Tee" loading="lazy">
-                    </div>
-                    <div class="yml-card-info">
-                        <span class="yml-card-label" data-en="Signature Series" data-nl="Signature Reeks">Signature Series</span>
-                        <h4 class="yml-card-name" data-en="BJK vs MC Blue Tee" data-nl="BJK vs MC Blauw T-shirt">BJK vs MC Blue Tee</h4>
-                        <span class="yml-card-price">€ 59</span>
-                    </div>
-                </a>
-
-                <a href="product.html" class="yml-card">
-                    <div class="yml-card-img">
-                        <img src="imgs/mockups/Float-Blue-Tee.png" alt="Float Blue Tee" loading="lazy">
+                        <img src="imgs/mockups/Cage-Blue-Tee.png" alt="Cage Blue Tee" loading="lazy">
                     </div>
                     <div class="yml-card-info">
                         <span class="yml-card-label" data-en="Court Collection" data-nl="Court Collectie">Court Collection</span>
-                        <h4 class="yml-card-name" data-en="Float Blue Tee" data-nl="Float Blauw T-shirt">Float Blue Tee</h4>
+                        <h4 class="yml-card-name" data-en="Cage Blue Tee" data-nl="Cage Blauw T-shirt">Cage Blue Tee</h4>
                         <span class="yml-card-price">€ 55</span>
                     </div>
                 </a>
 
-                <a href="product.html" class="yml-card">
+                <a href="product.html?id=bjk-vs-mc-hoodie" class="yml-card">
                     <div class="yml-card-img">
-                        <img src="imgs/mockups/Padel-Court-Blue-Tee.png" alt="Padel Court Blue Tee" loading="lazy">
+                        <img src="imgs/mockups/BJKvsMC-White-Hoodie.png" alt="BJK vs MC Hoodie" loading="lazy">
                     </div>
                     <div class="yml-card-info">
-                        <span class="yml-card-label" data-en="Padel Series" data-nl="Padel Reeks">Padel Series</span>
-                        <h4 class="yml-card-name" data-en="Padel Court Blue Tee" data-nl="Padel Court Blauw T-shirt">Padel Court Blue Tee</h4>
+                        <span class="yml-card-label" data-en="Signature Series" data-nl="Signature Reeks">Signature Series</span>
+                        <h4 class="yml-card-name" data-en="BJK vs MC Hoodie" data-nl="BJK vs MC Hoodie">BJK vs MC Hoodie</h4>
+                        <span class="yml-card-price">€ 75</span>
+                    </div>
+                </a>
+
+                <a href="product.html?id=float-blue-hoodie" class="yml-card">
+                    <div class="yml-card-img">
+                        <img src="imgs/mockups/Float-Blue-Hoodie.png" alt="Float Blue Hoodie" loading="lazy">
+                    </div>
+                    <div class="yml-card-info">
+                        <span class="yml-card-label" data-en="Court Collection" data-nl="Court Collectie">Court Collection</span>
+                        <h4 class="yml-card-name" data-en="Float Blue Hoodie" data-nl="Float Blauw Hoodie">Float Blue Hoodie</h4>
+                        <span class="yml-card-price">€ 75</span>
+                    </div>
+                </a>
+
+                <a href="product.html?id=stickman-tennis-tee" class="yml-card">
+                    <div class="yml-card-img">
+                        <img src="imgs/mockups/Stickman-Tennis-Blue-Tee.png" alt="Stickman Tennis Tee" loading="lazy">
+                    </div>
+                    <div class="yml-card-info">
+                        <span class="yml-card-label" data-en="Tennis Icons" data-nl="Tennis Iconen">Tennis Icons</span>
+                        <h4 class="yml-card-name" data-en="Stickman Tennis Tee" data-nl="Stickman Tennis T-shirt">Stickman Tennis Tee</h4>
                         <span class="yml-card-price">€ 55</span>
                     </div>
                 </a>
@@ -333,7 +260,7 @@
                 <div class="footer-col">
                     <p class="footer-col-title" data-nl="Navigatie" data-en="Navigation">Navigation</p>
                     <ul>
-                        <li><a href="about.html" data-nl="Over Ons" data-en="About">About</a></li>
+                        <li><a href="story.html" data-nl="Over Ons" data-en="About">About</a></li>
                         <li><a href="courts.html" data-nl="Banen" data-en="Courts">Courts</a></li>
                         <li><a href="facilities.html" data-nl="Faciliteiten" data-en="Facilities">Facilities</a></li>
                         <li><a href="coaching.html" data-nl="Coaching" data-en="Coaching">Coaching</a></li>
@@ -342,7 +269,7 @@
                 <div class="footer-col">
                     <p class="footer-col-title" data-nl="Meer" data-en="More">More</p>
                     <ul>
-                        <li><a href="membership.html" data-nl="Lidmaatschap" data-en="Membership">Membership</a></li>
+                        <li><a href="pricing.html" data-nl="Lidmaatschap" data-en="Membership">Membership</a></li>
                         <li><a href="shop.html" data-nl="Shop" data-en="Shop">Shop</a></li>
                         <li><a href="contact.html" data-nl="Contact" data-en="Contact">Contact</a></li>
                         <li><a href="#" data-nl="Privacy Policy" data-en="Privacy Policy">Privacy Policy</a></li>
@@ -370,8 +297,79 @@
         </div>
     </footer>
 
+    <script src="products.js"></script>
     <script src="script.js"></script>
     <script>
+        /* ── Populate product from ?id= ── */
+        (function() {
+            var id = new URLSearchParams(location.search).get('id');
+            var product = (window.PRODUCTS && window.PRODUCTS[id]) || null;
+            if (!product) {
+                var keys = window.PRODUCTS ? Object.keys(window.PRODUCTS) : [];
+                if (!keys.length) return;
+                product = window.PRODUCTS[keys[0]];
+                id = keys[0];
+            }
+            var lang = (document.documentElement.lang === 'nl') ? 'nl' : 'en';
+            var name = product.name[lang] || product.name.en;
+            var collection = product.collection[lang] || product.collection.en;
+            var desc = product.description[lang] || product.description.en;
+
+            document.title = 'Deuces — ' + name;
+
+            var nameEl = document.querySelector('.pdp-name');
+            if (nameEl) {
+                nameEl.textContent = name;
+                nameEl.setAttribute('data-en', product.name.en);
+                nameEl.setAttribute('data-nl', product.name.nl);
+            }
+
+            var collEl = document.querySelector('.pdp-collection');
+            if (collEl) {
+                collEl.textContent = collection;
+                collEl.setAttribute('data-en', product.collection.en);
+                collEl.setAttribute('data-nl', product.collection.nl);
+            }
+
+            var descEl = document.querySelector('.pdp-desc');
+            if (descEl) {
+                descEl.textContent = desc;
+                descEl.setAttribute('data-en', product.description.en);
+                descEl.setAttribute('data-nl', product.description.nl);
+            }
+
+            var priceEl = document.getElementById('pdpPrice');
+            if (priceEl) priceEl.textContent = '€ ' + product.price.toFixed(2);
+
+            var bcEl = document.getElementById('pdpBreadcrumbName');
+            if (bcEl) bcEl.textContent = name;
+
+            var mainImg = document.getElementById('pdpMainImg');
+            if (mainImg) {
+                mainImg.src = product.images[0];
+                mainImg.alt = name;
+            }
+
+            var thumbsEl = document.querySelector('.pdp-thumbs');
+            if (thumbsEl && product.images.length) {
+                thumbsEl.innerHTML = product.images.map(function(src, i) {
+                    return '<button class="pdp-thumb' + (i === 0 ? ' pdp-thumb--active' : '') +
+                        '" data-img="' + src + '" aria-label="View ' + (i + 1) + '">' +
+                        '<img src="' + src + '" alt=""></button>';
+                }).join('');
+            }
+
+            var sizeWrap = document.querySelector('.pdp-size-options');
+            if (sizeWrap && product.sizes && product.sizes.length) {
+                sizeWrap.innerHTML = product.sizes.map(function(size, i) {
+                    var checked = (size === 'M' || (i === Math.floor(product.sizes.length / 2))) ? ' checked' : '';
+                    return '<label class="pdp-size-opt">' +
+                        '<input type="radio" name="pdp-size" value="' + size + '"' + checked + '>' +
+                        '<span>' + size + '</span></label>';
+                }).join('');
+            }
+        })();
+
         /* ── Quantity stepper ── */
         var qty = 1;
         var qtyVal = document.getElementById('pdpQtyVal');

@@ -9,7 +9,7 @@
 
 /* ── Product image placeholders ─────────────────── */
 .product-img {
-  height: 260px;
+  aspect-ratio: 1 / 1;
   position: relative;
   overflow: hidden;
 }
@@ -110,7 +110,7 @@
     .shop-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
     .shop-grid { grid-template-columns: 1fr; max-width: 360px; margin: 0 auto; }
 }
 
@@ -119,21 +119,10 @@
    SHOP PAGE — Editorial layout (shop.html only)
 ══════════════════════════════════════════════════ */
 
-/* ── Page header ─────────────────────────────────── */
-.shop-page-header {
-    padding: calc(var(--nav-h) + 4rem) 0 2.5rem;
-    text-align: center;
-    background: var(--white);
-    border-bottom: 1px solid rgba(13,28,53,0.08);
-}
-
-.shop-page-title {
-    font-family: var(--font-sans);
-    font-size: clamp(0.75rem, 1.4vw, 1rem);
-    font-weight: 400;
-    letter-spacing: 0.5em;
-    text-transform: uppercase;
-    color: var(--prussian);
+/* ── Page hero ───────────────────────────────────── */
+.shop-hero .hero-overlay {
+    background-image: url(imgs/women-smiling-team-padel.jpg);
+    background-position: center 35%;
 }
 
 /* ── Filter bar ──────────────────────────────────── */
@@ -358,7 +347,7 @@
 }
 
 /* ── Responsive — editorial grid ─────────────────── */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
     .shop-all-grid {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: none;
@@ -374,14 +363,82 @@
     }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 768px) {
+    .shop-hero { min-height: 420px; height: 60vh; }
+    .shop-filter-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        padding: 1rem 1.25rem;
+    }
+    .shop-filter-tabs {
+        gap: 1.1rem;
+        overflow-x: auto;
+        width: 100%;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        padding-bottom: 2px;
+    }
+    .shop-filter-tabs::-webkit-scrollbar { display: none; }
+    .sft { white-space: nowrap; flex-shrink: 0; }
+    .shop-filter-count { font-size: 0.6rem; }
+
     .shop-all-grid {
-        grid-auto-rows: 300px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: none;
+        grid-auto-rows: auto;
+        gap: 0.6rem;
+        padding: 0.75rem;
+        background: var(--white);
     }
 
-    .sc-ls1, .sc-ls2 { aspect-ratio: 3 / 2; grid-auto-rows: auto; }
+    .sc-1, .sc-2, .sc-3, .sc-4,
+    .sc-5, .sc-6, .sc-7,
+    .sc-ls1, .sc-ls2 { grid-column: span 1; }
 
-    .shop-cell-img-wrap img { padding: 1.25rem; }
+    .shop-cell {
+        background: var(--cream);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+    }
 
-    .shop-filter-tabs { gap: 1.25rem; }
+    .shop-cell-img-wrap {
+        aspect-ratio: 4 / 5;
+        flex: none;
+        min-height: 0;
+        background: var(--cream);
+    }
+    .shop-cell-img-wrap img {
+        padding: 0.5rem;
+        object-fit: contain;
+    }
+
+    .shop-cell-info {
+        padding: 0.6rem 0.7rem 0.85rem;
+        background: var(--white);
+    }
+    .shop-cell-label {
+        font-size: 0.5rem;
+        margin-bottom: 0.2rem;
+    }
+    .shop-cell-name { font-size: 0.7rem; }
+    .shop-cell-price { font-size: 0.7rem; }
+    .shop-cell-swatches { margin-top: 0.4rem; }
+
+    /* Lifestyle cells span full width as visual breaks */
+    .sc-ls1, .sc-ls2 {
+        grid-column: span 2;
+        aspect-ratio: 16 / 9;
+        background: var(--prussian);
+    }
+    .sc-ls1 img, .sc-ls2 img {
+        padding: 0;
+        object-fit: cover;
+    }
+
+    /* Show view CTA on touch since hover doesn't exist */
+    .shop-btn-view {
+        opacity: 0;
+    }
 }

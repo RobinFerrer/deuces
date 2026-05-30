@@ -1,0 +1,32 @@
+/* ═══════════════════════════════════════════════════
+   ACADEMY — academy.html (hub landing)
+═══════════════════════════════════════════════════ */
+
+/* Hero background override */
+.academy-hero .hero-overlay {
+    background-image: url(imgs/serve-motion-gravel.jpg);
+    background-position: center 30%;
+}
+
+/* Method strip — two-column editorial */
+.academy-method {
+    padding: var(--section-pad) 0;
+}
+
+.academy-method-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: center;
+}
+
+.academy-method-text .body-text {
+    margin-bottom: 1.25rem;
+}
+
+@media (max-width: 768px) {
+    .academy-method-inner {
+        grid-template-columns: 1fr;
+        gap: clamp(28px, 6vw, 48px);
+    }
+}
