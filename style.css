@@ -207,7 +207,6 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
     position: relative;
     overflow: hidden;
     background: var(--white);
-    border-top: 1px solid rgba(13, 28, 53, 0.08);
     padding: clamp(64px, 8vw, 120px) 0 2.5rem;
 }
 
@@ -227,7 +226,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
     line-height: 1;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    color: rgba(13, 28, 53, 0.05);
+    color: rgba(13, 28, 53, 0.025);
 }
 .footer-watermark .animate-child {
     display: inline-block;
@@ -340,7 +339,6 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
     gap: 0.4rem;
     text-align: center;
     padding-top: clamp(1.5rem, 3vw, 2.5rem);
-    border-top: 1px solid rgba(13, 28, 53, 0.08);
 }
 .footer-logo {
     font-family: var(--font-serif);

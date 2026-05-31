@@ -2,11 +2,16 @@
    ABOUT — shared component (index.html + about.html)
 ═══════════════════════════════════════════════════ */
 
+.story-hero .hero-overlay {
+    background-image: url(imgs/padel-racket-ball-motion-sky.jpeg);
+    background-position: center 50%;
+}
+
 /* ── About image placeholder ─────────────────────── */
 .img-about {
     aspect-ratio: 4 / 5;
     min-height: 360px;
-    background:url(imgs/overhead-tennis-courts.jpg);
+    background:url(imgs/tennis-clay-courts-seaside.jpg);
     background-size: cover;
     background-position: center;
     position: relative;

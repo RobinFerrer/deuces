@@ -2,6 +2,11 @@
    MEMBERSHIP — membership.html
 ═══════════════════════════════════════════════════ */
 
+.pricing-hero .hero-overlay {
+    background-image: url(imgs/tennis-clay-stadium-aerial-motion.jpeg);
+    background-position: center 50%;
+}
+
 .membership {
     padding: var(--section-pad) 0;
 }
