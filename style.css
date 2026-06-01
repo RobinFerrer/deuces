@@ -36,6 +36,14 @@
     --transition: 0.3s var(--ease-out);
 }
 
+/* ── Alternating section accents (50% flame / 50% indigo) ─ */
+/* Every other <section> swaps flame → indigo so accents read 50/50. */
+/* Footer is <footer>, so :nth-of-type(section) leaves it untouched. */
+body > section:nth-of-type(even) {
+    --flame: #2244E9;
+    --flame-dark: #1933c2;
+}
+
 /* ── Reset ──────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -668,7 +676,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
     color: var(--white);
     border-top: 1px solid rgba(255,255,255,0.06);
 }
-.spotlight--dark .spotlight-eyebrow      { color: rgba(255,255,255,0.55); }
+.spotlight--dark .spotlight-eyebrow      { color: var(--flame); }
 .spotlight--dark .spotlight-text h2      { color: var(--white); }
 .spotlight--dark .spotlight-text h2 em   { color: var(--flame); font-style: italic; }
 .spotlight--dark .spotlight-text p       { color: rgba(255,255,255,0.7); }

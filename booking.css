@@ -366,7 +366,7 @@
     padding: var(--section-pad) 0;
 }
 
-.bk-policy .section-label { color: rgba(255,255,255,0.5); }
+.bk-policy .section-label { color: var(--flame); }
 .bk-policy .section-title { color: var(--white); }
 
 .bk-policy-inner {

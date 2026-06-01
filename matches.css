@@ -98,7 +98,7 @@
     padding: var(--section-pad) 0;
     background: var(--prussian);
 }
-.matches-results .section-label { color: rgba(255,255,255,0.5); }
+.matches-results .section-label { color: var(--flame); }
 .matches-results .section-title { color: var(--white); margin-bottom: clamp(32px, 4vw, 56px); }
 
 .results-list {

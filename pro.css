@@ -37,7 +37,7 @@
     background: var(--prussian);
 }
 
-.pro-includes .section-label { color: rgba(255,255,255,0.5); }
+.pro-includes .section-label { color: var(--flame); }
 .pro-includes .section-title { color: var(--white); margin-bottom: clamp(32px, 4vw, 56px); }
 
 .pro-includes-grid {
@@ -101,7 +101,7 @@
     padding: clamp(60px, 9vw, 120px) clamp(20px, 4vw, 48px);
 }
 
-.pro-cta-inner .section-label { color: rgba(255,255,255,0.5); }
+.pro-cta-inner .section-label { color: var(--flame); }
 .pro-cta-inner h2 { color: var(--white); font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 700; line-height: 1.15; }
 .pro-cta-inner h2 em { font-style: italic; font-family: var(--font-serif); color: var(--flame); }
 .pro-cta-inner p  { color: rgba(255,255,255,0.7); max-width: 480px; }

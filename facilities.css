@@ -276,7 +276,7 @@
     align-items: center;
 }
 
-.fac-cta-text .section-label { color: rgba(255,255,255,0.55); }
+.fac-cta-text .section-label { color: var(--flame); }
 
 .fac-cta-text h2 {
     font-family: var(--font-serif);

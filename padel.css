@@ -30,7 +30,7 @@
 
 /* ── Why grid ──────────────────────────────────── */
 .padel-why { padding: var(--section-pad) 0; background: var(--prussian); }
-.padel-why .section-label { color: rgba(255,255,255,0.5); }
+.padel-why .section-label { color: var(--flame); }
 .padel-why .section-title { color: var(--white); margin-bottom: clamp(32px, 4vw, 56px); }
 
 .padel-why-grid {
