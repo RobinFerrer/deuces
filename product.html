@@ -37,16 +37,9 @@
         <!-- Left: sticky image panel -->
         <div class="pdp-img-panel">
             <div class="pdp-img-inner">
-                <img src="imgs/mockups/Tactics-Blue-Tee.png" alt="Tactics Blue Tee" class="pdp-main-img" id="pdpMainImg">
+                <img src="imgs/mockups/Tshirts/BJKvsMC/tshirt_bjkc_tshirt_white_shop.jpg" alt="" class="pdp-main-img" id="pdpMainImg">
             </div>
-            <div class="pdp-thumbs">
-                <button class="pdp-thumb pdp-thumb--active" data-img="imgs/mockups/Tactics-Blue-Tee.png" aria-label="Blue colourway">
-                    <img src="imgs/mockups/Tactics-Blue-Tee.png" alt="">
-                </button>
-                <button class="pdp-thumb" data-img="imgs/mockups/Tactics-White-Tee.png" aria-label="White colourway">
-                    <img src="imgs/mockups/Tactics-White-Tee.png" alt="">
-                </button>
-            </div>
+            <div class="pdp-thumbs" id="pdpThumbs"></div>
         </div>
 
         <!-- Right: product info -->
@@ -62,34 +55,21 @@
                 <!-- Description -->
                 <p class="pdp-desc" data-en="A lightweight performance tee built for on-court movement. The Tactics graphic nods to the strategy behind every shot, wearable both on the baseline and off it. Made from breathable, ring-spun cotton for all-day comfort." data-nl="Een lichtgewicht performance T-shirt voor beweging op de baan. De Tactics print verwijst naar de strategie achter elk schot, draagbaar op de baseline en er ver buiten. Gemaakt van ademend, ring-gesponnen katoen voor comfort de hele dag.">A lightweight performance tee built for on-court movement. The Tactics graphic nods to the strategy behind every shot, wearable both on the baseline and off it. Made from breathable, ring-spun cotton for all-day comfort.</p>
 
+                <!-- Type selector (clothing only) -->
+                <div class="pdp-type-wrap" id="pdpTypeWrap" hidden>
+                    <div class="pdp-type-header">
+                        <p class="pdp-type-label" data-en="Select Type" data-nl="Selecteer Type">Select Type</p>
+                    </div>
+                    <div class="pdp-type-options" id="pdpTypeOptions" role="radiogroup" aria-label="Type"></div>
+                </div>
+
                 <!-- Size selector -->
                 <div class="pdp-size-wrap">
                     <div class="pdp-size-header">
                         <p class="pdp-size-label" data-en="Select Size" data-nl="Selecteer Maat">Select Size</p>
                         <a href="#" class="pdp-size-guide" data-en="Size Guide" data-nl="Maatgids">Size Guide</a>
                     </div>
-                    <div class="pdp-size-options" role="radiogroup" aria-label="Size">
-                        <label class="pdp-size-opt">
-                            <input type="radio" name="pdp-size" value="XS">
-                            <span>XS</span>
-                        </label>
-                        <label class="pdp-size-opt">
-                            <input type="radio" name="pdp-size" value="S">
-                            <span>S</span>
-                        </label>
-                        <label class="pdp-size-opt">
-                            <input type="radio" name="pdp-size" value="M" checked>
-                            <span>M</span>
-                        </label>
-                        <label class="pdp-size-opt">
-                            <input type="radio" name="pdp-size" value="L">
-                            <span>L</span>
-                        </label>
-                        <label class="pdp-size-opt">
-                            <input type="radio" name="pdp-size" value="XL">
-                            <span>XL</span>
-                        </label>
-                    </div>
+                    <div class="pdp-size-options" role="radiogroup" aria-label="Size"></div>
                 </div>
 
                 <!-- Price -->
@@ -181,64 +161,7 @@
             </div>
         </div>
         <div class="yml-scroll-wrap">
-            <div class="yml-scroll" id="ymlScroll">
-
-                <a href="product.html?id=deuces-white-tee" class="yml-card">
-                    <div class="yml-card-img">
-                        <img src="imgs/mockups/Deuces-Front-White-Tee.png" alt="Deuces White Tee" loading="lazy">
-                    </div>
-                    <div class="yml-card-info">
-                        <span class="yml-card-label" data-en="Essentials" data-nl="Essentials">Essentials</span>
-                        <h4 class="yml-card-name" data-en="Deuces White Tee" data-nl="Deuces Wit T-shirt">Deuces White Tee</h4>
-                        <span class="yml-card-price">€ 55</span>
-                    </div>
-                </a>
-
-                <a href="product.html?id=cage-blue-tee" class="yml-card">
-                    <div class="yml-card-img">
-                        <img src="imgs/mockups/Cage-Blue-Tee.png" alt="Cage Blue Tee" loading="lazy">
-                    </div>
-                    <div class="yml-card-info">
-                        <span class="yml-card-label" data-en="Court Collection" data-nl="Court Collectie">Court Collection</span>
-                        <h4 class="yml-card-name" data-en="Cage Blue Tee" data-nl="Cage Blauw T-shirt">Cage Blue Tee</h4>
-                        <span class="yml-card-price">€ 55</span>
-                    </div>
-                </a>
-
-                <a href="product.html?id=bjk-vs-mc-hoodie" class="yml-card">
-                    <div class="yml-card-img">
-                        <img src="imgs/mockups/BJKvsMC-White-Hoodie.png" alt="BJK vs MC Hoodie" loading="lazy">
-                    </div>
-                    <div class="yml-card-info">
-                        <span class="yml-card-label" data-en="Signature Series" data-nl="Signature Reeks">Signature Series</span>
-                        <h4 class="yml-card-name" data-en="BJK vs MC Hoodie" data-nl="BJK vs MC Hoodie">BJK vs MC Hoodie</h4>
-                        <span class="yml-card-price">€ 75</span>
-                    </div>
-                </a>
-
-                <a href="product.html?id=float-blue-hoodie" class="yml-card">
-                    <div class="yml-card-img">
-                        <img src="imgs/mockups/Float-Blue-Hoodie.png" alt="Float Blue Hoodie" loading="lazy">
-                    </div>
-                    <div class="yml-card-info">
-                        <span class="yml-card-label" data-en="Court Collection" data-nl="Court Collectie">Court Collection</span>
-                        <h4 class="yml-card-name" data-en="Float Blue Hoodie" data-nl="Float Blauw Hoodie">Float Blue Hoodie</h4>
-                        <span class="yml-card-price">€ 75</span>
-                    </div>
-                </a>
-
-                <a href="product.html?id=stickman-tennis-tee" class="yml-card">
-                    <div class="yml-card-img">
-                        <img src="imgs/mockups/Stickman-Tennis-Blue-Tee.png" alt="Stickman Tennis Tee" loading="lazy">
-                    </div>
-                    <div class="yml-card-info">
-                        <span class="yml-card-label" data-en="Tennis Icons" data-nl="Tennis Iconen">Tennis Icons</span>
-                        <h4 class="yml-card-name" data-en="Stickman Tennis Tee" data-nl="Stickman Tennis T-shirt">Stickman Tennis Tee</h4>
-                        <span class="yml-card-price">€ 55</span>
-                    </div>
-                </a>
-
-            </div>
+            <div class="yml-scroll" id="ymlScroll"></div>
         </div>
 
         <!-- Shop All CTA -->
@@ -305,13 +228,16 @@
         /* ── Populate product from ?id= ── */
         (function() {
             var id = new URLSearchParams(location.search).get('id');
-            var product = (window.PRODUCTS && window.PRODUCTS[id]) || null;
+            var products = window.PRODUCTS || {};
+            var keys = Object.keys(products);
+            if (!keys.length) return;
+
+            var product = products[id];
             if (!product) {
-                var keys = window.PRODUCTS ? Object.keys(window.PRODUCTS) : [];
-                if (!keys.length) return;
-                product = window.PRODUCTS[keys[0]];
                 id = keys[0];
+                product = products[id];
             }
+
             var lang = (document.documentElement.lang === 'nl') ? 'nl' : 'en';
             var name = product.name[lang] || product.name.en;
             var collection = product.collection[lang] || product.collection.en;
@@ -352,22 +278,64 @@
                 mainImg.alt = name;
             }
 
-            var thumbsEl = document.querySelector('.pdp-thumbs');
+            var thumbsEl = document.getElementById('pdpThumbs');
             if (thumbsEl && product.images.length) {
                 thumbsEl.innerHTML = product.images.map(function(src, i) {
                     return '<button class="pdp-thumb' + (i === 0 ? ' pdp-thumb--active' : '') +
                         '" data-img="' + src + '" aria-label="View ' + (i + 1) + '">' +
-                        '<img src="' + src + '" alt=""></button>';
+                        '<img src="' + src + '" alt="" loading="lazy"></button>';
                 }).join('');
+                thumbsEl.querySelectorAll('.pdp-thumb').forEach(function(thumb) {
+                    thumb.addEventListener('click', function() {
+                        thumbsEl.querySelectorAll('.pdp-thumb').forEach(function(t) {
+                            t.classList.remove('pdp-thumb--active');
+                        });
+                        this.classList.add('pdp-thumb--active');
+                        mainImg.src = this.dataset.img;
+                    });
+                });
+            }
+
+            var typeWrap = document.getElementById('pdpTypeWrap');
+            var typeOpts = document.getElementById('pdpTypeOptions');
+            if (typeWrap && typeOpts && product.types && product.types.length) {
+                typeOpts.innerHTML = product.types.map(function(t, i) {
+                    var checked = (i === 0) ? ' checked' : '';
+                    return '<label class="pdp-type-opt">' +
+                        '<input type="radio" name="pdp-type" value="' + t + '"' + checked + '>' +
+                        '<span>' + t + '</span></label>';
+                }).join('');
+                typeWrap.hidden = false;
+            } else if (typeWrap) {
+                typeWrap.hidden = true;
             }
 
             var sizeWrap = document.querySelector('.pdp-size-options');
             if (sizeWrap && product.sizes && product.sizes.length) {
                 sizeWrap.innerHTML = product.sizes.map(function(size, i) {
-                    var checked = (size === 'M' || (i === Math.floor(product.sizes.length / 2))) ? ' checked' : '';
+                    var checked = (size === 'M' || product.sizes.length === 1 || (i === Math.floor(product.sizes.length / 2) && !product.sizes.includes('M'))) ? ' checked' : '';
                     return '<label class="pdp-size-opt">' +
                         '<input type="radio" name="pdp-size" value="' + size + '"' + checked + '>' +
                         '<span>' + size + '</span></label>';
+                }).join('');
+            }
+
+            /* ── You May Like ── populate from products.js (skip current) */
+            var ymlScroll = document.getElementById('ymlScroll');
+            if (ymlScroll) {
+                var pool = keys.filter(function(k) { return k !== id; });
+                /* deterministic shuffle (rotate by id length) so same product = same suggestions */
+                var rot = id.length % pool.length;
+                pool = pool.slice(rot).concat(pool.slice(0, rot));
+                ymlScroll.innerHTML = pool.slice(0, 6).map(function(slug) {
+                    var p = products[slug];
+                    return '<a href="product.html?id=' + slug + '" class="yml-card">' +
+                        '<div class="yml-card-img"><img src="' + p.images[0] + '" alt="' + p.name.en + '" loading="lazy"></div>' +
+                        '<div class="yml-card-info">' +
+                        '<span class="yml-card-label" data-en="' + p.collection.en + '" data-nl="' + p.collection.nl + '">' + (p.collection[lang] || p.collection.en) + '</span>' +
+                        '<h4 class="yml-card-name" data-en="' + p.name.en + '" data-nl="' + p.name.nl + '">' + (p.name[lang] || p.name.en) + '</h4>' +
+                        '<span class="yml-card-price">€ ' + p.price + '</span>' +
+                        '</div></a>';
                 }).join('');
             }
         })();
@@ -380,17 +348,6 @@
         });
         document.getElementById('pdpQtyPlus').addEventListener('click', function() {
             qty++; qtyVal.textContent = qty;
-        });
-
-        /* ── Thumbnail image switcher ── */
-        document.querySelectorAll('.pdp-thumb').forEach(function(thumb) {
-            thumb.addEventListener('click', function() {
-                document.querySelectorAll('.pdp-thumb').forEach(function(t) {
-                    t.classList.remove('pdp-thumb--active');
-                });
-                this.classList.add('pdp-thumb--active');
-                document.getElementById('pdpMainImg').src = this.dataset.img;
-            });
         });
 
         /* ── Accordion ── */
