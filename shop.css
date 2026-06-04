@@ -14,10 +14,10 @@
   overflow: hidden;
 }
 
-.img-product-cap    { background: url(imgs/mockups/Tactics-Blue-Tee.png); background-size: cover; background-position: center; }
+.img-product-cap    { background: url('imgs/mockups/Tshirts/Tactics/tshirt_tactics_sweater_grey_shop.jpg'); background-size: cover; background-position: center; }
 .img-product-polo   { background: url(imgs/mockups/Deuces-Front-White-Tee.png); background-size: cover; background-position: center; }
-.img-product-bag    { background: url(imgs/mockups/Court-Blue-Hoodie.png); background-size: cover; background-position: center; }
-.img-product-bottle { background: url(imgs/mockups/BJKvsMC-White-Tee.png); background-size: cover; background-position: center; }
+.img-product-bag    { background: url('imgs/mockups/Tshirts/Court/Court-Grey-Hoodie_shop.png'); background-size: cover; background-position: center; }
+.img-product-bottle { background: url('imgs/mockups/Tshirts/Cage/tshirt_mmoc_shirt_white_shop.jpg'); background-size: cover; background-position: center; }
 
 
 /* ── Shop section ────────────────────────────────── */
